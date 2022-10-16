@@ -2,34 +2,40 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { AiOutlineSearch } from 'react-icons/ai';
+import  LogoImg  from '../../../assets/images/logo64.png';
 const Navbar = () => {
     return (
         <header>
-            <div className='grid grid-flow-col m-8'>
-                <div className='header-left'>
-                    <h1>logo</h1>
+            <div className='flex justify-around m-8 border-b-8 border-[#F0F0F0]'>
+                <div className='header-left logo border-b-8 border-[#F0F0F0]'>
+                    <img src={LogoImg} alt="" />
                 </div>
                 <div className='header-right'>
-                    <div className='header-right-top'>
+                    <div className='header-right-top ml-28'>
                         <nav>
-                            <ul className='inline-grid grid-cols-9'>
-                                <li>
-                                    <Link>
+                            <ul className='flex flex-wrap pl-0 mb-0'>
+                                <li className='font-normal'>
+                                    <Link className='pt-0 pb-0 pr-4 pl-4 hover:underline'>
                                         Hospital Services
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link className='pt-0 pb-0 pr-4 pl-4 hover:underline'>
                                         Reserch
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link className='pt-0 pb-0 pr-4 pl-4 hover:underline'>
+                                        Careers
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className='pt-0 pb-0 pr-4 pl-4 hover:underline'>
                                         Shop
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link className='pt-0 pb-0 pr-4 pl-4 hover:underline'>
                                         About us
                                     </Link>
                                 </li>
@@ -48,42 +54,43 @@ const Navbar = () => {
                             </ul>
                         </nav>
                     </div>
-                    <div>
+                    <div className='mt-4'>
                         <nav>
-                            <ul className='inline-grid grid-cols-6'>
-                                <li className='pt-2 cursor-pointer bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none'>
+                            <ul className='flex'>
+                                <li className='border-b-8 hover:text-white border-red-700 w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block gap-4'><RiArrowDropDownLine /></span>
+                                        <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Blood
                                     </Link>
                                 </li>
-                                <li className='w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                <li className='border-b-8 border-red-900 hover:border-red-900 w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Plasma
+                                        <span className='hover:opacity-0'>Plasma</span>
+                                        <span className='opacity-0 hover:opacity-100'>Plasma For Life</span>
                                     </Link>
                                 </li>
-                                <li className='w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                <li className='border-b-8 border-[#54C3BB] hover:bg-[#54C3BB] w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Stem Cells
                                     </Link>
                                 </li>
-                                <li className='w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                <li className=' border-b-8 border-[#419B96] hover:bg-[#419B96] w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 hover:text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Organ
                                         & Tissues
                                     </Link>
                                 </li>
-                                <li className='w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                <li className=' border-b-8 border-[#F0F0F0] w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm  hover:bg-[#4D4D4D] hover:border-[#4D4D4D] hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Ways to donet
                                     </Link>
                                 </li>
                                 
-                                <li className='w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                <li className=' border-b-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer justify-cente bg-white text-sm font-medium text-gray-700 shadow-sm hover:text-white hover:border-[#4D4D4D] hover:bg-[#4D4D4D] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Stories
