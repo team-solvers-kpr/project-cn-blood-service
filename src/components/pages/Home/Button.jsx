@@ -4,7 +4,7 @@ export const Button = ({
     title = '',
 }) => {
   return (
-    <button className='bg-slate-500 rounded-full text-white uppercase h-16 w-28'>
+    <button className='bg-[#C4161C] font-bold rounded-full text-white uppercase h-14 w-24 '>
         {title}
     </button>
   )

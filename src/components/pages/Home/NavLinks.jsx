@@ -12,7 +12,7 @@ export const NavLinks = () => {
         links.map(link => (
             <div>
                 <div className='px-3 lg:px-0 text-left lg:text-black text-white'>
-                    <h1 className='lg:hover:underline cursor-pointer'>{link.name}</h1>
+                    <h1 className='lg:hover:underline cursor-pointer py-4'>{link.name}</h1>
                 </div>
             </div>
         ))
