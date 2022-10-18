@@ -5,7 +5,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import  LogoImg  from '../../../assets/images/logo64.png';
 import { NavLinks } from './NavLinks';
 import { Button } from './Button';
-import Hamburger from 'hamburger-react';
+import { CgMenuLeft, CgClose } from 'react-icons/cg';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -15,18 +15,20 @@ const Navbar = () => {
             <div className='lg:flex justify-around items-center lg:m-8 lg:border-b-8 border-[#F0F0F0]'>
                 <div className='header-left logo  z-50 p-5 md:w-auto w-full flex justify-between'>
                     <img src={LogoImg} alt="logo" />
-                    <div className='menu-icon cursor-pointer'>
-                        <Hamburger  color="#E7131A" hideOutline={false} 
-                        onToggle={toggle => {
-                            if(toggle){
-                                
-                            }else{
-                                console.log('close menu')
-                            }
-                            
-                        }} />
-                        <span className='uppercase font-bold text-[#BEBEC2]'>Menu</span>
+                    {!isOpen && (
+                        <div className='menu-icon cursor-pointer font-bold inline-block absolute right-4 lg:hidden outline-none'
+                        onClick={() => setOpen(!isOpen)}
+                    >
+                        <CgMenuLeft fontSize={40}  />
+                        <span className='uppercase text-[#BEBEC2]'>Menu</span>
                     </div>
+                    )}
+                   {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 lg:hidden outline-none inline-block'
+                   onClick={() => setOpen(!isOpen)}
+                   >
+                        <CgClose fontSize={40} />
+                    </div>
+                    )}
                 </div>
                 <div className=' header-right'>
                     <div className='header-right-top lg:ml-28'>
@@ -50,7 +52,6 @@ const Navbar = () => {
                         </nav>
                     </div>
                     <div className='mt-4'>
-                        <nav>
                             <ul className='md:flex hidden border-b-10 border-[#f0f0f0]'>
                                 <li className='border-b-8 hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link  to='/'  className=' pt-4 pb-0 pr-2 pl-2'>
@@ -91,12 +92,14 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             </ul>
-                        </nav>
                     </div>
 
                     {/* mobile menu navigation  */}
 
-                    <div className={`md:hidden bg-white  h-full w-full bottom-0 py-24 duration-500 ${isOpen ? 'left-0' : 'left-[-100%]'}`}>
+                    <div className={`md:hidden bg-white  h-full w-full bottom-0 py-24 ${
+              isOpen ? "translate-x-0" : "-translate-x-full"
+            } ease-in-out duration-700 z-10`}>
+                        
                         <div className='py-5 flex px-8'>
                             <div className='pr-8'>
                                 <button className='rounded-full bg-[#f0f0f0] text-lg font-bold text-red-900 h-14 w-14'>FR</button>
