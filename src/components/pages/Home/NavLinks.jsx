@@ -11,7 +11,7 @@ export const NavLinks = () => {
     {
         links.map(link => (
             <div>
-                <div className='px-3 lg:px-0 text-left lg:text-black text-white'>
+                <div className='px-3 lg:px-0 text-left  text-[#4D4D4D]'>
                     <h1 className='lg:hover:underline cursor-pointer py-4'>{link.name}</h1>
                 </div>
             </div>
