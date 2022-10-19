@@ -17,7 +17,7 @@ const Navbar = () => {
                 <div className='header-left logo  z-50 p-5 md:w-auto w-full flex justify-between'>
                     <img src={LogoImg} alt="logo" />
                     {!isOpen && (
-                        <div className='menu-icon cursor-pointer font-bold inline-block absolute right-4 lg:hidden outline-none'
+                        <div className='menu-icon cursor-pointer font-bold  absolute right-4 hidden outline-none'
                         onClick={() => setOpen(!isOpen)}
                     >
                         <CgMenuLeft fontSize={40}  />
