@@ -1,17 +1,17 @@
 import React, { useState} from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
-// import * as BiIcons from "react-icons/bi";
 import  LogoImg  from '../../../assets/logo.png';
 import NavLinks  from './NavLinks';
 import  Button  from './Button';
 import { CgMenuLeft, CgClose } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
+import { SearchBar } from './SearchBar';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
-
+    const [search, setSearch] = useState(false);
     return (
         <nav>
             <div className='lg:flex justify-around items-center'>
@@ -69,10 +69,13 @@ const Navbar = () => {
                                         textColor='text-[#C4161C]'
                                         onClick={(e) => Navigate("/signin")}
                                     />
-                                    <div>
-                                        <div className='bg-[#4D4D4D] hover:bg-[#C4161C] rounded-full h-11 w-11  cursor-pointer inline-flex justify-center items-center'>
+                                    <div className=''>
+                                        {!search && (<div className='bg-[#4D4D4D] hover:bg-[#C4161C] rounded-full h-11 w-11  cursor-pointer inline-flex justify-center items-center'  onClick={() => setSearch(!search)}>
                                             <AiOutlineSearch  className='' color='fff' fontSize={28} />
-                                        </div>
+                                        </div>)}
+                                        {search && (<div className='' onClick={() => setSearch(!search)}>
+                                            <SearchBar />
+                                        </div>)}
                                     </div>
                                    
 
