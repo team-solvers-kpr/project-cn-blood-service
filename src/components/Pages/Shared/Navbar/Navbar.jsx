@@ -1,7 +1,8 @@
 import React, { useState} from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
+// import * as BiIcons from "react-icons/bi";
 import  LogoImg  from '../../../assets/logo.png';
 import NavLinks  from './NavLinks';
 import  Button  from './Button';
@@ -68,9 +69,26 @@ const Navbar = () => {
                                         textColor='text-[#C4161C]'
                                         onClick={(e) => Navigate("/signin")}
                                     />
-                                    <button className='bg-[#4D4D4D] hover:bg-[#C4161C] rounded-full h-10 w-10'>
-                                        <AiOutlineSearch className='inline-block'  color='#ffff' fontSize={28} />
-                                    </button>
+                                    <div>
+                                        <div className='bg-[#4D4D4D] hover:bg-[#C4161C] rounded-full h-11 w-11  cursor-pointer inline-flex justify-center items-center'>
+                                            <AiOutlineSearch  className='' color='fff' fontSize={28} />
+                                        </div>
+                                    </div>
+                                   
+
+                                            {/* <form action="">
+                                                <div className="relative flex items-center lg:justify-center justify-end  text-gray-500 focus-within:text-gray-700 bg-[#C4161C]">
+                                                    <BiIcons.BiSearch className="text-xl w-5 h-5 absolute ml-3 pointer-events-none" />
+                                                    <input
+                                                        type="text"
+                                                        name="Search"
+                                                        placeholder="what are we search for?"
+                                                        autoComplete="off"
+                                                        aria-label="search videos"
+                                                        className="lg:pl-10 pl-2 pr-3 py-2 w-4 focus:w-40 font semibold placeholder-gray-500 text-black rounded-xl border-none"
+                                                    />
+                                                </div>
+                                            </form> */}
                                 </div>
                             </ul>
                     </div>
