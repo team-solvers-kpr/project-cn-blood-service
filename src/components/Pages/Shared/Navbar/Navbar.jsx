@@ -2,9 +2,9 @@ import React, { useState} from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { AiOutlineSearch } from 'react-icons/ai';
-import  LogoImg  from '../../../assets/images/logo64.png';
-import { NavLinks } from './NavLinks';
-import { Button } from './Button';
+import  LogoImg  from '../../../assets/logo.png';
+import NavLinks  from './NavLinks';
+import  Button  from './Button';
 import { CgMenuLeft, CgClose } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 
@@ -12,19 +12,19 @@ const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
 
     return (
-        <header>
+        <nav>
             <div className='lg:flex justify-around items-center'>
                 <div className='header-left logo  z-50 p-5 md:w-auto w-full flex justify-between'>
                     <img src={LogoImg} alt="logo" />
                     {!isOpen && (
-                        <div className='menu-icon cursor-pointer font-bold  absolute right-4 hidden outline-none'
+                        <div className='menu-icon cursor-pointer font-bold  absolute inline-block right-4 lg:hidden outline-none'
                         onClick={() => setOpen(!isOpen)}
                     >
                         <CgMenuLeft fontSize={40}  />
                         <span className='uppercase text-[#BEBEC2]'>Menu</span>
                     </div>
                     )}
-                   {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 lg:hidden outline-none inline-block'
+                   {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none '
                    onClick={() => setOpen(!isOpen)}
                    >
                         <CgClose fontSize={40} />
@@ -33,7 +33,6 @@ const Navbar = () => {
                 </div>
                 <div className=' header-right'>
                     <div className='header-right-top lg:ml-28'>
-                        <nav>
                             <ul className='md:flex hidden items-center gap-3 pl-0 mb-0'>
                                 <li className='font-normal'>
                                     <Link to='/hospital services' className='pt-0 pb-0 pr-4 pl-4 hover:underline text-[#4D4D4D]'>
@@ -74,7 +73,6 @@ const Navbar = () => {
                                     </button>
                                 </div>
                             </ul>
-                        </nav>
                     </div>
                     <div className='mt-4'>
                             <ul className='md:flex hidden border-[#f0f0f0]'>
@@ -136,7 +134,6 @@ const Navbar = () => {
                             Sign in
                             </button>
                         </div>
-                        <nav>
                         <ul className='border-[#f0f0f0]'>
                                 <li className='border-l-8 hover:text-white border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none h-20 ease-in-out'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
@@ -177,7 +174,6 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                             </ul>
-                        </nav>
                         <div className='links bg-[#4D4D4D]'>
                             <ul>
                                 <li className='font-normal text-left text-white uppercase pt-10'>
@@ -185,178 +181,14 @@ const Navbar = () => {
                                         Hospital Services
                                     </Link>
                                 </li>
-                                <NavLinks  />
+                                <NavLinks textColor='text-white' textTransform='uppercase' />
                             </ul>
                     </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </nav>
     );
 }
 
 export default Navbar;
-
-
-// import { Fragment } from 'react'
-// import { Menu, Transition } from '@headlessui/react';
-// import { ChevronDownIcon } from '@heroicons/react/20/solid';
-
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
-
-// export default function Navbar() {
-//   return (
-//     <Menu as="div" className="relative grid grid-flow-col text-left">
-//       <div>
-//         <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-//           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-//           Options
-//         </Menu.Button>
-//       </div>
-//       <div>
-//         <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-//           Options
-//           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-//         </Menu.Button>
-//       </div>
-//       <div>
-//         <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-//           Options
-//           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-//         </Menu.Button>
-//       </div>
-//       <div>
-//         <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-//           Options
-//           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-//         </Menu.Button>
-//       </div>
-//       <div>
-//         <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-//           Options
-//           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-//         </Menu.Button>
-//       </div>
-//       <div>
-//         <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-//           Options
-//           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
-//         </Menu.Button>
-//       </div>
-
-//       <Transition
-//         as={Fragment}
-//         enter="transition ease-out duration-100"
-//         enterFrom="transform opacity-0 scale-95"
-//         enterTo="transform opacity-100 scale-100"
-//         leave="transition ease-in duration-75"
-//         leaveFrom="transform opacity-100 scale-100"
-//         leaveTo="transform opacity-0 scale-95"
-//       >
-//         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-//           <div className="py-1">
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Edit
-//                 </a>
-//               )}
-//             </Menu.Item>
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Duplicate
-//                 </a>
-//               )}
-//             </Menu.Item>
-//           </div>
-//           <div className="py-1">
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Archive
-//                 </a>
-//               )}
-//             </Menu.Item>
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Move
-//                 </a>
-//               )}
-//             </Menu.Item>
-//           </div>
-//           <div className="py-1">
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Share
-//                 </a>
-//               )}
-//             </Menu.Item>
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Add to favorites
-//                 </a>
-//               )}
-//             </Menu.Item>
-//           </div>
-//           <div className="py-1">
-//             <Menu.Item>
-//               {({ active }) => (
-//                 <a
-//                   href="/"
-//                   className={classNames(
-//                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-//                     'block px-4 py-2 text-sm'
-//                   )}
-//                 >
-//                   Delete
-//                 </a>
-//               )}
-//             </Menu.Item>
-//           </div>
-//         </Menu.Items>
-//       </Transition>
-//     </Menu>
-//   )
-// }

@@ -11,7 +11,6 @@ import WaysToDonate from "../WaysToDonate/WaysToDonate";
 const Home = () => {
   return (
     <div>
-      <Navbar></Navbar>
       <SearchFiled></SearchFiled>
       <BannerCard></BannerCard>
       <VideoSection></VideoSection>
