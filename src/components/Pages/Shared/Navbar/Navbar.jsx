@@ -7,7 +7,7 @@ import  Button  from './Button';
 import { CgMenuLeft, CgClose } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { SearchBar } from './SearchBar';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -33,19 +33,19 @@ const Navbar = () => {
                     )}
                 </div>
                 <div className=' header-right'>
-                    <div className='header-right-top lg:ml-28'>
+                    <div className={`header-right-top lg:ml-28`}>
                             <ul className='md:flex hidden items-center gap-3 pl-0 mb-0'>
-                                <li className='font-normal'>
-                                    <Link to='/hospital services' className='pt-0 pb-0 pr-4 pl-4 hover:underline text-[#4D4D4D]'>
-                                        Hospital Services
-                                    </Link>
-                                </li>
-                                <NavLinks />
-                                <div className='flex items-center gap-3'>
+                                <div className={` ${ search ? 'hidden && translate-x-80' : 'inline-flex'}`}>
+                                    <div className='inline-flex items-center gap-3'>
+                                        <li className='font-normal'>
+                                            <Link to='/hospital services' className='pt-0 pb-0 pr-4 pl-4 hover:underline text-[#4D4D4D]'>
+                                                Hospital Services
+                                            </Link>
+                                        </li>
+                                        <NavLinks />
+                                    </div>
+                                <div className='flex items-center gap-3 ml-1'>
                                     <button className='font-bold text-[#C4161C]'>Francia</button>
-                                    {/* <button className='h-11 w-28 bg-[#C4161C] hover:border text-white hover:bg-white hover:text-[#C4161C] border-[#C4161C] rounded-full font-bold outline-none inline-block uppercase'>
-                                        Book Now
-                                    </button> */}
                                     <Button
                                         btnText={"Book Now"}
                                         bgprimary="bg-[#C4161C]"
@@ -55,10 +55,6 @@ const Navbar = () => {
                                         textColor='text-white'
                                         onClick={(e) => Navigate("/bookNow")}
                                     />
-                                    {/* <button className='h-11 w-28 hover:bg-[#C4161C] text-[#C4161C] border border-[#C4161C] hover:text-white bg-white rounded-full font-bold outline-none uppercase'>
-                                    <FaUserAlt className='inline-block'  color='#C4161C' /> 
-                                    Sign in
-                                    </button> */}
 
                                     <Button
                                         btnText={"Sign in"}
@@ -69,30 +65,9 @@ const Navbar = () => {
                                         textColor='text-[#C4161C]'
                                         onClick={(e) => Navigate("/signin")}
                                     />
-                                    <div className=''>
-                                        {!search && (<div className='bg-[#4D4D4D] hover:bg-[#C4161C] rounded-full h-11 w-11  cursor-pointer inline-flex justify-center items-center'  onClick={() => setSearch(!search)}>
-                                            <AiOutlineSearch  className='' color='fff' fontSize={28} />
-                                        </div>)}
-                                        {search && (<div className='' onClick={() => setSearch(!search)}>
-                                            <SearchBar />
-                                        </div>)}
-                                    </div>
-                                   
-
-                                            {/* <form action="">
-                                                <div className="relative flex items-center lg:justify-center justify-end  text-gray-500 focus-within:text-gray-700 bg-[#C4161C]">
-                                                    <BiIcons.BiSearch className="text-xl w-5 h-5 absolute ml-3 pointer-events-none" />
-                                                    <input
-                                                        type="text"
-                                                        name="Search"
-                                                        placeholder="what are we search for?"
-                                                        autoComplete="off"
-                                                        aria-label="search videos"
-                                                        className="lg:pl-10 pl-2 pr-3 py-2 w-4 focus:w-40 font semibold placeholder-gray-500 text-black rounded-xl border-none"
-                                                    />
-                                                </div>
-                                            </form> */}
                                 </div>
+                                </div>
+                                <SearchBar />
                             </ul>
                     </div>
                     <div className='mt-4'>

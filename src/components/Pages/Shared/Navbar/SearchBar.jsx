@@ -1,19 +1,21 @@
 import React from 'react'
-import { AiOutlineClose, AiOutlineSearch } from 'react-icons/ai'
 
 export const SearchBar = () => {
   return (
-    <div>
-        <div className='relative bg-slate-50 border rounded-full inline-flex justify-between items-center'>
-            <div className='bg-[#4D4D4D] hover:bg-[#C4161C] rounded-full h-11 w-11 absolute cursor-pointer inline-flex justify-center items-center'>
-                <AiOutlineSearch  className='' color='fff' fontSize={28} />
-             </div>
-            <form action="">
-                <input type='text' className='h-11 ml-12 w-[290px] bg-transparent outline-none' placeholder='What are we searching for?' name='name' />
-                <AiOutlineClose className='' fontSize={18} color='#C4161C' />
-            </form>
-            <AiOutlineClose className='cursor-pointer' fontSize={28} color='#C4161C' />                                        
-        </div>
+    <div className="mx-auto max-w-md">
+
+
+      <form action="" className="relative mx-auto w-max">
+        <input type="search" 
+              className="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-lime-300 focus:pl-28 focus:pr-4" />
+        <svg xmlns="http://www.w3.org/2000/svg" className="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-lime-300 peer-focus:stroke-lime-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </form>
+
+
     </div>
   )
 }
+
+
