@@ -2,16 +2,18 @@ import React, { useState} from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import  LogoImg  from '../../../assets/logo.png';
-import NavLinks  from './NavLinks';
+import { MainMenu } from './MainMenu';
 import  Button  from './Button';
 import { CgMenuLeft, CgClose } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { SearchBar } from './SearchBar';
-import { AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
+import  DropdownMenus  from '../../../../temp/menu.json';
 
 const Navbar = () => {
+    const { menus } = DropdownMenus;
+console.log(DropdownMenus.menus);
+
     const [isOpen, setOpen] = useState(false);
-    const [search, setSearch] = useState(false);
     return (
         <nav>
             <div className='lg:flex justify-around items-center'>
@@ -33,43 +35,85 @@ const Navbar = () => {
                     )}
                 </div>
                 <div className=' header-right'>
-                    <div className={`header-right-top lg:ml-28`}>
-                            <ul className='md:flex hidden items-center gap-3 pl-0 mb-0'>
-                                <div className={` ${ search ? 'hidden && translate-x-80' : 'inline-flex'}`}>
-                                    <div className='inline-flex items-center gap-3'>
-                                        <li className='font-normal'>
-                                            <Link to='/hospital services' className='pt-0 pb-0 pr-4 pl-4 hover:underline text-[#4D4D4D]'>
-                                                Hospital Services
-                                            </Link>
-                                        </li>
-                                        <NavLinks />
+                    <div className={`header-right-top lg:ml-28 relative md:flex flex-col hidden xl:flex xl:flex-row `}>
+                            <nav className='navBarTop  pt-0  block '>
+                                <div className='md:block xl:inline-flex items-center px-12 md:px-0'>
+                                    <div className=' mb-4 xl:mb-0 xl:mr-0 flex'>
+                                        <nav role='navigation' aria-labelledby='block-secondarynavigation-3-menu' className='ml-auto  md:block font-bold block block-menu navigation menu--secondary-navigation'>
+                                            <ul className='flex pl-0 mb-0 flex-wrap'>
+                                                <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
+                                                    <Link>
+                                                        Hospital Service
+                                                    </Link>
+                                                </li>
+                                                <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
+                                                    <Link>
+                                                        Reserch
+                                                    </Link>
+                                                </li>
+                                                <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
+                                                    <Link>
+                                                        Careers
+                                                    </Link>
+                                                </li>
+                                                <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
+                                                    <Link>
+                                                        Shop
+                                                    </Link>
+                                                </li>
+                                                <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
+                                                    <Link>
+                                                        About us
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </nav>
                                     </div>
-                                <div className='flex items-center gap-3 ml-1'>
-                                    <button className='font-bold text-[#C4161C]'>Francia</button>
-                                    <Button
-                                        btnText={"Book Now"}
-                                        bgprimary="bg-[#C4161C]"
-                                        textprimary="text-[#C4161C]"
-                                        borderprimary="border-red-700"
-                                        bgsecondary="bg-white"
-                                        textColor='text-white'
-                                        onClick={(e) => Navigate("/bookNow")}
-                                    />
+                                    <div className='order-1 md:order-2 md:pr-12 mr-2 mb-4 xl:mb-0 xl:pr-0 md:float-right xl:float-none'>
+                                        <div className='flex flex-wrap items-center'>
+                                            <div className='link pr-2'>
+                                                <Link className='text-red-500 font-bold'>
+                                                    Français
+                                                </Link>
+                                            </div>
+                                            <div className='button flex justify-between gap-2'>
+                                                <Button
+                                                    btnText={"Book Now"}
+                                                    bgprimary="bg-[#C4161C]"
+                                                    textprimary="text-[#C4161C]"
+                                                    borderprimary="border-red-700"
+                                                    bgsecondary="bg-white"
+                                                    textColor='text-white'
+                                                    onClick={(e) => Navigate("/bookNow")}
+                                                />
 
-                                    <Button
-                                        btnText={"Sign in"}
-                                        bgprimary="bg-white"
-                                        textprimary="text-white"
-                                        borderprimary="border-red-700"
-                                        bgsecondary="bg-[#C4161C]"
-                                        textColor='text-[#C4161C]'
-                                        onClick={(e) => Navigate("/signin")}
-                                    />
+                                                <Button
+                                                    btnText={"Sign in"}
+                                                    bgprimary="bg-white"
+                                                    textprimary="text-white"
+                                                    borderprimary="border-red-700"
+                                                    bgsecondary="bg-[#C4161C]"
+                                                    textColor='text-[#C4161C]'
+                                                    onClick={(e) => Navigate("/signin")}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                </div>
+                            </nav>
+                            <div className='searchSection pt-[5px]'>
                                 <SearchBar />
-                            </ul>
+                            </div>
                     </div>
+                    
+                    {/* start main menu area  */}
+
+                    {/* <div className='main-menu'>
+                        <MainMenu menus={menus} />
+                    </div> */}
+
+
+
                     <div className='mt-4'>
                             <ul className='md:flex hidden border-[#f0f0f0]'>
                                 <li className='border-b-8 hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
@@ -177,7 +221,7 @@ const Navbar = () => {
                                         Hospital Services
                                     </Link>
                                 </li>
-                                <NavLinks textColor='text-white' textTransform='uppercase' />
+                                {/* <NavLinks textColor='text-white' textTransform='uppercase' /> */}
                             </ul>
                     </div>
                     </div>
