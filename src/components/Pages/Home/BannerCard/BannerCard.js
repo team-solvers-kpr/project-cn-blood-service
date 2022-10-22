@@ -33,7 +33,7 @@ const BannerCard = () => {
               <p className="text-white py-4 text-md px-4">
                 You can save lives and change many more.
               </p>
-              <button class="bg-white hover:bg-gray-200 text-red-600 text-lg font-semibold py-3 px-6 rounded-full">
+              <button className="bg-white hover:bg-gray-200 text-red-600 text-lg font-semibold py-3 px-6 rounded-full">
                 Book Now
               </button>
             </div>
@@ -47,7 +47,7 @@ const BannerCard = () => {
             <p className="text-lg">
               Your donation could go on to <br /> captivate a country.
             </p>
-            <button class="bg-red-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
+            <button className="bg-red-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
               Learn More
             </button>
           </div>
@@ -72,7 +72,7 @@ const BannerCard = () => {
               <p className="text-white py-4 text-md px-6">
                 For many, plasma is the only treatment.
               </p>
-              <button class="bg-white hover:bg-gray-200 text-red-700 text-lg font-semibold py-3 px-6 rounded-full">
+              <button className="bg-white hover:bg-gray-200 text-red-700 text-lg font-semibold py-3 px-6 rounded-full">
                 Book Now
               </button>
             </div>
@@ -87,7 +87,7 @@ const BannerCard = () => {
               Your donation could go on to fuel the
               <br /> future.
             </p>
-            <button class="bg-red-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
+            <button className="bg-red-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
               Learn More
             </button>
           </div>
@@ -112,7 +112,7 @@ const BannerCard = () => {
               <p className="text-white py-4 text-md px-4">
                 You may be someone's lifesaving match.
               </p>
-              <button class="bg-white hover:bg-gray-200 text-red-600 text-lg font-semibold py-3 px-6 rounded-full">
+              <button className="bg-white hover:bg-gray-200 text-red-600 text-lg font-semibold py-3 px-6 rounded-full">
                 Register today
               </button>
             </div>
@@ -126,7 +126,7 @@ const BannerCard = () => {
             <p className="text-lg">
               Your donation could go on to be the <br /> best dad.
             </p>
-            <button class="bg-teal-500 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
+            <button className="bg-teal-500 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
               Learn More
             </button>
           </div>
@@ -152,7 +152,7 @@ const BannerCard = () => {
                 More than 4,000 people in Canada are waiting for an organ
                 transplant.
               </p>
-              <button class="bg-white hover:bg-gray-200 text-red-600 text-lg font-semibold py-3 px-6 rounded-full">
+              <button className="bg-white hover:bg-gray-200 text-red-600 text-lg font-semibold py-3 px-6 rounded-full">
                 Book Now
               </button>
             </div>
@@ -166,7 +166,7 @@ const BannerCard = () => {
               Your donation could go on to support
               <br /> cultures to thribe.
             </p>
-            <button class="bg-teal-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
+            <button className="bg-teal-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
               Learn More
             </button>
           </div>
