@@ -3,6 +3,7 @@ import bannerImage1 from "../../../assets/bannerCard1.png";
 import bannerImage2 from "../../../assets/bannerCard2.png";
 import bannerImage3 from "../../../assets/bannerCard3.png";
 import bannerImage4 from "../../../assets/bannerCard4.png";
+import * as AiIcons from "react-icons/ai";
 
 const BannerCard = () => {
   return (
@@ -11,19 +12,25 @@ const BannerCard = () => {
         Discover how you can{" "}
         <span className="font-bold text-red-600">make all the difference</span>.
       </h3>
-      <hr className="mx-32" />
+      <hr className="lg:mx-32" />
 
-      <section className="pb-6 flex justify-center items-center gap-[1px] mb-64">
-        <div className="w-[311px] h-[411px] bg-transparent ">
-          <div className="relative preserve-3d hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
+      <section className="pb-6 lg:flex grid grid-cols-2 justify-center items-center gap-[1px] mb-64">
+        <div className="lg:w-[311px] h-[411px] bg-transparent ">
+          <div className="relative preserve-3d lg:hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
             <div className="absolute flex flex-col backface-hidden w-full h-full">
               <img
                 src={bannerImage1}
                 alt="banner card 1"
                 className="w-full h-full"
               />
-              <div className="bg-red-600 text-white text-2xl font-semibold py-4">
+              <div className="bg-red-600 lg:block flex flex-col text-white text-2xl font-semibold py-4">
                 Blood <br /> for Life
+                <div className="font-semibold lg:hidden inline hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out">
+                  <a href="/" className="text-2xl">
+                    Learn More{"  "}
+                  </a>
+                  <AiIcons.AiOutlineArrowRight className="inline-block mb-1 text-2xl cursor-pointer" />
+                </div>
               </div>
             </div>
             <div className="absolute flex flex-col justify-center items-center my-rotate-x-180 backface-hidden w-full h-full bg-red-600">
@@ -38,7 +45,7 @@ const BannerCard = () => {
               </button>
             </div>
           </div>
-          <div className="my-4 text-gray-600">
+          <div className="my-4 lg:block hidden text-gray-600">
             <h2 className="text-3xl font-md pb-2">Lee</h2>
             <h4 className="text-lg font-bold mb-12">
               Book recipient |{" "}
@@ -53,16 +60,22 @@ const BannerCard = () => {
           </div>
         </div>
 
-        <div className="w-[311px] h-[411px] bg-transparent">
-          <div className="relative preserve-3d hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
+        <div className="lg:w-[311px] h-[411px] bg-transparent">
+          <div className="relative preserve-3d lg:hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
             <div className="absolute flex flex-col backface-hidden w-full h-full">
               <img
                 src={bannerImage2}
                 alt="banner card 1"
                 className="w-full h-full"
               />
-              <div className="bg-red-700 text-white text-2xl font-semibold py-4">
+              <div className="bg-red-700 lg:block flex flex-col text-white text-2xl font-semibold py-4">
                 Plasma <br /> for Life
+                <div className="font-semibold lg:hidden inline hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out">
+                  <a href="/" className="text-2xl">
+                    Learn More{"  "}
+                  </a>
+                  <AiIcons.AiOutlineArrowRight className="inline-block mb-1 text-2xl cursor-pointer" />
+                </div>
               </div>
             </div>
             <div className="absolute flex flex-col justify-center items-center my-rotate-x-180 backface-hidden w-full h-full bg-red-700">
@@ -77,7 +90,7 @@ const BannerCard = () => {
               </button>
             </div>
           </div>
-          <div className="my-4 text-gray-600">
+          <div className="my-4 lg:block hidden text-gray-600">
             <h2 className="text-3xl font-md pb-2">Christina</h2>
             <h4 className="text-lg font-bold mb-5">
               Plasma recipient |{" "}
@@ -93,16 +106,22 @@ const BannerCard = () => {
           </div>
         </div>
 
-        <div className="w-[311px] h-[411px] bg-transparent ">
-          <div className="relative preserve-3d hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
+        <div className="lg:w-[311px] h-[411px] bg-transparent ">
+          <div className="relative preserve-3d lg:hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
             <div className="absolute flex flex-col backface-hidden w-full h-full">
               <img
                 src={bannerImage3}
                 alt="banner card 1"
                 className="w-full h-full"
               />
-              <div className="bg-teal-500 text-white text-2xl font-semibold py-4">
+              <div className="bg-teal-500 lg:block flex flex-col text-white text-2xl font-semibold py-4">
                 Steam Cells <br /> for Life
+                <div className="font-semibold lg:hidden inline hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out">
+                  <a href="/" className="text-2xl">
+                    Learn More{"  "}
+                  </a>
+                  <AiIcons.AiOutlineArrowRight className="inline-block mb-1 text-2xl cursor-pointer" />
+                </div>
               </div>
             </div>
             <div className="absolute flex flex-col justify-center items-center my-rotate-x-180 backface-hidden w-full h-full bg-teal-500">
@@ -117,7 +136,7 @@ const BannerCard = () => {
               </button>
             </div>
           </div>
-          <div className="my-4 text-gray-600">
+          <div className="my-4 lg:block hidden text-gray-600">
             <h2 className="text-3xl font-md pb-2">Lee</h2>
             <h4 className="text-lg font-bold mb-12">
               Stem cell recipient |{" "}
@@ -132,16 +151,22 @@ const BannerCard = () => {
           </div>
         </div>
 
-        <div className="w-[311px] h-[411px] bg-transparent ">
-          <div className="relative preserve-3d hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
+        <div className="lg:w-[311px] h-[411px] bg-transparent ">
+          <div className="relative preserve-3d lg:hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
             <div className="absolute flex flex-col backface-hidden w-full h-full">
               <img
                 src={bannerImage4}
                 alt="banner card 1"
                 className="w-full h-full"
               />
-              <div className="bg-teal-600 text-white text-2xl font-semibold py-4">
+              <div className="bg-teal-600 lg:block flex flex-col text-white text-2xl font-semibold py-4">
                 Organs & Tissues <br /> for Life
+                <div className="font-semibold lg:hidden inline hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out">
+                  <a href="/" className="text-2xl">
+                    Learn More{"  "}
+                  </a>
+                  <AiIcons.AiOutlineArrowRight className="inline-block mb-1 text-2xl cursor-pointer" />
+                </div>
               </div>
             </div>
             <div className="absolute flex flex-col justify-center items-center my-rotate-x-180 backface-hidden w-full h-full bg-teal-600">
@@ -157,7 +182,7 @@ const BannerCard = () => {
               </button>
             </div>
           </div>
-          <div className="my-4 text-gray-600">
+          <div className="my-4 lg:block hidden text-gray-600">
             <h2 className="text-3xl font-md pb-2">Mary</h2>
             <h4 className="text-lg font-bold mb-12">
               Organ recipient | <span className="font-normal">Storyteller</span>
