@@ -103,8 +103,11 @@ export const HospitalServices = () => {
         </div>
       </div>
       <div className='bg-[#F0F0F0]'>
-
-          <HospitalCard />
+        <div className='pt-8 flex flex-col items-center lg:flex-row lg:gap-4 lg:pl-12'>
+          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
+          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
+          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
+        </div>
       </div>
     </div>
   )

@@ -9,18 +9,22 @@ export const HospitalCard = ({
     readMore = 'text',
 }) => {
   return (
-    <div>
-        <div className='bg-white'>
-            <div className='cardImg'>
+    <div className='h-[810px] w-[416px]'>
+        <div className='bg-white flex flex-col shadow-lg items-center'>
+            <div className='cardImg h-48 w-48'>
                 <img src={img} alt="" />
             </div>
-            <div>
-                <h1>{heading}</h1>
-                <hr className='h-0 w-24  text-left rounded  bg-[#E7131A] border-solid border-2 border-[#E7131A]' />
-                <p>{pragraph}</p>
-                <Link to='/'>
-                    {readMore}
-                </Link>
+            <div className='cardContent p-12 text-left'>
+                <div>
+                    <h1>{heading}</h1>
+                    <hr className='h-0 w-24  rounded  bg-[#E7131A] border-solid border-2 border-[#E7131A]' />
+                    <p>{pragraph}</p>
+                </div>
+                <div className=''>
+                    <Link to='/'>
+                        {readMore}
+                    </Link>
+                </div>
             </div>
         </div>
     </div>
