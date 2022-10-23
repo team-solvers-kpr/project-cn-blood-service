@@ -2,18 +2,15 @@ import React, { useState} from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import  LogoImg  from '../../../assets/logo.png';
-import { MainMenu } from './MainMenu';
 import  Button  from './Button';
 import { CgMenuLeft, CgClose } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { SearchBar } from './SearchBar';
-import  DropdownMenus  from '../../../../temp/menu.json';
 
 const Navbar = () => {
-    const { menus } = DropdownMenus;
-console.log(DropdownMenus.menus);
 
     const [isOpen, setOpen] = useState(false);
+
     return (
         <nav>
             <div className='lg:flex justify-around items-center'>
@@ -102,7 +99,7 @@ console.log(DropdownMenus.menus);
                                 </div>
                             </nav>
                             <div className='searchSection pt-[5px]'>
-                                <SearchBar />
+                                <SearchBar width='w-12' pr= 'focus:pr-4' />
                             </div>
                     </div>
                     
@@ -116,7 +113,7 @@ console.log(DropdownMenus.menus);
 
                     <div className='mt-4'>
                             <ul className='md:flex hidden border-[#f0f0f0]'>
-                                <li className='border-b-8 hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                <li tabIndex={0} className='border-b-8 hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
                                     <Link  to='/'  className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Blood
@@ -161,6 +158,10 @@ console.log(DropdownMenus.menus);
                     <div className={`md:hidden bg-white relative  h-full w-full bottom-0 py-24 pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             } ease-in-out duration-700 z-10`}>
+
+                        <div className='searchBar'>
+                            <SearchBar width="w-full" pr='pr-10' />
+                        </div>
                         
                         <div className='py-5 flex justify-around'>
                             <div className='pr-8'>
@@ -216,9 +217,29 @@ console.log(DropdownMenus.menus);
                             </ul>
                         <div className='links bg-[#4D4D4D]'>
                             <ul>
-                                <li className='font-normal text-left text-white uppercase pt-10'>
-                                    <Link to='/hospital services' className='px-3'>
+                                <li className='font-normal text-left text-white uppercase px-3 pt-10'>
+                                    <Link to='/hospital services' className=''>
                                         Hospital Services
+                                    </Link>
+                                </li>
+                                <li className='font-normal text-left text-white uppercase px-3 pt-10'>
+                                    <Link>
+                                        Reserch
+                                    </Link>
+                                </li>
+                                 <li className='font-normal text-left text-white uppercase px-3 pt-10'>
+                                    <Link>
+                                        Careers
+                                    </Link>
+                                </li>               
+                                <li className='font-normal text-left text-white uppercase px-3 pt-10'>
+                                    <Link>
+                                        Shop
+                                    </Link>
+                                </li>
+                                <li className='font-normal text-left text-white uppercase px-3 pt-10 pb-4'>
+                                    <Link>
+                                        About us
                                     </Link>
                                 </li>
                                 {/* <NavLinks textColor='text-white' textTransform='uppercase' /> */}
