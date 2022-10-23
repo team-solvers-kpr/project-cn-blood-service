@@ -39,27 +39,27 @@ const Navbar = () => {
                                         <nav role='navigation' aria-labelledby='block-secondarynavigation-3-menu' className='ml-auto  md:block font-bold block block-menu navigation menu--secondary-navigation'>
                                             <ul className='flex pl-0 mb-0 flex-wrap'>
                                                 <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
-                                                    <Link>
+                                                    <Link to='/hospital-services'>
                                                         Hospital Service
                                                     </Link>
                                                 </li>
                                                 <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
-                                                    <Link>
+                                                    <Link to='/'>
                                                         Reserch
                                                     </Link>
                                                 </li>
                                                 <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
-                                                    <Link>
+                                                    <Link to='/'>
                                                         Careers
                                                     </Link>
                                                 </li>
                                                 <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
-                                                    <Link>
+                                                    <Link to='/'>
                                                         Shop
                                                     </Link>
                                                 </li>
                                                 <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
-                                                    <Link>
+                                                    <Link to='/'>
                                                         About us
                                                     </Link>
                                                 </li>
@@ -160,7 +160,7 @@ const Navbar = () => {
             } ease-in-out duration-700 z-10`}>
 
                         <div className='searchBar'>
-                            <SearchBar width="w-full" pr='pr-10' />
+                            <SearchBar width="w-full"  />
                         </div>
                         
                         <div className='py-5 flex justify-around'>
