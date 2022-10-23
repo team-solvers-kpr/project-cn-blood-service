@@ -18,7 +18,11 @@ module.exports = {
   mode: "jit",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hospital-services': "url('/public/assets/images/SS_Mercy_2560x1150_0.jpg')"
+      }
+    },
   },
   daisyui: {
     themes: false,

@@ -132,7 +132,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 <li className=' border-b-8 border-[#419B96] hover:bg-[#419B96] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 hover:text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
-                                    <Link to='/about'  className=' pt-4 pb-0 pr-2 pl-2'>
+                                    <Link to='/'  className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Organ & Tissues
                                     </Link>

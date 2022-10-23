@@ -10,7 +10,7 @@ import React from 'react'
       className={`${bgprimary} 
       h-11 w-28 rounded-full 
       ${textColor} font-bold 
-      text-lg uppercase border 
+      text-base uppercase border 
       ${borderprimary} hover:${bgsecondary} 
       hover:${textprimary} cursor-pointer 
       duration-300`
