@@ -107,8 +107,8 @@ export const HospitalServices = () => {
           </div> 
         </div>
       </div>
-      <div className='bg-[#F0F0F0] max-w-full'>
-        <div className='pt-8 grid grid-cols-3  lg:pl-12 gap-4 container'>
+      <div className='bg-[#F0F0F0] max-w-full '>
+        <div className='pt-12 grid grid-cols-3  lg:pl-12 gap-4 container pb-12'>
           <HospitalCard />
         </div>
       </div>
