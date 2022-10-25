@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "image": "",
+        "heading": "Customer service",
+        "pragraph": "Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.",
+        "morelink": "Customer service"
+    },
+    {
+        "id": 2,
+        "image": "",
+        "heading": "Laboratory services",
+        "pragraph": "Canadian Blood Services Diagnostic Services Laboratories, National Platelet Immunology Reference Laboratory (NPIRL) and the National Immunohematology Reference Laboratory (NIRL) provide a broad range of routine and referral services including perinatal testing, pre and post transfusion testing, routine and complex antibody investigations, transfusion reaction investigations, and assistance in finding the most suitable components for patients.",
+        "morelink": "Laboratory services"
+    },
+    {
+        "id": 3,
+        "image": "",
+        "heading": "Products",
+        "pragraph": "Canadian Blood Services provides the hospitals it serves with several different types of blood components. Each type of blood component is intended to meet a particular patient’s clinical need. These blood components include red blood cells, platelets and plasma.",
+        "morelink": "Products"
+    },
+    {
+        "id": 4,
+        "image": "",
+        "heading": "Inventory ordering",
+        "pragraph": "Canadian Blood Services operates nine distribution sites across Canada, each site has a group of hospitals that they service. All blood orders must be submitted by fax using the current order form.",
+        "morelink": "Inventory ordering"
+    },
+    {
+        "id": 5,
+        "image": "",
+        "heading": "Licensing and inspections",
+        "pragraph": "All Canadian Blood Services production sites are required to hold an Authorization and a Blood Establishment Licence, and sites that perform transformation activities (i.e., irradiation, washing or pooling) are required to have a Blood Establishment Registration.",
+        "morelink": "Licensing and inspections"
+    },
+    {
+        "id": 6,
+        "image": "",
+        "heading": "Transfusion practice",
+        "pragraph": "Canadian Blood Services remains committed to and passionate about saving and improving lives and advancing patient care, by delivering safe and innovative products, services and programs, in the areas of transfusion medicine, cellular therapies and transplantation medicine.",
+        "morelink": "Transfusion practice"
+    },
+    {
+        "id": 7,
+        "image": "",
+        "heading": "Canadian Blood Services Stem Cell Registry",
+        "pragraph": "Our stem cell registry, known as Canadian Blood Services Stem Cell Registry, provides assistance nationally and internationally in searching for an unrelated blood stem cell/marrow donor. The Canadian Blood Services Stem Cell Registry team manages this complex process to ensure that it is performed accurately and efficiently.",
+        "morelink": "Canadian Blood Services Stem Cell Registry"
+    },
+]

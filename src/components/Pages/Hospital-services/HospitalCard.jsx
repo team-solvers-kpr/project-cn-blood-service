@@ -1,32 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import cardImg from '../../assets/images/adaptability_0.png';
+import React, { useEffect, useState } from 'react'
+// import { AiOutlineArrowRight } from 'react-icons/ai';
+// import { Link } from 'react-router-dom';
+// import cardImg from '../../assets/images/adaptability_0.png';
 
-export const HospitalCard = ({
-    img = cardImg,
-    heading = 'txt',
-    pragraph ='txt',
-    readMore = 'text',
-}) => {
+
+
+export const HospitalCard = () => {
+  const [ hospitalData, setHospitalData ] = useState([]);
+  useEffect(() => {
+    const fetchHospitalCard = async () => {
+      const res = await fetch('../../../../public/assets/data/hospitalCard.json');
+      const data = await res.json();
+      return setHospitalData(data);
+    }
+    fetchHospitalCard()
+  }, []);
+  console.log(hospitalData);
   return (
-    <div className='h-[810px] w-[416px]'>
-        <div className='bg-white flex flex-col shadow-lg items-center'>
-            <div className='cardImg h-48 w-48'>
-                <img src={img} alt="" />
-            </div>
-            <div className='cardContent p-12 text-left'>
-                <div>
-                    <h1>{heading}</h1>
-                    <hr className='h-0 w-24  rounded  bg-[#E7131A] border-solid border-2 border-[#E7131A]' />
-                    <p>{pragraph}</p>
-                </div>
-                <div className=''>
-                    <Link to='/'>
-                        {readMore}
-                    </Link>
-                </div>
-            </div>
-        </div>
+    <div>
+      <h1>feching Data</h1>
+
+      <div>{hospitalData.morelink}</div>
+      
     </div>
   )
 }
