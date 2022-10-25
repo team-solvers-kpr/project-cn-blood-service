@@ -100,7 +100,7 @@ const BannerCard = () => {
               Your donation could go on to fuel the
               <br /> future.
             </p>
-            <button className="bg-red-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
+            <button className="bg-red-700 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
               Learn More
             </button>
           </div>
