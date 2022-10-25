@@ -6,7 +6,7 @@ export const OurLatestUpdate = () => {
   return (
     <div className='pt-8 container'>
         <div className='ourLatestUpdate flex justify-between items-center'>
-            <div className='ml-12'>
+            <div className='ml-16'>
                 <span>
                     <h1 className='font-bold text-[#4D4D4D] text-5xl'>Our latest updates</h1>
                 </span>

@@ -77,7 +77,7 @@ const Navbar = () => {
                                                 <Button
                                                     btnText={"Book Now"}
                                                     bgprimary="bg-[#C4161C]"
-                                                    height="h-11"
+                                                    height="h-10"
                                                     width="w-28"
                                                     textprimary="text-[#C4161C]"
                                                     borderprimary="border-red-700"
