@@ -77,16 +77,25 @@ const Navbar = () => {
                                                 <Button
                                                     btnText={"Book Now"}
                                                     bgprimary="bg-[#C4161C]"
+                                                    height="h-11"
+                                                    width="w-28"
                                                     textprimary="text-[#C4161C]"
                                                     borderprimary="border-red-700"
                                                     bgsecondary="bg-white"
                                                     textColor='text-white'
+                                                    fontwidth="font-bold"
+                                                    fontsize="text-base"
                                                     onClick={(e) => Navigate("/bookNow")}
                                                 />
 
                                                 <Button
                                                     btnText={"Sign in"}
                                                     bgprimary="bg-white"
+                                                    height="h-11"
+                                                    width="w-28"
+                                                    fontwidth="font-bold"
+                                                    textTransform='uppercase'
+                                                    fontsize="text-base"
                                                     textprimary="text-white"
                                                     borderprimary="border-red-700"
                                                     bgsecondary="bg-[#C4161C]"

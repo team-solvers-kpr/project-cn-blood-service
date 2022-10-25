@@ -2,7 +2,7 @@ import React from "react";
 import BannerCard from "../BannerCard/BannerCard";
 import BloodInventory from "../BloodInventory/BloodInventory";
 import BookDonationButton from "../BookDonationButton/BookDonationButton";
-import LatestCard from "../LatestCard/LatestCard";
+import { OurLatestUpdate } from "../LatestCard/OurLatestUpdate";
 import SearchFiled from "../SearchField/SearchFiled";
 import VideoSection from "../VideoSection/VideoSection";
 import WaysToDonate from "../WaysToDonate/WaysToDonate";
@@ -13,7 +13,7 @@ const Home = () => {
       <SearchFiled></SearchFiled>
       <BannerCard></BannerCard>
       <VideoSection></VideoSection>
-      <LatestCard></LatestCard>
+      <OurLatestUpdate></OurLatestUpdate>
       <BloodInventory></BloodInventory>
       <WaysToDonate></WaysToDonate>
       <BookDonationButton></BookDonationButton>

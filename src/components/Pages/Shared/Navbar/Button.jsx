@@ -2,15 +2,18 @@ import React from 'react'
 
   const  Button = ({ 
       bgprimary, textprimary, borderprimary, 
-      bgsecondary, btnText, onClick ,textColor
+      bgsecondary, btnText, onClick ,textColor,
+      height, width, fontwidth, fontsize, textTransform
   }) => {
   return (
     <button
       onClick={(e) => onClick(e)}
       className={`${bgprimary} 
-      h-11 w-28 rounded-full 
-      ${textColor} font-bold 
-      text-base uppercase border 
+      ${height} ${width}
+      rounded-full 
+      ${textColor} ${fontwidth} 
+      ${fontsize} ${textTransform} 
+      border 
       ${borderprimary} hover:${bgsecondary} 
       hover:${textprimary} cursor-pointer 
       duration-300`

@@ -14,7 +14,7 @@ export const HospitalServices = () => {
     <div>
       <div className='container m-8'>
         <div className="bg-[url('/src/components/assets/images/SS_Mercy_2560x1150_0.jpg)]">
-          {/* <div>
+          <div>
             <div>
               <div className="content flex">
                 <h1 className='text-6xl font-bold text-slate-700 md:w-7/12 lg:w-8/12 text-left' >Hospital services</h1>
@@ -104,18 +104,12 @@ export const HospitalServices = () => {
                 </li>
               </ul>
             </div>  
-          </div>  */}
+          </div> 
         </div>
       </div>
       <div className='bg-[#F0F0F0] max-w-full'>
-        <div className='pt-8 grid grid-cols-3  lg:pl-12 gap-12 '>
-          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
-          <HospitalCard heading='Laboratory services' pragraph='Canadian Blood Services Diagnostic Services Laboratories, National Platelet Immunology Reference Laboratory (NPIRL) and the National Immunohematology Reference Laboratory (NIRL) provide a broad range of routine and referral services including perinatal testing, pre and post transfusion testing, routine and complex antibody investigations, transfusion reaction investigations, and assistance in finding the most suitable components for patients.' readMore='Laboratory services' />
-          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
-          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
-          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
-          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
-          <HospitalCard heading='Customer service' pragraph='Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.' readMore='Customer service' />
+        <div className='pt-8 grid grid-cols-3  lg:pl-12 gap-4 container'>
+          <HospitalCard />
         </div>
       </div>
     </div>
