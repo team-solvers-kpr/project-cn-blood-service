@@ -10,7 +10,7 @@ const FooterLowerPart = () => {
       <div>
       <p className="text-sm text-gray-700 mt-8">© Copyright 2022 Canadian Blood Services. All Rights Reserved.</p>
       </div>
-      <div className="flex justify-center text-sm my-6">
+      <div className="lg:flex justify-center text-sm my-6">
       <div>
         <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'>Publications and reports </a> </p>
         </div>
@@ -34,7 +34,7 @@ const FooterLowerPart = () => {
        <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/contact-us" target='_blank'>Contact us </a></p>
        </div>
       </div>
-      <div className="mx-60 mt-10">
+      <div className="lg:mx-60 mx-10 mt-10">
         <p className="text-sm text-gray-700">Canadian Blood Services acknowledges the funding of provincial, territorial and federal governments. The views expressed in this document are those of
 Canadian Blood Services and do not necessarily reflect those of governments.</p>
       </div>
