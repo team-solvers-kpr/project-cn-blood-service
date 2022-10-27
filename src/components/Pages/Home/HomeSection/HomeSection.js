@@ -1,11 +1,11 @@
 import React from "react";
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 const HomeSection = () => {
   return (
-    <div className="flex mb-10 relative flex justify-end" style={{height:"500px"}}>
-     <div className=" w-full " style={{backgroundColor:"#E7131A"}}>
-       <div className="py-32 px-40">
+    <div className="lg:flex mb-10 lg:relative lg:flex lg:justify-end" >
+     <div className=" lg:w-full " style={{backgroundColor:"#E7131A"}}>
+       <div className="lg:py-32 lg:px-40 p-4">
        <h1 className="text-white text-4xl font-semibold mb-4 text-justify">
         Make All The Difference
         </h1>
@@ -17,8 +17,8 @@ const HomeSection = () => {
         </p>
        </div>
      </div>
-     <div className=" w-full relative" style={{backgroundColor:"#419B96"}}>
-        <div className="p-40">
+     <div className=" lg:w-full lg:relative" style={{backgroundColor:"#419B96"}}>
+        <div className="lg:p-40 p-4">
         <p className="text-white text-lg font-normal mb-6 text-justify">
         The greatest human connection is made when we give to each other. Whether it’s time, knowledge, expertise, or a lifesaving donation. These connections are what make us Canada’s Lifeline.
         </p>
@@ -28,7 +28,7 @@ const HomeSection = () => {
         </div>
      </div>
      {/* for youtube  */}
-     <div className='absolute mt-16 mr-40 ' >
+     <div className='absolute lg:mt-16 lg:mr-40' >
       <ReactPlayer url='https://youtu.be/brAqVXrouGg'></ReactPlayer>
      </div>
       

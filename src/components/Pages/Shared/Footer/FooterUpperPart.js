@@ -18,12 +18,12 @@ const FooterUpperPart = () => {
       <div class="">
      
       
-        <div class="flex ">
-          <div class="flex flex-none w-96 mx-24">
+        <div class="flex  justify-center">
+          <div class="flex flex-none lg:w-96 lg:mx-24 ml-12">
             <div class="">
-              <div><img src={image0} alt="" className="h-16 w-96"/></div>
+              <div><img src={image0} alt="" className="lg:h-16 lg:w-96"/></div>
               <div>
-              <div className="">
+              <div className="hidden lg:block">
       <div>
         <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-lg font-semibold mt-2"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">HOSPITAL SERVICES </a> </p>
         </div>
@@ -46,7 +46,7 @@ const FooterUpperPart = () => {
        
       </div>
               </div>
-              <div class=" flex my-6 md:flex  ">
+              <div class=" flex my-6 ">
                 <BsFacebook class="hover:text-red-600 text-gray-400 text-3xl mx-1 mt-1"></BsFacebook>
                 <TiSocialLinkedinCircular class="hover:text-red-600 text-gray-400 text-5xl mx-1 pb-2 "></TiSocialLinkedinCircular>
                 <AiFillTwitterCircle class="hover:text-red-600 text-gray-400 text-4xl mx-1"></AiFillTwitterCircle>
@@ -58,8 +58,8 @@ const FooterUpperPart = () => {
               </div>
               {/* apple & goole app link  */}
               <div className="flex">
-              <div className="mr-4"><a href="https://apps.apple.com/app/id804765636" target="_blank"  rel="noopener noreferrer"> <img src={Image1} alt="" className="h-10 w-32" /></a></div>
-              <div><a  href="https://play.google.com/store/apps/details?id=ca.blood.giveblood" target="_blank"  rel="noopener noreferrer"><img src={Image2} alt="" className="h-10 w-32"/></a></div>
+              <div className="mr-4"><a href="https://apps.apple.com/app/id804765636" target="_blank"  rel="noopener noreferrer"> <img src={Image1} alt="" className="lg:h-10 lg:w-32 w-48 " /></a></div>
+              <div><a  href="https://play.google.com/store/apps/details?id=ca.blood.giveblood" target="_blank"  rel="noopener noreferrer"><img src={Image2} alt="" className="lg:h-10 lg:w-32 w-48 "/></a></div>
 
               </div>
 
@@ -67,9 +67,9 @@ const FooterUpperPart = () => {
             
           </div>
           {/* border */}
-          <div className="border-r border-gray-300"></div>
+          <div className="border-r border-gray-300 hidden lg:block"></div>
           {/* right part of FooterUpperPart starts */}
-          <div class="flex grow justify-between ">
+          <div class="lg:flex grow justify-between hidden lg:block">
           
             <div class="m-4 mr-12 w-1/4">
               <div class="mb-4 ">
