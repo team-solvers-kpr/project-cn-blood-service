@@ -1,13 +1,13 @@
 import React from "react";
 import BannerCard from "./BannerCard/BannerCard";
-import HomeSection from "./HomeSection/HomeSection";
+import VideoSection from "./VideoSection/VideoSection";
 
 const Home = () => {
   return (
     <div>
       <h2>This is Home.</h2>
       <BannerCard></BannerCard>
-      <HomeSection></HomeSection>
+      <VideoSection></VideoSection>
     </div>
   );
 };
