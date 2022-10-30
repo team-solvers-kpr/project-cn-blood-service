@@ -15,7 +15,7 @@ const BannerCard = () => {
       <hr className="lg:mx-32" />
 
       <section className="pb-6 lg:flex grid grid-cols-2 justify-center items-center gap-[1px] mb-64">
-        <div className="lg:w-[311px] h-[411px] bg-transparent ">
+        <div className="lg:w-[311px] h-[411px] bg-transparent">
           <div className="relative preserve-3d lg:hover:my-rotate-x-180 w-full h-full duration-500 delay-200">
             <div className="absolute flex flex-col backface-hidden w-full h-full">
               <img
@@ -100,7 +100,7 @@ const BannerCard = () => {
               Your donation could go on to fuel the
               <br /> future.
             </p>
-            <button className="bg-red-600 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
+            <button className="bg-red-700 text-white text-lg font-semibold py-3 px-6 rounded-full my-4">
               Learn More
             </button>
           </div>

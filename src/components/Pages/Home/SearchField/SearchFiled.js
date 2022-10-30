@@ -34,7 +34,7 @@ const SearchFiled = () => {
         </div>
       </div>
       <form action="" id="clear-from" className="lg:w-1/3">
-        <div className="lg:flex items-center">
+        <div className="relative lg:flex items-center">
           <MdIcons.MdLocationOn className="absolute lg:text-5xl text-4xl lg:mt-0 mt-3 lg:ml-2 ml-14 text-red-600 pointer-events-none z-10" />
           {searchData.length !== 0 && (
             <ImIcons.ImCross
