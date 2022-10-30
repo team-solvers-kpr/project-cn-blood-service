@@ -21,7 +21,7 @@ const BookDonationButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-0 right-[42%]">
+    <div className="lg:fixed bottom-0 right-[42%]">
       <div
         className={`${
           isVisible ? "translate-y-0" : "translate-y-full"
