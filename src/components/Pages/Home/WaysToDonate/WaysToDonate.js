@@ -4,11 +4,11 @@ import * as AiIcons from "react-icons/ai";
 
 const WaysToDonate = () => {
   return (
-    <div className="text-white text-left mb-20 bg-gray-700 px-32 grid grid-cols-7 gap-4 divide-x divide-slate-500">
+    <div className="text-white text-left mb-20 bg-gray-700 lg:px-32 px-10 lg:grid grid-cols-7 gap-4 lg:divide-x divide-y divide-slate-500">
       <div className="py-32 col-span-5">
         <h2 className="text-3xl font-bold">Ways to donate</h2>
-        <hr className="mt-8 mr-[50rem] bg-white h-[.35rem] rounded-full" />
-        <p className="my-8 text-lg pr-80">
+        <hr className="mt-8 lg:mr-[50rem] mr-[18rem] bg-white h-[.35rem] rounded-full" />
+        <p className="my-8 text-lg lg:pr-80">
           There are many ways to donate. You can give one-time or recurring
           financial donations, organize group donations in collaboration with
           other organizations or communities, sponsor a donation event or even
