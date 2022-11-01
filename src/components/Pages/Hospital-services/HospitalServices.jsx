@@ -7,17 +7,21 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { HospitalCard } from './HospitalCard';
-// import backgroundImg from '../../assets/images/SS_Mercy_2560x1150_0.jpg';
+import HospitalRelatedInformation from './HospitalRelatedInformation';
+import backgroundImg from '../../assets/SS_Mercy_2560x1150_0.jpg';
 
 export const HospitalServices = () => {
   return (
     <div>
       <div className='container m-8'>
-        <div className="bg-[url('/src/components/assets/images/SS_Mercy_2560x1150_0.jpg)]">
-          <div>
-            <div>
+        <div className="relative h-full">
+          <div className=''>
+            <img src={backgroundImg} alt="" />
+          </div>
+          <div className='absolute -mt-[34rem]'>
+            <div className=''>
               <div className="content flex">
-                <h1 className='text-6xl font-bold text-slate-700 md:w-7/12 lg:w-8/12 text-left' >Hospital services</h1>
+                <h1 className='text-5xl font-bold text-slate-700 md:w-7/12 lg:w-8/12 text-left' >Hospital services</h1>
               </div>
               <div className='max-w-xl mt-8 mb-8 text-left text-slate-700'>
                 <p className=' mb-8'>Canadian Blood Services is responsible for a secure system of life essentials for transfusion and transplantation that’s reliable, accessible and sustainable.</p>
@@ -25,9 +29,8 @@ export const HospitalServices = () => {
               </div>
               <hr className='h-0 w-24  text-left rounded  bg-[#E7131A] border-solid border-2 border-[#E7131A]
               ' />
-            </div>
-          </div> 
-          <div className=' mt-8 '>
+            </div> 
+          <div className='mt-8'>
             <div>
               <ul>
                 <li>
@@ -104,12 +107,19 @@ export const HospitalServices = () => {
                 </li>
               </ul>
             </div>  
-          </div> 
+          </div>
+        </div> 
         </div>
       </div>
       <div className='bg-[#F0F0F0] max-w-full '>
         <div className='pt-12 grid grid-cols-3  lg:pl-12 gap-4 container pb-12'>
           <HospitalCard />
+        </div>
+      </div>
+      <div className='bg-white mt-12'>
+        <h1 className='text-left ml-20 text-2xl font-bold text-slate-700'>Related information</h1>
+        <div className='grid grid-cols-3  lg:pl-12 gap-4 container pb-12'>
+          <HospitalRelatedInformation />
         </div>
       </div>
     </div>
