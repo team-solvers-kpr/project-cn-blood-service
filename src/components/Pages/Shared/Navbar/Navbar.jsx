@@ -114,53 +114,108 @@ const Navbar = () => {
                     
                     {/* start main menu area  */}
 
-                    {/* <div className='main-menu'>
-                        <MainMenu menus={menus} />
+
+
+                    {/* <div className='mt-4'>
+                            <ul className='md:flex hidden border-[#f0f0f0]'>
+                                <li className='border-b-8 hover:text-white text-left text-lg font-bold border-red-500 w-full pt-2 cursor-pointer bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                    <div className=' pt-4 pb-0'>
+                                        <span className='inline-block'><RiArrowDropDownLine /></span>
+                                        <span className='text-left'>Blood</span>
+                                    </div>
+                                </li>
+                                <li className='border-b-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                    <div className=' pt-4 pb-0 '>
+                                        <span className=' inline-block'><RiArrowDropDownLine /></span>
+                                       <span>Plasma</span>
+                                       {/* <span>For life</span> */}
+                                    {/* </div>
+                                </li>
+                                <li className='border-b-8 border-[#54C3BB] hover:bg-[#54C3BB] hover:text-white w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm  focus:outline-none '>
+                                    <div  to='/' className=' pt-4 pb-0 '>
+                                        <span className='inline-block'><RiArrowDropDownLine /></span>
+                                        <span>Stem Cells</span> 
+                                        {/* <span>For life</span> */}
+                                    {/* </div>
+                                </li>
+                                <li className=' border-b-8 border-[#419B96] hover:bg-[#419B96] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 hover:text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
+                                    <div className=' pt-4 pb-0 hover:relative'>
+                                        <span className='inline-block'><RiArrowDropDownLine /></span>
+                                        <span>Organ & Tissues</span> */}
+                                        {/* <span className='hover:absolute'>For life</span> */}
+                                    {/* </div>
+                                </li>
+                                <li className=' border-b-8 border-[#F0F0F0] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm  hover:bg-[#4D4D4D] hover:border-[#4D4D4D] hover:text-white focus:outline-none '>
+                                    <div className=' pt-4 pb-0'>
+                                        <span className='inline-block'><RiArrowDropDownLine /></span>
+                                        <span>Ways to donet</span>
+                                    </div>
+                                </li>
+                                
+                                <li className=' border-b-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white hover:border-[#4D4D4D] hover:bg-[#4D4D4D] focus:outline-none  outline-none '>
+                                    <div  className=' pt-4 pb-0'>
+                                        <span className='inline-block'><RiArrowDropDownLine /></span>
+                                        Stories
+                                    </div>
+                                </li>
+                            </ul>
                     </div> */}
 
 
 
-                    <div className='mt-4'>
-                            <ul className='md:flex hidden border-[#f0f0f0]'>
-                                <li tabIndex={0} className='border-b-8 hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
-                                    <Link  to='/'  className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Blood
-                                    </Link>
-                                </li>
-                                <li className='border-b-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
-                                    <Link  to='/' className=' pt-4 pb-0 pr-2 pl-2 '>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Plasma
-                                    </Link>
-                                </li>
-                                <li className='border-b-8 border-[#54C3BB] hover:bg-[#54C3BB] hover:text-white w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm  focus:outline-none '>
-                                    <Link  to='/' className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Stem Cells
-                                    </Link>
-                                </li>
-                                <li className=' border-b-8 border-[#419B96] hover:bg-[#419B96] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 hover:text-white shadow-sm  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100'>
-                                    <Link to='/'  className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Organ & Tissues
-                                    </Link>
-                                </li>
-                                <li className=' border-b-8 border-[#F0F0F0] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm  hover:bg-[#4D4D4D] hover:border-[#4D4D4D] hover:text-white focus:outline-none h-20'>
-                                    <Link  to='/' className=' pt-4 pb-0 pr-2 pl-2 '>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Ways to donet
-                                    </Link>
-                                </li>
-                                
-                                <li className=' border-b-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white hover:border-[#4D4D4D] hover:bg-[#4D4D4D] focus:outline-none h-20'>
-                                    <Link  to='/' className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Stories
-                                    </Link>
-                                </li>
-                            </ul>
-                    </div>
+<div className="navbar mt-4">
+  <div className="flex justify-between flex-1 px-2">
+    <div className="flex items-stretch">
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost rounded-btn">Blood</label>
+        <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><Link>Item 1</Link></li> 
+          <li><Link>Item 2</Link></li>
+        </ul>
+      </div>
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost rounded-btn">Plasma</label>
+        <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><Link>Item 1</Link></li> 
+          <li><Link>Item 2</Link></li>
+        </ul>
+      </div>
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost rounded-btn">Stem Cells</label>
+        <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><Link>Item 1</Link></li> 
+          <li><Link>Item 2</Link></li>
+        </ul>
+      </div>
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost rounded-btn">Organ & Tissues</label>
+        <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><Link>Item 1</Link></li> 
+          <li><Link>Item 2</Link></li>
+        </ul>
+      </div>
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost rounded-btn">Ways to donet</label>
+        <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><Link>Item 1</Link></li> 
+          <li><Link>Item 2</Link></li>
+        </ul>
+      </div>
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0} className="btn btn-ghost rounded-btn">Stories</label>
+        <ul tabIndex={0} className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+          <li><Link>Item 1</Link></li> 
+          <li><Link>Item 2</Link></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    
+
+
+
 
                     {/* mobile menu navigation  */}
 

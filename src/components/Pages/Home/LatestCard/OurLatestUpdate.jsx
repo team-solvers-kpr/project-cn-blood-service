@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../../Shared/Navbar/Button'
 import LatestCard from './LatestCard'
 
-export const OurLatestUpdate = () => {
+const OurLatestUpdate = () => {
   return (
     <div className='pt-8 container'>
         <div className='ourLatestUpdate flex justify-between items-center'>
@@ -23,3 +23,5 @@ export const OurLatestUpdate = () => {
     </div>
   )
 }
+
+export default OurLatestUpdate;
