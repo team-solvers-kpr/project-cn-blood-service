@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../../Shared/Navbar/Button'
-import LatestCard from './LatestCard'
+import LatestCard from './LatestCard';
 
 const OurLatestUpdate = () => {
   return (
