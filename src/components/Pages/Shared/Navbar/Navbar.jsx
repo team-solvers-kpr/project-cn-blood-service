@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import  LogoImg  from '../../../assets/footerimage.png';
 import  Button  from './Button';
@@ -10,6 +10,7 @@ import { SearchBar } from './SearchBar';
 const Navbar = () => {
 
     const [isOpen, setOpen] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <nav>
@@ -85,7 +86,7 @@ const Navbar = () => {
                                                     textColor='text-white'
                                                     fontwidth="font-bold"
                                                     fontsize="text-base"
-                                                    onClick={(e) => Navigate("/bookNow")}
+                                                    onClick={(e) => navigate("/bookNow")}
                                                 />
 
                                                 <Button
@@ -100,7 +101,7 @@ const Navbar = () => {
                                                     borderprimary="border-red-700"
                                                     bgsecondary="bg-[#C4161C]"
                                                     textColor='text-[#C4161C]'
-                                                    onClick={(e) => Navigate("/signin")}
+                                                    onClick={(e) => navigate("/signin")}
                                                 />
                                             </div>
                                         </div>

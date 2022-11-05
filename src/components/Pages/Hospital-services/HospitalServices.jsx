@@ -14,11 +14,11 @@ export const HospitalServices = () => {
   return (
     <div>
       <div className='container m-8'>
-        <div className="relative h-full">
-          <div className=''>
+        <div className="h-full">
+          <div className='hidden'>
             <img src={backgroundImg} alt="" />
           </div>
-          <div className='absolute -mt-[34rem]'>
+          <div className=''>
             <div className=''>
               <div className="content flex">
                 <h1 className='text-5xl font-bold text-slate-700 md:w-7/12 lg:w-8/12 text-left' >Hospital services</h1>
@@ -36,73 +36,73 @@ export const HospitalServices = () => {
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>COVID-19 Information for Health Care Professionals</p>
+                      <p className='text-lg text-red-500 font-semibold'>COVID-19 Information for Health Care Professionals</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <span className='text-lg text-[#E7131A] font-semibold'>Customer service</span>
+                      <span className='text-lg text-red-500 font-semibold'>Customer service</span>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Hospital Services Forms</p>
+                      <p className='text-lg text-red-500 font-semibold'>Hospital Services Forms</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Laboratory services</p>
+                      <p className='text-lg text-red-500 font-semibold'>Laboratory services</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Products</p>
+                      <p className='text-lg text-red-500 font-semibold'>Products</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Inventory ordering</p>
+                      <p className='text-lg text-red-500 font-semibold'>Inventory ordering</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Licensing and inspections</p>
+                      <p className='text-lg text-red-500 font-semibold'>Licensing and inspections</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Transfusion practice</p>
+                      <p className='text-lg text-red-500 font-semibold'>Transfusion practice</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Rare Blood Program</p>
+                      <p className='text-lg text-red-500 font-semibold'>Rare Blood Program</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>HLA/HPA Selected Platelets</p>
+                      <p className='text-lg text-red-500 font-semibold'>HLA/HPA Selected Platelets</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Stem Cell Registry Documents</p>
+                      <p className='text-lg text-red-500 font-semibold'>Stem Cell Registry Documents</p>
                   </Link>
                 </li>
                 <li>
                   <Link to='/' className='flex items-center gap-4 focus:underline'>
                     <span><AiOutlineArrowRight fontSize={24} color="#E7131A" /></span>
-                      <p className='text-lg text-[#E7131A] font-semibold'>Cord Blood Bank</p>
+                      <p className='text-lg text-red-500 font-semibold'>Cord Blood Bank</p>
                   </Link>
                 </li>
               </ul>
@@ -112,13 +112,13 @@ export const HospitalServices = () => {
         </div>
       </div>
       <div className='bg-[#F0F0F0] max-w-full '>
-        <div className='pt-12 grid grid-cols-3  lg:pl-12 gap-4 container pb-12'>
+        <div className='pt-12 grid lg:grid-cols-3 grid-cols-1  lg:pl-12 gap-4 container pb-12'>
           <HospitalCard />
         </div>
       </div>
       <div className='bg-white mt-12'>
-        <h1 className='text-left ml-20 text-2xl font-bold text-slate-700'>Related information</h1>
-        <div className='grid grid-cols-3  lg:pl-12 gap-4 container pb-12'>
+        <h1 className='text-left lg:ml-20 ml-12 text-2xl font-bold text-slate-700'>Related information</h1>
+        <div className='grid lg:grid-cols-3 grid-cols-1 lg:pl-12  pb-12'>
           <HospitalRelatedInformation />
         </div>
       </div>

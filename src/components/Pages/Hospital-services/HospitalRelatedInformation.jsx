@@ -16,7 +16,7 @@ const HospitalRelatedInformation = () => {
   }, []);
   return (
     hospitalRelatedData && hospitalRelatedData.map(data =>
-      <div className='bg-white flex flex-col border-r-2  items-center' key={data.id}>
+      <div className='bg-white flex flex-col lg:border-r-2 border-b-2  items-center ' key={data.id}>
       <div className='cardContent p-12 text-left'>
           <div>
               <h1 className='py-6'>
