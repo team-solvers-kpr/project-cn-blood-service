@@ -7,7 +7,7 @@ import { CgMenuLeft, CgClose } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { SearchBar } from './SearchBar';
 
-const Navbar = () => {
+const Nav = () => {
 
     const [isOpen, setOpen] = useState(false);
 
@@ -242,6 +242,7 @@ const Navbar = () => {
                                         About us
                                     </Link>
                                 </li>
+                                {/* <NavLinks textColor='text-white' textTransform='uppercase' /> */}
                             </ul>
                     </div>
                     </div>
@@ -251,4 +252,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar;
+export default Nav;

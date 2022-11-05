@@ -15,7 +15,7 @@ const LatestCard = () => {
 
   }, []);
   return (
-    <div className="grid grid-cols-3 gap-4 max-w-full lg:pl-16">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-full lg:pl-16">
     {latestCardData && latestCardData.map(data =>
       <div >
         <div className='bg-white flex flex-col shadow-lg items-center h-[800px]' key={data.id}>

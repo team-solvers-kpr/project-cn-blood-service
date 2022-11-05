@@ -4,7 +4,7 @@ import LatestCard from './LatestCard';
 
 const OurLatestUpdate = () => {
   return (
-    <div className='pt-8 container'>
+    <div className='pt-80 container'>
         <div className='ourLatestUpdate flex justify-between items-center'>
             <div className='ml-16'>
                 <span>
