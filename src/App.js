@@ -5,7 +5,8 @@ import Home from './components/pages/Home/Home/Home'
 import { HospitalServices } from "./components/pages/Hospital-services/HospitalServices";
 import Notfound from "./components/pages/Notfound/Notfound";
 import Footer from "./components/pages/Shared/Footer/Footer";
-import Navbar from "./components/pages/Shared/Navbar/Navbar";
+import Nav from "./components/pages/Shared/Navbar/Nav";
+// import Navbar from "./components/pages/Shared/Navbar/Navbar";
 
 function App() {
   const Wrapper = ({ children }) => {
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Wrapper>
-        <Navbar></Navbar>
+        <Nav></Nav>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/hospital-services" element={<HospitalServices />}></Route>
