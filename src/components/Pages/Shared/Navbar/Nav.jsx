@@ -9,6 +9,7 @@ import { SearchBar } from './SearchBar';
 
 const Nav = () => {
     const [isOpen, setOpen] = useState(false);
+    const [showDropdown, setShowDropdown] = useState(false)
     const navigate = useNavigate();
   return (
     <div className='manuBar flex flex-row'>
@@ -37,16 +38,16 @@ const Nav = () => {
                             <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
                         </li>
                         <li className='hover:underline'>
-                            <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
+                            <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
                         </li>
                         <li className='hover:underline'>
-                            <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
+                            <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
                         </li>
                         <li className='hover:underline'>
-                            <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
+                            <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
                         </li>
                         <li className='hover:underline'>
-                            <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
+                            <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
                         </li>
                     </ul>
                     <div className='inline-flex  gap-2'>
@@ -94,7 +95,7 @@ const Nav = () => {
                 </nav>
             </div>
             <div className="main-menu flex">
-                <div className="border-b-8 inline-flex items-center hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none">
+                {!showDropdown &&(<div onClick={() => setShowDropdown(!showDropdown)} className="border-b-8 inline-flex items-center hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none">
                     <span><RiArrowDropDownLine /></span>
                     <span className=''>Blood</span>
 
@@ -104,7 +105,7 @@ const Nav = () => {
                         dropdown start
                     
                     */}
-                    <div className='absolute top-28 container flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3'>
+                    <div  className={`absolute top-28 container flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
                             <div className='drop flex flex-col'>
                                 <h1>Am I eligible to donate blood</h1>
                                 <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -170,7 +171,7 @@ const Nav = () => {
                                 </ul>
                             </div>
                         </div>
-                </div>
+                </div>)}
                 <div className="border-b-8 inline-flex items-center hover:text-white text-lg font-bold border-red-500 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 shadow-sm hover:bg-red-500 focus:outline-none">
                     <span><RiArrowDropDownLine /></span>
                     <span className=''>Blood</span>
