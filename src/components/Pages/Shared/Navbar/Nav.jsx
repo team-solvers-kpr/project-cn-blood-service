@@ -13,25 +13,25 @@ const Nav = () => {
     const navigate = useNavigate();
   return (
     <div>
-        <div className='manuBar grid grid-flow-col items-center'>
-        <div className='logo flex flex-row col-span-3 lg:border-b-8 border-sky-50'>
-            <img src={Logo} alt="logo" className='h-16' />
+        <div className='manuBar  grid grid-flow-col'>
+        <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
+            <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />
             {!isOpen && (
                         <div className='menu-icon cursor-pointer font-bold  absolute inline-block right-4 lg:hidden outline-none'
                         onClick={() => setOpen(!isOpen)}
                     >
-                        <CgMenuLeft fontSize={40}  />
+                        <CgMenuLeft fontSize={40} className="text-red-600" />
                         <span className='uppercase text-[#BEBEC2]'>Menu</span>
                     </div>
                     )}
                    {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none '
                    onClick={() => setOpen(!isOpen)}
                    >
-                        <CgClose fontSize={40} />
+                        <CgClose fontSize={40} className="text-red-600" />
                     </div>
                     )}
         </div>
-        <div className='right pt-4 col-span-9'>
+        <div className='right md:block hidden pt-2 col-span-9'>
             <div className="menu-top">
                 <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
                     <ul className='flex gap-2 pt-1'>
@@ -96,40 +96,40 @@ const Nav = () => {
                 </nav>
             </div>
             <div className="main-menu flex">
-                <div  className="border-b-8 hover:text-white font-bold border-red-600 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+                <div  className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                     <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                    <br /><span className='text-white pl-4 pb-4'>for life</span>
+                    <br /><span className='text-white pl-4 pb-4'>for Life</span>
                 </div>
-                <div  className="border-b-8 hover:text-white font-bold border-red-700 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
+                <div  className="border-b-8 hover:text-white font-bold border-red-700 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
                     <span><RiArrowDropDownLine className='inline-block' />Plasma</span>
-                    <br /><span className='text-white pl-4'>for life</span>
+                    <br /><span className='text-white pl-4'>for Life</span>
 
 
                    
                 </div>
                 <div  className="border-b-8 hover:text-white font-bold  w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
                     <span><RiArrowDropDownLine className='inline-block' />Stem Cells</span>
-                    <br /><span className='text-white pl-4 '>for life</span>
+                    <br /><span className='text-white pl-4 '>for Life</span>
 
 
                    
                 </div>
-                <div  className="border-b-8 hover:text-white font-bold  w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
+                <div  className="border-b-8 hover:text-white font-bold  w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
                     <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
                     <br /> <span className='pl-4'>Tissues</span>
-                    <br /><span className='text-white pl-4'>for life</span>
+                    <br /><span className='text-white pl-4'>for Life</span>
 
 
                    
                 </div>
-                <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
                     <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
                     <br /> <span className='pl-4'>Donate</span>
 
 
                    
                 </div>
-                <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
                     <span><RiArrowDropDownLine className='inline-block' />Stories</span>
                 </div>
 
