@@ -3,16 +3,17 @@ import UpperPart from "./UpperPart";
 import WhoAreWe from "./WhoAreWe";
 import WhatWeDo from "./WhatWeDo";
 import WhoWeServe from "./WhoWeServe";
+import Vision from "./Vision";
 
 
 const AboutUs = () => {
   return (
     <div>
-      <h2>This is AboutUs</h2>
       <UpperPart></UpperPart>
       <WhoAreWe></WhoAreWe>
       <WhatWeDo></WhatWeDo>
       <WhoWeServe></WhoWeServe>
+      <Vision></Vision>
       
     </div>
   );
