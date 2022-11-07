@@ -12,7 +12,7 @@ const WhoAreWe = () => {
      
      <div>
        <div>
-        <div className="flex cursor-pointer  bg-white border-1 rounded p-4 ">
+        <div className="flex cursor-pointer  bg-white border-1 rounded p-4 shadow-md">
         <div className="text-2xl mt-2 mr-6 text-red-600"><AiOutlinePlus></AiOutlinePlus></div>
        <div className="text-3xl  text-justify text-gray-600">Our legacy</div>
         </div>
