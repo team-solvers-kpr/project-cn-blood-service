@@ -4,6 +4,7 @@ import WhoAreWe from "./WhoAreWe";
 import WhatWeDo from "./WhatWeDo";
 import WhoWeServe from "./WhoWeServe";
 import Vision from "./Vision";
+import LastRedPart from "./LastRedPart";
 
 
 const AboutUs = () => {
@@ -14,6 +15,7 @@ const AboutUs = () => {
       <WhatWeDo></WhatWeDo>
       <WhoWeServe></WhoWeServe>
       <Vision></Vision>
+      <LastRedPart></LastRedPart>
       
     </div>
   );
