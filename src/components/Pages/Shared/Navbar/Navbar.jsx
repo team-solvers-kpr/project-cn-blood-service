@@ -146,7 +146,7 @@ const Navbar = () => {
                                     </Link>
                                 </li>
                                 
-                                <li className=' border-b-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white hover:border-[#4D4D4D] hover:bg-[#4D4D4D] focus:outline-none h-20'>
+                                <li className=' border-b-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white hover:border-sky-50 hover:bg-[#4D4D4D] focus:outline-none h-20'>
                                     <Link  to='/' className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-flex'><RiArrowDropDownLine />Stories</span>
                                     </Link>
