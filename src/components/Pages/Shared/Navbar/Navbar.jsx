@@ -59,7 +59,7 @@ const Navbar = () => {
                                                     </Link>
                                                 </li>
                                                 <li className='px-3 text-left py-4 font-semibold text-base lg:hover:underline'>
-                                                    <Link to='/'>
+                                                    <Link to='/about-us'>
                                                         About us
                                                     </Link>
                                                 </li>
