@@ -1,8 +1,3 @@
-
-
-// bg-red-600 bg-red-700 bg-teal-500 bg-teal-600
-
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineArrowRight } from 'react-icons/ai';
