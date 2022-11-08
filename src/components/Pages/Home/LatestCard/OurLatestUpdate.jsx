@@ -1,10 +1,11 @@
 import React from 'react'
 import Button from '../../Shared/Navbar/Button'
-import LatestCard from './LatestCard'
-
-export const OurLatestUpdate = () => {
+import LatestCard from './LatestCard';
+import { useNavigate } from 'react-router-dom';
+const OurLatestUpdate = () => {
+    const navigate = useNavigate();
   return (
-    <div className='pt-8 container'>
+    <div className='pt-80'>
         <div className='ourLatestUpdate flex justify-between items-center'>
             <div className='ml-16'>
                 <span>
@@ -12,8 +13,8 @@ export const OurLatestUpdate = () => {
                 </span>
             </div>
             <div className=''>
-                <Button btnText='Read All News' bgprimary='bg-red-500' bgsecondary='bg-red-700' textColor='text-white'width='w-32' height="h-10" fontwidth="font-semibold" fontsize="text-sm" />
-                <Button btnText='Read All Stories' bgprimary='bg-red-500' bgsecondary='bg-red-700' textColor='text-white'width='w-32' height="h-10" fontwidth="font-semibold" fontsize="text-sm" />
+                <Button btnText='Read All News' bgprimary='bg-red-500' bgsecondary='bg-red-700' textColor='text-white'width='w-32' height="h-10" fontwidth="font-semibold" fontsize="text-sm" onClick={(e) => navigate("/readAllNews")} />
+                <Button btnText='Read All Stories' bgprimary='bg-red-500' bgsecondary='bg-red-700' textColor='text-white'width='w-32' height="h-10" fontwidth="font-semibold" fontsize="text-sm" onClick={(e) => navigate("/readAllStories")}/>
                 
             </div>
         </div>
@@ -23,3 +24,5 @@ export const OurLatestUpdate = () => {
     </div>
   )
 }
+
+export default OurLatestUpdate;

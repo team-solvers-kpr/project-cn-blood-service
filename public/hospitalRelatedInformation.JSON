@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "heading": "Rare blood program",
+        "pragraph": "Did you know that some people’s blood is rarer than others? It’s not just about being type A, B, O or AB. On the surface of our red blood cells are proteins called antigens.",
+        "morelink": "Learn more about the Rare Blood Program"
+    },
+    {
+        "id": "2",
+        "heading": "Stem cell registry",
+        "pragraph": "Our stem cell registry, known as Canadian Blood Services Stem Cell Registry provides assistance nationally and internationally in searching for an unrelated blood stem cell/marrow donor.",
+        "morelink": "Learn more about OneMatch"
+    },
+    {
+        "id": "3",
+        "heading": "Hospital customer service",
+        "pragraph": "Canadian Blood Services is working towards a more integrated relationship with hospital customers to provide safe and effective care for patients.",
+        "morelink": "Learn more about Hospital Customer Service"
+    }
+]

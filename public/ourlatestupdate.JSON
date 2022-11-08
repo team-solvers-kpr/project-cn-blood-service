@@ -5,7 +5,8 @@
         "title":"Cord blood banking resumes Oct. 17",
         "date":"10/14/2022",
         "categories":"News release",
-        "shortDescription":"Canadian Blood Services is excited to share that we will resume cord blood banking on Oct. 17, 2022, following a temporary suspension due to a global shortage of cord blood processing kits."
+        "shortDescription":"Canadian Blood Services is excited to share that we will resume cord blood banking on Oct. 17, 2022, following a temporary suspension due to a global shortage of cord blood processing kits.",
+        "moreLink": "Read More"
     },
     {
         "id":"2",
@@ -13,16 +14,21 @@
         "title":"A roadmap to guide our reconciliation journey with Indigenous peoples and communities",
         "date":"09/29/2022",
         "categories":"News release",
-        "shortDescription":"Sept.29, 2022 (OTTAWA) - Canadian Blood Services is entering a significant chapter of our truth and reconciliation journey this week, with the public release of our organization's Reconciliation Action Plan (RAP)."
+        "shortDescription":"Sept.29, 2022 (OTTAWA) - Canadian Blood Services is entering a significant chapter of our truth and reconciliation journey this week, with the public release of our organization's Reconciliation Action Plan (RAP).",
+        "moreLink": "Read More"
     }
     ,
     {
-        "id":"3","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-Dave-Sarah_0.jpg?itok=EvpkIpqW","title":"Stem cell donor and recipient celebrate their remarkable 20-year bond","date":"","categories":"Information","shortDescription":"In 2002, Dave Charlebois's stem cells saved the life of Sarah Byrne. She was just one year old at the time."
+        "id":"3","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-Dave-Sarah_0.jpg?itok=EvpkIpqW","title":"Stem cell donor and recipient celebrate their remarkable 20-year bond","date":"","categories":"Information","shortDescription":"In 2002, Dave Charlebois's stem cells saved the life of Sarah Byrne. She was just one year old at the time.",
+        "moreLink": "Read More"
     },
-    {"id":"4","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-Julia_0.jpg?itok=qBoe3oGJ","title":"Emergency room nurse becomes two-time living organ donor","date":"","categories":"Information","shortDescription":"Julia King donated both a portion of her liver and a kidney to help two strangers"
+    {"id":"4","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-Julia_0.jpg?itok=qBoe3oGJ","title":"Emergency room nurse becomes two-time living organ donor","date":"","categories":"Information","shortDescription":"Julia King donated both a portion of her liver and a kidney to help two strangers",
+        "moreLink": "Read More"
     },
-    {"id":"5","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-PPRP-Vial.jpg?itok=6KidjVvm","title":"Blueprint for greater security of immunoglobulins for patients in Canada","date":"","categories":"News release","shortDescription":"Sept. 7, 2022 (OTTAWA) - In response to an ongoing global shortage of immunoglobulins and risks to cross-border supply chains made further evident by the pandemic, Canadian Blood Services is announcing a blueprint for action to ensure patients in Canada continue to have long-term access to these lifesaving therapies."
+    {"id":"5","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-PPRP-Vial.jpg?itok=6KidjVvm","title":"Blueprint for greater security of immunoglobulins for patients in Canada","date":"","categories":"News release","shortDescription":"Sept. 7, 2022 (OTTAWA) - In response to an ongoing global shortage of immunoglobulins and risks to cross-border supply chains made further evident by the pandemic.",
+        "moreLink": "Read More"
     },
-    {"id":"6","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-Mares-family-min.jpg?itok=stmC1DvE","title":"Canadian stem cell donor saves American infant's life","date":"","categories":"Information","shortDescription":"Just a few months after birth, Austin Mares received lifesaving stem cells to treat a rare disease"
+    {"id":"6","img":"https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Teaser-Mares-family-min.jpg?itok=stmC1DvE","title":"Canadian stem cell donor saves American infant's life","date":"","categories":"Information","shortDescription":"Just a few months after birth, Austin Mares received lifesaving stem cells to treat a rare disease",
+        "moreLink": "Read More"
     }
 ]
