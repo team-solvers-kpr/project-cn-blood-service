@@ -2,9 +2,9 @@ import React from "react";
 import BannerCard from "../BannerCard/BannerCard";
 import BloodInventory from "../BloodInventory/BloodInventory";
 import BookDonationButton from "../BookDonationButton/BookDonationButton";
-import { OurLatestUpdate } from "../LatestCard/OurLatestUpdate";
 import SearchFiled from "../SearchField/SearchFiled";
 import VideoSection from "../VideoSection/VideoSection";
+import OurLatestUpdate from '../LatestCard/OurLatestUpdate';
 import WaysToDonate from "../WaysToDonate/WaysToDonate";
 
 const Home = () => {
