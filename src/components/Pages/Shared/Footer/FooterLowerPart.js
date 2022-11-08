@@ -12,26 +12,26 @@ const FooterLowerPart = () => {
       </div>
       <div className="lg:flex justify-center text-sm my-6">
       <div>
-        <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'>Publications and reports </a> </p>
+        <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank' rel="noopener noreferrer">Publications and reports </a> </p>
         </div>
         <div className="border-r border-gray-500 mx-4"></div>
        <div>
-       <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/media" target='_blank'>Media </a></p>
+       <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/media" target='_blank' rel="noopener noreferrer">Media </a></p>
        </div>
        <div className="border-r border-gray-500 mx-4 "></div>
-       <div>  <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/policies" target='_blank'>Corporate policies</a></p>
+       <div>  <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/policies" target='_blank' rel="noopener noreferrer">Corporate policies</a></p>
        </div>
        <div className="border-r border-gray-500 mx-4"></div>
       <div>
-      <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/legal-information" target='_blank'>Privacy/Legal </a> </p>
+      <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/legal-information" target='_blank' rel="noopener noreferrer">Privacy/Legal </a> </p>
       </div>
       <div className="border-r border-gray-500 mx-4"></div>
        <div>
-       <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/sitemap" target='_blank'>Site Map </a> </p>
+       <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/sitemap" target='_blank' rel="noopener noreferrer">Site Map </a> </p>
        </div>
        <div className="border-r border-gray-500 mx-4"></div>
        <div>
-       <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/contact-us" target='_blank'>Contact us </a></p>
+       <p className="hover:text-red-800 cursor-pointer text-red-600"><a href="https://www.blood.ca/en/about-us/contact-us" target='_blank' rel="noopener noreferrer">Contact us </a></p>
        </div>
       </div>
       <div className="lg:mx-60 mx-10 mt-10">
