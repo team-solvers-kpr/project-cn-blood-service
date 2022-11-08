@@ -10,7 +10,7 @@ import { HospitalCard } from './HospitalCard';
 import HospitalRelatedInformation from './HospitalRelatedInformation';
 import backgroundImg from '../../assets/SS_Mercy_2560x1150_0.jpg';
 
-export const HospitalServices = () => {
+ const HospitalServices = () => {
   return (
     <div>
       <div className='container m-8'>
@@ -125,3 +125,4 @@ export const HospitalServices = () => {
     </div>
   )
 }
+export default HospitalServices;

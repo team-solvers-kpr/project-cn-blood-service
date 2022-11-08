@@ -560,24 +560,24 @@ const Navbar = () => {
                         
                         <div className='py-5 flex justify-around'>
                             <div className='pr-8'>
-                                <button className='rounded-full bg-[#f0f0f0] text-lg font-bold text-red-900 h-14 w-14'>FR</button>
+                                <button className='rounded-full bg-[#f0f0f0] text-lg font-bold text-red-700 h-14 w-14'>FR</button>
                             </div>
-                            <button className='h-14 w-28 bg-[#C4161C] hover:border text-white hover:bg-white hover:text-[#C4161C] border-[#C4161C] rounded-full font-bold outline-none inline-block uppercase'>
+                            <button className='h-14 w-28 bg-red-600 hover:border text-white hover:bg-white hover:text-red-600 border-[#C4161C] rounded-full font-bold outline-none inline-block uppercase'>
                                         Book Now
                             </button>
                             <button className='h-14 w-28 hover:bg-red-600 text-red-600 border border-red-600 hover:text-white bg-white rounded-full font-bold outline-none uppercase'>
-                            <FaUserAlt className='inline-block'  color='#C4161C' /> 
+                            <FaUserAlt className='inline-block'  color='red-600' /> 
                             Sign in
                             </button>
                         </div>
                         <ul className='border-[#f0f0f0]'>
-                                <li className='border-l-8 hover:text-white border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none h-20 ease-in-out'>
+                                <li className='border-l-8 hover:text-white border-red-600 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-600 focus:outline-none h-20 ease-in-out'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Blood
                                     </Link>
                                 </li>
-                                <li className='border-l-8 border-red-900 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-900 hover:text-white focus:outline-none h-20'>
+                                <li className='border-l-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none h-20'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Plasma
@@ -613,7 +613,7 @@ const Navbar = () => {
                         <div className='links bg-[#4D4D4D]'>
                             <ul>
                                 <li className='font-normal text-left text-white uppercase px-3 pt-10'>
-                                    <Link to='/hospital services' className=''>
+                                    <Link to='/hospital-services' className=''>
                                         Hospital Services
                                     </Link>
                                 </li>

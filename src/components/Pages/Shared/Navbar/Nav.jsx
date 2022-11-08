@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsArrowRight } from 'react-icons/bs';
 import { CgClose, CgMenuLeft } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { Link, useNavigate } from 'react-router-dom';
+import { json, Link, useNavigate } from 'react-router-dom';
 import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import { SearchBar } from './SearchBar';
@@ -11,7 +11,20 @@ import { SearchBar } from './SearchBar';
 const Nav = () => {
     const [isOpen, setOpen] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false)
+    const [showDropdownData, setShowDropdownData] = useState(false)
     const navigate = useNavigate();
+
+
+    useEffect(() => {
+
+        const fetchData = async () => {
+          const res = await fetch('./menus.JSON');
+          const data = await res.json();
+          setShowDropdownData(data);
+        }
+        fetchData();
+    
+      }, []);
   return (
     <div>
         <div className='manuBar  grid grid-flow-col'>
@@ -96,106 +109,7 @@ const Nav = () => {
                         </div>
                     </nav>
                 </div>
-                <div className="main-menu flex">
-                    <div onClick={()=> setShowDropdown (!showDropdown)} className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                        <br /><span className='text-white pl-4 pb-4'>for Life</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold border-red-700 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Plasma</span>
-                        <br /><span className='text-white pl-4'>for Life</span>   
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold  w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Stem Cells</span>
-                        <br /><span className='text-white pl-4 '>for Life</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold  w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
-                        <br /> <span className='pl-4'>Tissues</span>
-                        <br /><span className='text-white pl-4'>for Life</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
-                        <br /> <span className='pl-4'>Donate</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Stories</span>
-                    </div>
-
-
-
-                        {/* 
-                        
-                            dropdown start
-                        
-                        */}
-                    { showDropdown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
-                                <div className='drop flex flex-col mt-4'>
-                                    <h1 className='font-semibold'>Am I eligible to donate blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
-                                    <ul className='space-y-4 font-medium opacity-80 '>
-                                        <li>
-                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className='flex flex-col mt-4'>
-                                    <h1>Donating blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
-                                    <ul className='space-y-4'>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul className='space-y-4 mt-4'>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
-                                            <Link className='focus:underline text-white'>
-                                            View all blood info
-                                            </Link>
-                                            <span><BsArrowRight className='text-white' /></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>)}
-                </div>
+                <dir>{JSON.stringify(showDropdownData)}</dir>
             </div>
         </div>
 
