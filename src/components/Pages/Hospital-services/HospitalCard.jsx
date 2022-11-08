@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-
-
 export const HospitalCard = () => {
   const [ hospitalData, setHospitalData ] = useState([]);
   useEffect(() => {

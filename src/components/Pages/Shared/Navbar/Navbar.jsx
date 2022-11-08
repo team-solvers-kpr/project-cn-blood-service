@@ -91,7 +91,7 @@ const Navbar = () => {
                                                 <Button
                                                     btnText={"Sign in"}
                                                     bgprimary="bg-white"
-                                                    height="h-11"
+                                                    height="h-10"
                                                     width="w-28"
                                                     fontwidth="font-bold"
                                                     textTransform='uppercase'
