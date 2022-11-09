@@ -1,11 +1,12 @@
 import { useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-import Home from "./components/pages/Home/Home";
+import Home from "./components/pages/Home/Home/Home";
 import { HospitalServices } from "./components/pages/Hospital-services/HospitalServices";
 import Notfound from "./components/pages/Notfound/Notfound";
 import Footer from "./components/pages/Shared/Footer/Footer";
 import Navbar from "./components/pages/Shared/Navbar/Navbar";
+import AboutUs from './components/pages/AboutUs/AboutUs'
 
 function App() {
   const Wrapper = ({ children }) => {
@@ -25,6 +26,8 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
           <Route path="/hospital-services" element={<HospitalServices />}></Route>
+          <Route path="/About-Us" element={<AboutUs/>}></Route>
+
           <Route path="*" element={<Notfound />}></Route>
         </Routes>
         <Footer></Footer>
