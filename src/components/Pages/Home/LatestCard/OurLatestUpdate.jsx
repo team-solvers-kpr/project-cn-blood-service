@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const OurLatestUpdate = () => {
     const navigate = useNavigate();
   return (
-    <div className='pt-96 lg:pt-8 container items-center'>
+    <div className='pt-96 lg:pt-8 p-4 lg:m-8'>
         <div className='ourLatestUpdate flex justify-between items-center'>
             <div className='lg:ml-16'>
                 <span>
