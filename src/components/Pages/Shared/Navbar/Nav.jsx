@@ -7,9 +7,9 @@ import { BsArrowRight } from 'react-icons/bs';
 function Nav() {
   return (
     <ul className='flex flex-row w-full'>
-      <li className=''>
+      <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 pb-6 hover:text-white transition-all font-bold border-red-600 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
@@ -23,7 +23,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[800px] pl-4  mt-2 pt-4 gap-4 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -76,7 +76,7 @@ function Nav() {
                     <div className='grid gap-4 pb-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donating blood</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -85,9 +85,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/blood-type"
                                 >
-                                ABCs of eligible
+                                    What is my blood type?
                                 </Link>
                             )}
                         </Menu.Item>
@@ -95,9 +95,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/donation-process"
                                 >
-                                Change to donate criteria
+                                    Donation process
                                 </Link>
                             )}
                         </Menu.Item>
@@ -115,9 +115,29 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/rare-blood-program"
                                 >
-                                Sexual behaviour-based screen
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
                                 </Link>
                             )}
                         </Menu.Item>
@@ -125,15 +145,35 @@ function Nav() {
                     <div className='grid gap-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
                         </Menu.Item>
                         <Menu.Item>
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/recognition-program"
                                 >
-                                ABCs of eligible
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
                                 </Link>
                             )}
                         </Menu.Item>
@@ -143,27 +183,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/account-settings"
                                 >
-                                Change to donate criteria
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Trans Individusls
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Sexual behaviour-based screen
+                                    COVID-19 information
                                 </Link>
                             )}
                         </Menu.Item>
@@ -184,8 +204,8 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all w-40 font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                <span><RiArrowDropDownLine className='inline-block' />Blood </span>
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold border-red-700 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Plasma </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
             <Transition
@@ -198,11 +218,11 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[800px] pl-4  mt-2 pt-4 gap-4 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
-                            <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'>Am I eligible to donate Plasma?</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -213,7 +233,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/abc-of-eligible"
                                 >
-                                ABCs of eligible
+                                    ABCs of eligible
                                 </Link>
                             )}
                         </Menu.Item>
@@ -251,7 +271,7 @@ function Nav() {
                     <div className='grid gap-4 pb-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donate Plasma</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -260,9 +280,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/blood-type"
                                 >
-                                ABCs of eligible
+                                    What is my blood type?
                                 </Link>
                             )}
                         </Menu.Item>
@@ -270,9 +290,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/donation-process"
                                 >
-                                Change to donate criteria
+                                    Donation process
                                 </Link>
                             )}
                         </Menu.Item>
@@ -290,9 +310,29 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/rare-blood-program"
                                 >
-                                Sexual behaviour-based screen
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
                                 </Link>
                             )}
                         </Menu.Item>
@@ -300,15 +340,35 @@ function Nav() {
                     <div className='grid gap-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'>Security Canada's plasma suppely</h1>
                         </Menu.Item>
                         <Menu.Item>
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/recognition-program"
                                 >
-                                ABCs of eligible
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
                                 </Link>
                             )}
                         </Menu.Item>
@@ -318,27 +378,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/account-settings"
                                 >
-                                Change to donate criteria
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Trans Individusls
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Sexual behaviour-based screen
+                                    COVID-19 information
                                 </Link>
                             )}
                         </Menu.Item>
@@ -359,8 +399,8 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                <span><RiArrowDropDownLine className='inline-block' />Blood </span>
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold  w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Stem Cells </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
             <Transition
@@ -373,7 +413,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[800px] pl-4  mt-2 pt-4 gap-4 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -426,7 +466,7 @@ function Nav() {
                     <div className='grid gap-4 pb-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donating blood</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -435,9 +475,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/blood-type"
                                 >
-                                ABCs of eligible
+                                    What is my blood type?
                                 </Link>
                             )}
                         </Menu.Item>
@@ -445,9 +485,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/donation-process"
                                 >
-                                Change to donate criteria
+                                    Donation process
                                 </Link>
                             )}
                         </Menu.Item>
@@ -465,9 +505,29 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/rare-blood-program"
                                 >
-                                Sexual behaviour-based screen
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
                                 </Link>
                             )}
                         </Menu.Item>
@@ -475,15 +535,35 @@ function Nav() {
                     <div className='grid gap-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
                         </Menu.Item>
                         <Menu.Item>
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/recognition-program"
                                 >
-                                ABCs of eligible
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
                                 </Link>
                             )}
                         </Menu.Item>
@@ -493,27 +573,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/account-settings"
                                 >
-                                Change to donate criteria
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Trans Individusls
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Sexual behaviour-based screen
+                                    COVID-19 information
                                 </Link>
                             )}
                         </Menu.Item>
@@ -534,9 +594,10 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600  pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                <br /><span className='text-white pl-4 pb-4'>for Life</span>
+            <Menu.Button className="border-b-8 hover:text-white font-bold w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
+                <br /> <span className='pl-4'>Tissues</span>
+                <br /><span className='text-white pl-4'>for Life</span>
             </Menu.Button>
             <Transition
                 as={Fragment}
@@ -548,7 +609,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[800px] pl-4  mt-2 pt-4 gap-4 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -601,7 +662,7 @@ function Nav() {
                     <div className='grid gap-4 pb-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donating blood</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -610,9 +671,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/blood-type"
                                 >
-                                ABCs of eligible
+                                    What is my blood type?
                                 </Link>
                             )}
                         </Menu.Item>
@@ -620,9 +681,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/donation-process"
                                 >
-                                Change to donate criteria
+                                    Donation process
                                 </Link>
                             )}
                         </Menu.Item>
@@ -640,9 +701,29 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/rare-blood-program"
                                 >
-                                Sexual behaviour-based screen
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
                                 </Link>
                             )}
                         </Menu.Item>
@@ -650,15 +731,35 @@ function Nav() {
                     <div className='grid gap-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
                         </Menu.Item>
                         <Menu.Item>
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/recognition-program"
                                 >
-                                ABCs of eligible
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
                                 </Link>
                             )}
                         </Menu.Item>
@@ -668,27 +769,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/account-settings"
                                 >
-                                Change to donate criteria
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Trans Individusls
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Sexual behaviour-based screen
+                                    COVID-19 information
                                 </Link>
                             )}
                         </Menu.Item>
@@ -709,9 +790,9 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                <br /><span className='text-white pl-4 pb-4'>for Life</span>
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold border-sky-50 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
+                <br /> <span className='pl-4'>Donate</span>
             </Menu.Button>
             <Transition
                 as={Fragment}
@@ -723,7 +804,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[800px] pl-4  mt-2 pt-4 gap-4 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -776,7 +857,7 @@ function Nav() {
                     <div className='grid gap-4 pb-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donating blood</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -785,9 +866,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/blood-type"
                                 >
-                                ABCs of eligible
+                                    What is my blood type?
                                 </Link>
                             )}
                         </Menu.Item>
@@ -795,9 +876,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/donation-process"
                                 >
-                                Change to donate criteria
+                                    Donation process
                                 </Link>
                             )}
                         </Menu.Item>
@@ -815,9 +896,29 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/rare-blood-program"
                                 >
-                                Sexual behaviour-based screen
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
                                 </Link>
                             )}
                         </Menu.Item>
@@ -825,15 +926,35 @@ function Nav() {
                     <div className='grid gap-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
                         </Menu.Item>
                         <Menu.Item>
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/recognition-program"
                                 >
-                                ABCs of eligible
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
                                 </Link>
                             )}
                         </Menu.Item>
@@ -843,27 +964,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/account-settings"
                                 >
-                                Change to donate criteria
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Trans Individusls
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Sexual behaviour-based screen
+                                    COVID-19 information
                                 </Link>
                             )}
                         </Menu.Item>
@@ -884,9 +985,9 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                <br /><span className='text-white pl-4 pb-4'>for Life</span>
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold border-sky-50 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Stories </span>
+                <br /><span className='text-white pl-4 pb-4'></span>
             </Menu.Button>
             <Transition
                 as={Fragment}
@@ -898,7 +999,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[800px] pl-4  mt-2 pt-4 gap-4 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -951,7 +1052,7 @@ function Nav() {
                     <div className='grid gap-4 pb-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donating blood</h1>
                         </Menu.Item>
                         <Menu.Item>
                             <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
@@ -960,9 +1061,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/blood-type"
                                 >
-                                ABCs of eligible
+                                    What is my blood type?
                                 </Link>
                             )}
                         </Menu.Item>
@@ -970,9 +1071,9 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/donation-process"
                                 >
-                                Change to donate criteria
+                                    Donation process
                                 </Link>
                             )}
                         </Menu.Item>
@@ -990,9 +1091,29 @@ function Nav() {
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/rare-blood-program"
                                 >
-                                Sexual behaviour-based screen
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
                                 </Link>
                             )}
                         </Menu.Item>
@@ -1000,15 +1121,35 @@ function Nav() {
                     <div className='grid gap-4'>
  
                         <Menu.Item>
-                            <h1> Am I eligible to donate blood</h1>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
                         </Menu.Item>
                         <Menu.Item>
                         {({ active }) => (
                                 <Link
                                 className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
+                                to="/recognition-program"
                                 >
-                                ABCs of eligible
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
                                 </Link>
                             )}
                         </Menu.Item>
@@ -1018,27 +1159,7 @@ function Nav() {
                                 className={`${active && 'text-red-600'}`}
                                 to="/account-settings"
                                 >
-                                Change to donate criteria
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Trans Individusls
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                        {({ active }) => (
-                                <Link
-                                className={`${active && 'text-red-600'}`}
-                                to="/account-settings"
-                                >
-                                Sexual behaviour-based screen
+                                    COVID-19 information
                                 </Link>
                             )}
                         </Menu.Item>
