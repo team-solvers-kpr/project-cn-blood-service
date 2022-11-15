@@ -23,7 +23,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -218,7 +218,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 -left-16 w-[900px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -413,7 +413,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 -left-60 w-[900px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -609,7 +609,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 -right-60 w-[900px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -804,7 +804,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 right-0 w-[900px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
@@ -999,7 +999,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 left-0 w-[900px] pl-4  mt-2 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 right-0 w-[900px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className='grid gap-4 pb-4'>
 
                         <Menu.Item>
