@@ -6,11 +6,12 @@ import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
-import MegaMenu from './MegaMenu';
+import Nav from './Nav';
 import { SearchBar } from './SearchBar';
-import SingleMenu from './SingleMenu';
+import megaMenus from '../../../../temp/menus.json';
 
 const Navbar = () => {
+    const menus = megaMenus;
     const [isOpen, setOpen] = useState(false);
     const [showDropDown, setShowDropDown] = useState(false);
     
@@ -118,123 +119,34 @@ const Navbar = () => {
                         </div>
                     </nav>
                 </div>
-                <div className="main-menu" ref={menuRef}>
-                    <ul className='flex'>
-                        <li>
-                            <button onClick={()=> setShowDropDown (!showDropDown)} className="relative group border-b-8 hover:text-white transition-all font-bold border-red-600  pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                            <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                            <br /><span className='text-white pl-4 pb-4'>for Life</span>
+                <div className="main-menu flex" ref={menuRef}>
+                    <Nav menus={menus} />
+                    {/* <div onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+                        <span><RiArrowDropDownLine className='inline-block' />Blood </span>
+                        <br /><span className='text-white pl-4 pb-4'>for Life</span>
+                    </div>
+                    <div onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold border-red-700 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
+                        <span><RiArrowDropDownLine className='inline-block' />Plasma</span>
+                        <br /><span className='text-white pl-4'>for Life</span>   
+                    </div>
+                    <div onClick={()=> setShowDropDown (!showDropDown)}  className="border-b-8 hover:text-white font-bold  w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
+                        <span><RiArrowDropDownLine className='inline-block' />Stem Cells</span>
+                        <br /><span className='text-white pl-4 '>for Life</span>
+                    </div>
+                    <div onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold  w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
+                        <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
+                        <br /> <span className='pl-4'>Tissues</span>
+                        <br /><span className='text-white pl-4'>for Life</span>
+                    </div>
+                    <div onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                        <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
+                        <br /> <span className='pl-4'>Donate</span>
+                    </div>
+                    <div onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                        <span><RiArrowDropDownLine className='inline-block' />Stories</span>
+                    </div> */}
 
-                            </button>
-                            { showDropDown && (
-                                <SingleMenu heading={"Am I eligible to donate plasma"} textleft1='ABCs of eligible' textleft2='Change to donate criteria' textleft3="Trans Individusls" textleft4='Sexual behaviour-based screen' heading2={"Donating blood"} textright1={"ABCs of eligible"} textright2="Change to donate criteria" textright3="Trans Individusls" textright4={"Sexual behaviour-based screen"} textright5="Sexual behaviour-based screen" textcenter1={"Sexual behaviour-based screen"} textcenter2="Sexual behaviour-based screen" textcenter3={"Sexual behaviour-based screen"} textcenter4={"Sexual behaviour-based screen"} textcenter5="Sexual behaviour-based screen" btnText="view all blood info" />
-                            )}
-                        </li>
-                        <li>
-                            <button onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold border-red-700 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
-                            <span><RiArrowDropDownLine className='inline-block' />Plasma</span>
-                            <br /><span className='text-white pl-4'>for Life</span>
 
-                            </button>
-
-                            {/* { showDropDown && ( <div  className={`text-left transition-all ${showDropDown?'visible':'invisible'} absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
-                                <div className='drop flex flex-col mt-4'>
-                                    <h1 className='font-semibold'>Am I eligible to donate plasma</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-600 border-solid border-2 border-red-600' />
-                                    <ul className='space-y-4 font-medium '>
-                                        <li className=''>
-                                            <Link to='/blood' className='hover:text-red-600 '>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className='  hover:text-red-600'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className='flex flex-col mt-4'>
-                                    <h1>Donating blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-600 border-solid border-2 border-red-600' />
-                                    <ul className='space-y-4'>
-                                        <li>
-                                            <Link to='/blood'className='  hover:text-red-600'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul className='space-y-4 mt-4'>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li className='bg-red-600 space-x-10 h-20 font-bold flex justify-center items-center'>
-                                            <Link className='focus:underline text-white'>
-                                            View all blood info
-                                            </Link>
-                                            <span><BsArrowRight className='text-white' /></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>)} */}
-
-                        </li>
-                        <li>
-                            <button onClick={()=> setShowDropDown (!showDropDown)}  className="border-b-8 hover:text-white font-bold pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
-
-                            <span><RiArrowDropDownLine className='inline-block' />Stem Cells</span>
-                            <br /><span className='text-white pl-4 '>for Life</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button  onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
-
-                            <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
-                            <br /> <span className='pl-4'>Tissues</span>
-                            <br /><span className='text-white pl-4'>for Life</span>
-                            </button>
-                        </li>
-                        <li >
-                            <button onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold border-sky-50  pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
-                                
-                            <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
-                            <br /> <span className='pl-4'>Donate</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button onClick={()=> setShowDropDown (!showDropDown)} className="border-b-8 hover:text-white font-bold border-sky-50  pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
-
-                            <span><RiArrowDropDownLine className='inline-block' />Stories</span>
-                            </button>
-                        </li>
-
-                    </ul>
 
                         {/* 
                         
@@ -243,69 +155,64 @@ const Navbar = () => {
                         */}
 
                         {/* drop down for blood  */}
-                    {/* { showDropDown && (
-                        <MegaMenu menu={menu}/>
-                    )} */}
-
-{/* ${showDropDown?'visible':'invisible'} */}
-                                        {/* { showDropDown && ( <div  className={`text-left transition-all ${showDropDown?'visible':'invisible'} absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
+                    {/* { showDropDown && ( <div  className={`text-left transition-all ${showDropDown?'visible':'invisible'} absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
                                 <div className='drop flex flex-col mt-4'>
                                     <h1 className='font-semibold'>Am I eligible to donate blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-600 border-solid border-2 border-red-600' />
-                                    <ul className='space-y-4 font-medium '>
-                                        <li className=''>
-                                            <Link to='/blood' className='hover:text-red-600 '>ABCs of eligible</Link>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                                    <ul className='space-y-4 font-medium opacity-80 '>
+                                        <li>
+                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className='  hover:text-red-600'>Change to donate criteria</Link>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Trans Individusls</Link>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className='flex flex-col mt-4'>
                                     <h1>Donating blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-600 border-solid border-2 border-red-600' />
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
                                     <ul className='space-y-4'>
                                         <li>
-                                            <Link to='/blood'className='  hover:text-red-600'>ABCs of eligible</Link>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Change to donate criteria</Link>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Trans Individusls</Link>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
                                         </li>
                                     </ul>
                                 </div>
                                 <div>
                                     <ul className='space-y-4 mt-4'>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>ABCs of eligible</Link>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Change to donate criteria</Link>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Trans Individusls</Link>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
                                         </li>
                                         <li>
-                                            <Link to='/blood'className=' hover:text-red-600'>Sexual behaviour-based screen</Link>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
                                         </li>
-                                        <li className='bg-red-600 space-x-10 h-20 font-bold flex justify-center items-center'>
+                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
                                             <Link className='focus:underline text-white'>
                                             View all blood info
                                             </Link>
@@ -317,18 +224,344 @@ const Navbar = () => {
 
                         {/* drop down for plasma  */}
 
+                        {/* { showDropDown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
+                                <div className='drop flex flex-col mt-4'>
+                                    <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                                    <ul className='space-y-4 font-medium opacity-80 '>
+                                        <li>
+                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <h1>Donating blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
+                                    <ul className='space-y-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul className='space-y-4 mt-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
+                                            <Link className='focus:underline text-white'>
+                                            View all blood info
+                                            </Link>
+                                            <span><BsArrowRight className='text-white' /></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>)} */}
                         {/* drop down for psteme cell */}
 
-                        
+                        {/* { showDropDown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
+                                <div className='drop flex flex-col mt-4'>
+                                    <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                                    <ul className='space-y-4 font-medium opacity-80 '>
+                                        <li>
+                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <h1>Donating blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
+                                    <ul className='space-y-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul className='space-y-4 mt-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
+                                            <Link className='focus:underline text-white'>
+                                            View all blood info
+                                            </Link>
+                                            <span><BsArrowRight className='text-white' /></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>)} */}
                         {/* drop down for Organ & tissues  */}
 
-                        
+                        {/* { showDropDown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
+                                <div className='drop flex flex-col mt-4'>
+                                    <h1 className='font-semibold'>Am I eligible to donate tissues</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                                    <ul className='space-y-4 font-medium opacity-80 '>
+                                        <li>
+                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <h1>Donating blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
+                                    <ul className='space-y-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul className='space-y-4 mt-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
+                                            <Link className='focus:underline text-white'>
+                                            View all blood info
+                                            </Link>
+                                            <span><BsArrowRight className='text-white' /></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>)} */}
                         {/* drop down for Donaate  */}
 
-                        
+                        {/* { showDropDown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
+                                <div className='drop flex flex-col mt-4'>
+                                    <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                                    <ul className='space-y-4 font-medium opacity-80 '>
+                                        <li>
+                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <h1>Donating blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
+                                    <ul className='space-y-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul className='space-y-4 mt-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
+                                            <Link className='focus:underline text-white'>
+                                            View all blood info
+                                            </Link>
+                                            <span><BsArrowRight className='text-white' /></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>)} */}
                         {/* drop down for Stories  */}
 
-                        
+                        {/* { showDropDown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
+                                <div className='drop flex flex-col mt-4'>
+                                    <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                                    <ul className='space-y-4 font-medium opacity-80 '>
+                                        <li>
+                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className='flex flex-col mt-4'>
+                                    <h1>Donating blood</h1>
+                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
+                                    <ul className='space-y-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul className='space-y-4 mt-4'>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
+                                        </li>
+                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
+                                            <Link className='focus:underline text-white'>
+                                            View all blood info
+                                            </Link>
+                                            <span><BsArrowRight className='text-white' /></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>)} */}
                 </div>
             </div>
         </div>
