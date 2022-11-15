@@ -7,9 +7,9 @@ import { BsArrowRight } from 'react-icons/bs';
 function Nav() {
   return (
     <ul className='flex flex-row w-full'>
-      <li>
+      <li className=''>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
@@ -184,7 +184,7 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 hover:text-white transition-all w-40 font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
@@ -359,7 +359,7 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
@@ -534,7 +534,7 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600  pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
@@ -709,7 +709,7 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
@@ -884,7 +884,7 @@ function Nav() {
       </li>
       <li>
         <Menu as="div" className="relative inline-block text-left">
-            <Menu.Button className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+            <Menu.Button className="border-b-8 w-40 hover:text-white transition-all font-bold border-red-600 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
                 <span><RiArrowDropDownLine className='inline-block' />Blood </span>
                 <br /><span className='text-white pl-4 pb-4'>for Life</span>
             </Menu.Button>
