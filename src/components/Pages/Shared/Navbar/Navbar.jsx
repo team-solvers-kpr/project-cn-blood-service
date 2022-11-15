@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { BsArrowRight } from 'react-icons/bs';
+import React, { useState } from 'react'
 import { CgClose, CgMenuLeft } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { RiArrowDropDownLine } from 'react-icons/ri';
@@ -8,32 +7,10 @@ import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import Nav from './Nav';
 import { SearchBar } from './SearchBar';
-import megaMenus from '../../../../temp/menus.json';
 
 const Navbar = () => {
-    const menus = megaMenus;
     const [isOpen, setOpen] = useState(false);
-    const [showDropDown, setShowDropDown] = useState(false);
     
-    let menuRef = useRef();
-    useEffect(() => {
-        const closeDropDown = (e)=>{
-          if(!menuRef.current.contains(e.target)){
-            setShowDropDown(false);
-            console.log(menuRef.current);
-          }     
-        
-          console.log(e);
-        };
-    
-        document.addEventListener('click', closeDropDown);
-        
-    
-        return() =>{
-          document.removeEventListener("click", closeDropDown);
-        }
-    
-      }, []);
     const navigate = useNavigate();
   return (
     <div>
@@ -119,8 +96,8 @@ const Navbar = () => {
                         </div>
                     </nav>
                 </div>
-                <div className="main-menu flex" ref={menuRef}>
-                    <Nav menus={menus} />
+                <div className="main-menu flex">
+                    <Nav  />
                 </div>
             </div>
         </div>
