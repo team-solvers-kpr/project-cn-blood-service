@@ -13,8 +13,8 @@ const Navbar = () => {
     
     const navigate = useNavigate();
   return (
-    <div>
-        <div className='manuBar  grid grid-flow-col '>
+    <div className='lg:fixed w-full bg-white z-50'>
+        <div className='manuBar   grid grid-flow-col '>
             <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
                 <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />
                 {!isOpen && (
@@ -105,9 +105,9 @@ const Navbar = () => {
 
                             {/* mobile menu navigation  */}
 
-        <div className={`md:hidden bg-white relative  h-full w-full bottom-0 py-24 pt-4 ${
+        <div className={`md:hidden bg-white absolute h-full w-full py-24  pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
-            } ease-in-out duration-700 z-50`}>
+            } ease-in-out duration-700 z-40`}>
 
                         <div className='searchBar'>
                             <SearchBar width="w-full"  />
