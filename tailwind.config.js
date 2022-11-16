@@ -18,7 +18,7 @@ const myClass = plugin(function ({ addUtilities }) {
 });
 module.exports = {
   mode: "jit",
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
     extend: {
       backgroundImage: {
@@ -29,5 +29,8 @@ module.exports = {
   daisyui: {
     themes: false,
   },
-  plugins: [require("daisyui"), myClass],
+  plugins: [require( 'tw-elements/dist/plugin'), myClass,
+  require( "daisyui")
+],
+
 };

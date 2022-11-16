@@ -22,7 +22,7 @@ const Annual = () => {
      </div>
 
      <div className="w-full"> 
-        <img src={babyPic} className="w-full"/>
+        <img src={babyPic} alt="" className="w-full"/>
      </div>
      </div>
       
