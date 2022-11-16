@@ -7,6 +7,8 @@ import Signin from "./components/Pages/Login/Signin/Signin";
 import Notfound from "./components/Pages/Notfound/Notfound";
 import Footer from "./components/Pages/Shared/Footer/Footer";
 import Navbar from "./components/Pages/Shared/Navbar/Navbar";
+import AllProducts from "./components/Pages/Shop/AllProducts/AllProducts";
+import Shop from "./components/Pages/Shop/Shop/Shop";
 
 function App() {
   const Wrapper = ({ children }) => {
@@ -30,6 +32,8 @@ function App() {
             element={<HospitalServices />}
           ></Route>
           <Route path="/signin" element={<Signin />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/allProducts" element={<AllProducts />}></Route>
           <Route path="*" element={<Notfound />}></Route>
         </Routes>
         <Footer></Footer>
