@@ -1,16 +1,15 @@
 import { useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-
-import Home from "./components/Pages/Home/Home/Home";
-import { HospitalServices } from "./components/Pages/Hospital-services/HospitalServices";
 import Signin from "./components/Pages/Login/Signin/Signin";
-import Notfound from "./components/Pages/Notfound/Notfound";
-import Footer from "./components/Pages/Shared/Footer/Footer";
-import Navbar from "./components/Pages/Shared/Navbar/Navbar";
 import AllProducts from "./components/Pages/Shop/AllProducts/AllProducts";
 import Shop from "./components/Pages/Shop/Shop/Shop";
-
+import Home from './components/pages/Home/Home/Home'
+import { HospitalServices } from "./components/pages/Hospital-services/HospitalServices";
+import Notfound from "./components/pages/Notfound/Notfound";
+import Footer from "./components/pages/Shared/Footer/Footer";
+import Navbar from "./components/pages/Shared/Navbar/Navbar";
+import AboutUs from './components/pages/AboutUs/AboutUs'
 
 function App() {
     const Wrapper = ({ children }) => {
@@ -21,7 +20,6 @@ function App() {
         }, [location.pathname]);
         return children;
     };
-
 
   return (
     <div className="App">
@@ -37,13 +35,15 @@ function App() {
           <Route path="/signin" element={<Signin />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/allProducts" element={<AllProducts />}></Route>
+          <Route path="/hospital-services" element={<HospitalServices />}></Route>
+          <Route path="/about-Us" element={<AboutUs/>}></Route>
           <Route path="*" element={<Notfound />}></Route>
         </Routes>
         <Footer></Footer>
+        <AboutUs></AboutUs>
       </Wrapper>
     </div>
   );
-
 }
 
 export default App;
