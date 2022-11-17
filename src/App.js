@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
+
 import Home from "./components/Pages/Home/Home/Home";
 import { HospitalServices } from "./components/Pages/Hospital-services/HospitalServices";
 import Signin from "./components/Pages/Login/Signin/Signin";
@@ -10,15 +11,17 @@ import Navbar from "./components/Pages/Shared/Navbar/Navbar";
 import AllProducts from "./components/Pages/Shop/AllProducts/AllProducts";
 import Shop from "./components/Pages/Shop/Shop/Shop";
 
-function App() {
-  const Wrapper = ({ children }) => {
-    const location = useLocation();
 
-    useLayoutEffect(() => {
-      document.documentElement.scrollTo(0, 0);
-    }, [location.pathname]);
-    return children;
-  };
+function App() {
+    const Wrapper = ({ children }) => {
+        const location = useLocation();
+
+        useLayoutEffect(() => {
+            document.documentElement.scrollTo(0, 0);
+        }, [location.pathname]);
+        return children;
+    };
+
 
   return (
     <div className="App">
@@ -40,6 +43,7 @@ function App() {
       </Wrapper>
     </div>
   );
+
 }
 
 export default App;
