@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 
 const VideoSection = () => {
   return (
-    <div className="lg:flex mb-10 lg:relative lg:flex lg:justify-end" >
+    <div className="lg:flex mb-10 lg:relative lg:justify-end" >
      <div className=" lg:w-full " style={{backgroundColor:"#E7131A"}}>
        <div className="lg:py-32 lg:px-40 p-4">
        <h1 className="text-white text-4xl font-semibold mb-4 text-justify">
@@ -29,7 +29,9 @@ const VideoSection = () => {
      </div>
      {/* for youtube  */}
      <div className='absolute lg:mt-16 lg:mr-40' >
-      <ReactPlayer url='https://youtu.be/brAqVXrouGg'></ReactPlayer>
+        <VideoModal  videourl={} />
+        <ReactPlayer url='https://youtu.be/brAqVXrouGg'></ReactPlayer>
+
      </div>
       
     </div>

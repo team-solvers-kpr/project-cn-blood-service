@@ -2,7 +2,10 @@ import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
 import { CgClose } from 'react-icons/cg'
 
-const VideoModal = () => {
+const VideoModal = ({
+    images,
+    videourl
+}) => {
     let [isOpen, setIsOpen] = useState(true)
 
     function closeModal() {
@@ -21,7 +24,7 @@ const VideoModal = () => {
             onClick={openModal}
             className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
           >
-            <img src="{}" alt="" />
+            <img src={images} alt="video images" />
           </button>
         </div>
   
@@ -58,10 +61,7 @@ const VideoModal = () => {
                       Payment successful
                     </Dialog.Title>
                     <div className="mt-2">
-                      <p className="text-sm text-gray-500">
-                        Your payment has been successfully submitted. We’ve sent
-                        you an email with all of the details of your order.
-                      </p>
+                      <iframe src={videourl} frameborder="0" title='this is modal iframe'></iframe>
                     </div>
   
                     <div className="mt-4">
