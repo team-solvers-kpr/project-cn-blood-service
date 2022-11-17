@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+.shopAddContainer {
+    background-image: url("../../../assets/shop/bg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.textAndMugContainer {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0px 20px;
+    font-size: 28px;
+    text-align: left;
+    letter-spacing: -1px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding-bottom: 80px;
+}
+
+.textContainer {
+    margin-top: 100px;
+    width: 50%;
+}
+
+.borderSpan::after {
+    content: "";
+    display: inline-block;
+    height: 1em;
+    vertical-align: bottom;
+    width: 10%;
+    border-top: 6px solid rgb(255, 255, 255);
+}
+
+.shopNowBtn {
+    background-color: #fff;
+    color: #54c1bb;
+    width: 210px;
+    border-radius: 50px;
+    height: 63px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.shopNowBtn:hover {
+    background-color: #ed1c24;
+    color: #fff;
+    transition: 0.5s;
+
+}
+
+.mugContainer {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 1080px) {
+    .textAndMugContainer {
+        flex-direction: column;
+    }
+
+    .textContainer {
+        width: 100%;
+    }
+}
