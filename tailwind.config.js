@@ -29,5 +29,10 @@ module.exports = {
     daisyui: {
         themes: false,
     },
-    plugins: [require("@tailwindcss/forms"), require("daisyui"), myClass],
+    plugins: [
+        require("tw-elements/dist/plugin"),
+        require("@tailwindcss/forms"),
+        require("daisyui"),
+        myClass,
+    ],
 };
