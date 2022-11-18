@@ -1,4 +1,7 @@
 import React from "react";
+import 'tw-elements';
+import valueImage from '../../assets/value.jpg';
+
 
 
 
@@ -102,7 +105,7 @@ We make a difference and in that, we take great pride.</p>
     <div class="accordion-item mb-4">
       <h2 class="accordion-header mb-0" id="headingThree5">
         <button class="
-           cursor-pointer hover:bg-gray-200  bg-white hover:border-1   hover:shadow-md
+         cursor-pointer hover:bg-gray-200  bg-white hover:border-1   hover:shadow-md
           collapsed
           relative
           flex
@@ -120,18 +123,54 @@ We make a difference and in that, we take great pride.</p>
           aria-controls="collapseThree5">
          <div className="flex ">
         <p className="text-3xl font-semibold mr-4 text-red-600">+</p>
-       <div className="text-2xl mt-1 text-justify text-gray-600">Our mission</div>
+       <div className="text-2xl mt-1 text-justify text-gray-600">Our value</div>
         </div>
         </button>
       </h2>
       <div id="collapseThree5" class="accordion-collapse collapse" aria-labelledby="headingThree5">
-        <div class="accordion-body py-4 px-5">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default,
-          until the collapse plugin adds the appropriate classes that we use to style each
-          element. These classes control the overall appearance, as well as the showing and
-          hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-          our default variables. It's also worth noting that just about any HTML can go within
-          the <code>.accordion-body</code>, though the transition does limit overflow.
+        <div class="accordion-body py-4 px-5 border border-gray-300">
+        <div>
+            <div className="flex justify-center">
+              <img src={valueImage} alt=''/>
+            </div>
+            <div>
+              <h2 className="font-bold text-lg text-gray-700">Integrity</h2>
+              <p className="text-gray-700 mb-1">We do the right thing, always.</p>
+              <p className="text-gray-700 mb-1">We do what we say we will do.</p>
+              <p className="text-gray-700 mb-1">We share information in an honest, transparent manner.</p>
+              <p className="text-gray-700 ">We follow policies, processes and regulations.</p>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-bold text-lg text-gray-700">Collaboration</h2>
+              <p className="text-gray-700 mb-1">We help each other.</p>
+              <p className="text-gray-700 mb-1">We engage those who are affected by our decisions.</p>
+              <p className="text-gray-700 mb-1">We listen with an open mind.</p>
+              <p className="text-gray-700">We focus on solutions. </p>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-bold text-lg text-gray-700">Adaptability</h2>
+              <p className="text-gray-700 mb-1">We embrace change.</p>
+              <p className="text-gray-700 mb-1">We keep learning.</p>
+              <p className="text-gray-700 mb-1">We seek new ideas and opportunities.</p>
+              <p className="text-gray-700">We integrate better ways of working, quickly. </p>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-bold text-lg text-gray-700">Respect</h2>
+              <p className="text-gray-700 mb-1">We treat everyone fairly.</p>
+              <p className="text-gray-700 mb-1">We are considerate and courteous to everyone.</p>
+              <p className="text-gray-700 mb-1">We value diversity in all its forms.</p>
+              <p className="text-gray-700">We create and nurture an environment where everyone feels included.  </p>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-bold text-lg text-gray-700">Excellence</h2>
+              <p className="text-gray-700 mb-1">We give our best every day, in all that we do.</p>
+              <p className="text-gray-700 mb-1">We take ownership of our work.</p>
+              <p className="text-gray-700 mb-1">We continuously improve our processes, products and services.</p>
+              <p className="text-gray-700">We set increasingly higher standards for ourselves.   </p>
+            </div>
+
+           
+        </div>
         </div>
       </div>
     </div>
