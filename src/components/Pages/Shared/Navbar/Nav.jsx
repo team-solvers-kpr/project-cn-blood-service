@@ -1,298 +1,1169 @@
-import React, { useState } from 'react'
-import { BsArrowRight } from 'react-icons/bs';
-import { CgClose, CgMenuLeft } from 'react-icons/cg';
-import { FaUserAlt } from 'react-icons/fa';
+import React, { Fragment } from 'react';
+import { Menu, Transition } from '@headlessui/react'
 import { RiArrowDropDownLine } from 'react-icons/ri';
-import { Link, useNavigate } from 'react-router-dom';
-import Logo from '../../../assets/footerimage.png';
-import Button from './Button';
-import { SearchBar } from './SearchBar';
+import { Link } from 'react-router-dom';
+import { BsArrowRight } from 'react-icons/bs';
 
-const Nav = () => {
-    const [isOpen, setOpen] = useState(false);
-    const [showDropdown, setShowDropdown] = useState(false)
-    const navigate = useNavigate();
+function Nav() {
   return (
-    <div>
-        <div className='manuBar  grid grid-flow-col'>
-            <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
-                <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />
-                {!isOpen && (
-                            <div className='menu-icon cursor-pointer font-bold  absolute inline-block right-4 lg:hidden outline-none'
-                            onClick={() => setOpen(!isOpen)}
-                        >
-                            <CgMenuLeft fontSize={40} className="text-red-600" />
-                            <span className='uppercase text-[#BEBEC2]'>Menu</span>
-                        </div>
-                        )}
-                    {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none '
-                    onClick={() => setOpen(!isOpen)}
-                    >
-                            <CgClose fontSize={40} className="text-red-600" />
-                        </div>
-                        )}
-            </div>
-            <div className='right md:block hidden pt-2 col-span-9'>
-                <div className="menu-top">
-                    <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
-                        <ul className='flex gap-2 pt-1'>
-                            <li className='hover:underline'>
-                                <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
-                            </li>
-                            <li className='hover:underline'>
-                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
-                            </li>
-                            <li className='hover:underline'>
-                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
-                            </li>
-                            <li className='hover:underline'>
-                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
-                            </li>
-                            <li className='hover:underline'>
-                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
-                            </li>
-                        </ul>
-                        <div className='inline-flex  gap-2'>
-                            <div className='topbuttons inline-flex gap-2'>
-                                <div className='link pt-1'>
-                                    <Link className='text-red-500 font-bold'>
-                                        Français
-                                    </Link>
-                                </div>
-                                <div className='buttons inline-flex gap-2'>
-                                    <Button
-                                        btnText={"Book Now"}
-                                        bgprimary="bg-[#C4161C]"
-                                        height="h-10"
-                                        width="w-28"
-                                        textprimary="text-[#C4161C]"
-                                        borderprimary="border-red-700"
-                                        bgsecondary="bg-white"
-                                        textColor='text-white'
-                                        fontwidth="font-bold"
-                                        fontsize="text-base"
-                                        onClick={(e) => navigate("/bookNow")}
-                                    />
+    <ul className='flex flex-row w-full'>
+      <li>
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="border-b-8 pb-6 hover:text-white transition-all font-bold border-red-600 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Blood </span>
+                <br /><span className='text-white pl-4 pb-4'>for Life</span>
+            </Menu.Button>
+            <Transition
+                as={Fragment}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
 
-                                    <Button
-                                        btnText={"Sign in"}
-                                        bgprimary="bg-white"
-                                        height="h-11"
-                                        width="w-28"
-                                        fontwidth="font-bold"
-                                        textTransform='uppercase'
-                                        fontsize="text-base"
-                                        textprimary="text-white"
-                                        borderprimary="border-red-700"
-                                        bgsecondary="bg-[#C4161C]"
-                                        textColor='text-[#C4161C]'
-                                        onClick={(e) => navigate("/signin")}
-                                    />
-                                </div>
-                            </div>
-                            <div className='topsearchbar '>
-                                <SearchBar width='w-12' pr= 'focus:pr-4' />
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <div className="main-menu flex">
-                    <div onClick={()=> setShowDropdown (!showDropdown)} className="border-b-8 hover:text-white transition-all font-bold border-red-600 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Blood </span>
-                        <br /><span className='text-white pl-4 pb-4'>for Life</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold border-red-700 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Plasma</span>
-                        <br /><span className='text-white pl-4'>for Life</span>   
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold  w-full pt-2 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Stem Cells</span>
-                        <br /><span className='text-white pl-4 '>for Life</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold  w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
-                        <br /> <span className='pl-4'>Tissues</span>
-                        <br /><span className='text-white pl-4'>for Life</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
-                        <br /> <span className='pl-4'>Donate</span>
-                    </div>
-                    <div  className="border-b-8 hover:text-white font-bold border-sky-50 w-full pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
-                        <span><RiArrowDropDownLine className='inline-block' />Stories</span>
-                    </div>
+                <Menu.Items className="absolute z-50 left-0 w-[930px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className='grid gap-4 pb-4'>
 
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'} font-semibold`}
+                                to="/am-i-eligible-donate-blood"
+                                >
+                                    Am I eligible to donate blood
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/abc-of-eligible"
+                                >
+                                ABCs of eligible
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/change-to-donate-criteria"
+                                >
+                                Change to donate criteria
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/trans-tndividusls"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                Sexual behaviour-based screen
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4 pb-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donating blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/blood-type"
+                                >
+                                    What is my blood type?
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donation-process"
+                                >
+                                    Donation process
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/rare-blood-program"
+                                >
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/recognition-program"
+                                >
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                    COVID-19 information
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item className="bg-red-600 text-white text-center text-xl h-14 pt-4">
+                        {({ active }) => (
+                                <Link
+                                className={`${active && ''}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                    View More Blood <BsArrowRight className='inline-block' />
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
+      </li>
+      <li>
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold border-red-700 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:bg-red-700 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Plasma </span>
+                <br /><span className='text-white pl-4 pb-4'>for Life</span>
+            </Menu.Button>
+            <Transition
+                as={Fragment}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
 
+                <Menu.Items className="absolute z-50 -left-16 w-[930px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className='grid gap-4 pb-4'>
 
-                        {/* 
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'} font-semibold`}
+                                to="/am-i-eligible-to-donate-plasma"
+                                >
+                                    Am I eligible to donate Plasma?
+                                    
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/become-a-plasma-donor"
+                                >
+                                    Become a plasma donor
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/eligibility-quiz"
+                                >
+                                    Eligibility quiz
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/abcs-of-eligibility"
+                                >
+                                    ABCs of eligibility
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/men-who-have-sexp-with-men-plasma-eligibility"
+                                >
+                                    Men who have sex with men plasma eligibility
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4 pb-4'>
                         
-                            dropdown start
-                        
-                        */}
-                    { showDropdown && ( <div  className={`text-left transition-all absolute top-[9.5rem] z-50  w-fit flex flex-row space-x-10 p-8 bg-white shadow-2xl py-3`}>
-                                <div className='drop flex flex-col mt-4'>
-                                    <h1 className='font-semibold'>Am I eligible to donate blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-500 border-solid border-2 border-red-500' />
-                                    <ul className='space-y-4 font-medium opacity-80 '>
-                                        <li>
-                                            <Link to='/' className='hover:opacity-100'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className='flex flex-col mt-4'>
-                                    <h1>Donating blood</h1>
-                                    <hr className='h-0 w-24 my-6 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
-                                    <ul className='space-y-4'>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul className='space-y-4 mt-4'>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>ABCs of eligible</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Change to donate criteria</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Trans Individusls</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li>
-                                            <Link to='/'className='hover:opacity-100'>Sexual behaviour-based screen</Link>
-                                        </li>
-                                        <li className='bg-red-500 space-x-10 h-20 font-bold flex justify-center items-center'>
-                                            <Link className='focus:underline text-white'>
-                                            View all blood info
-                                            </Link>
-                                            <span><BsArrowRight className='text-white' /></span>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>)}
-                </div>
-            </div>
-        </div>
-
-
-                            {/* mobile menu navigation  */}
-
-        <div className={`md:hidden bg-white relative  h-full w-full bottom-0 py-24 pt-4 ${
-              isOpen ? "translate-x-0" : "-translate-x-full"
-            } ease-in-out duration-700 z-50`}>
-
-                        <div className='searchBar'>
-                            <SearchBar width="w-full"  />
-                        </div>
-                        
-                        <div className='py-5 flex justify-around'>
-                            <div className='pr-8'>
-                                <button className='rounded-full bg-[#f0f0f0] text-lg font-bold text-red-900 h-14 w-14'>FR</button>
-                            </div>
-                            <button className='h-14 w-28 bg-[#C4161C] hover:border text-white hover:bg-white hover:text-[#C4161C] border-[#C4161C] rounded-full font-bold outline-none inline-block uppercase'>
-                                        Book Now
-                            </button>
-                            <button className='h-14 w-28 hover:bg-red-600 text-red-600 border border-red-600 hover:text-white bg-white rounded-full font-bold outline-none uppercase'>
-                            <FaUserAlt className='inline-block'  color='#C4161C' /> 
-                            Sign in
-                            </button>
-                        </div>
-                        <ul className='border-[#f0f0f0]'>
-                                <li className='border-l-8 hover:text-white border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 focus:outline-none h-20 ease-in-out'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Blood
-                                    </Link>
-                                </li>
-                                <li className='border-l-8 border-red-900 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-900 hover:text-white focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Plasma
-                                    </Link>
-                                </li>
-                                <li className='border-l-8 border-[#54C3BB] hover:bg-[#54C3BB] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Stem Cells
-                                    </Link>
-                                </li>
-                                <li className='border-l-8 border-[#419B96] hover:bg-[#419B96] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 hover:text-white shadow-sm  focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Organ & 
-                                            Tissues
-                                    </Link>
-                                </li>
-                                <li className=' border-l-8 border-[#F0F0F0] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm  hover:bg-[#4D4D4D] hover:border-[#4D4D4D] hover:text-white focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Ways to donet
-                                    </Link>
-                                </li>
-                                
-                                <li className=' border-l-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white hover:border-[#4D4D4D] hover:bg-[#4D4D4D] focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Stories
-                                    </Link>
-                                </li>
-                            </ul>
-                        <div className='links bg-[#4D4D4D]'>
-                            <ul>
-                                <li className='font-normal text-left text-white uppercase px-3 pt-10'>
-                                    <Link to='/hospital services' className=''>
-                                        Hospital Services
-                                    </Link>
-                                </li>
-                                <li className='font-normal text-left text-white uppercase px-3 pt-10'>
-                                    <Link>
-                                        Reserch
-                                    </Link>
-                                </li>
-                                 <li className='font-normal text-left text-white uppercase px-3 pt-10'>
-                                    <Link>
-                                        Careers
-                                    </Link>
-                                </li>               
-                                <li className='font-normal text-left text-white uppercase px-3 pt-10'>
-                                    <Link>
-                                        Shop
-                                    </Link>
-                                </li>
-                                <li className='font-normal text-left text-white uppercase px-3 pt-10 pb-4'>
-                                    <Link>
-                                        About us
-                                    </Link>
-                                </li>
-                            </ul>
+                    <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'} font-semibold`}
+                                to="/How-your-plasma-donation-helps"
+                                >
+                                    Donate Plasma
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/How-your-plasma-donation-helps"
+                                >
+                                    How your plasma donation helps
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-questionnaire"
+                                >
+                                    Donor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-and-safety"
+                                >
+                                    Donor health and safety
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centres-hours-locations"
+                                >
+                                    Donor centres hours & locations
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/covid-19-information"
+                                >
+                                    COVID-19 information
+                                </Link>
+                            )}
+                        </Menu.Item>
                     </div>
-            </div>
-    </div>
+                    <div className='grid gap-4'>
+
+                         <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'} font-semibold`}
+                                to="/recognition-program"
+                                >
+                                    Security Canada's plasma suppely
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/plasma-and-the-blood-system-supply-chain"
+                                >
+                                    Plasma and the blood system supply chain
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/plasma-protein-and-related-products"
+                                >
+                                    Plasma protein and related products
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/covid-19-and-convalescent-plasma"
+                                >
+                                    COVID-19 and convalescent plasma
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item className="bg-red-600 text-white text-center text-xl h-14 pt-4">
+                        {({ active }) => (
+                                <Link
+                                className={`${active && ''}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                    View More Plasma info <BsArrowRight className='inline-block' />
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
+      </li>
+      <li>
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold  w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-500  hover:bg-teal-500 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Stem Cells </span>
+                <br /><span className='text-white pl-4 pb-4'>for Life</span>
+            </Menu.Button>
+            <Transition
+                as={Fragment}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
+
+                <Menu.Items className="absolute z-50 -left-60 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                   <div className='grid grid-cols-3 gap-4'>
+                        <div className='grid gap-4'>
+
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'} font-semibold`}
+                                    to="/adult-stem-cell-registry"
+                                    >
+                                        Adult stem cell registry
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                                <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/donating-stem-cells"
+                                    >
+                                        Donating stem cells
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/stem-cell-donation-eligibility-registration"
+                                    >
+                                        Stem cell donation eligibility and registration
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/how-stem-cell-donation-works"
+                                    >
+                                        How stem cell donation works
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/collection-transplant-hospital-resources"
+                                    >
+                                        Collection and transplant hospital resources
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/stem-cell-FAQs"
+                                    >
+                                        Stem cell FAQs
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                        </div>
+                        <div className='grid gap-4 pb-4'>
+
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'} font-semibold`}
+                                    to="/cord-blood-bank"
+                                    >
+                                        Cord blood bank
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                                <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/cord-blood-eligibility"
+                                    >
+                                        Cord blood eligibility
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/how-cord-blood-donation-works"
+                                    >
+                                        How cord blood donation works
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/safety-standards"
+                                    >
+                                        Safety Standards
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/donate-cord-blood-for-research"
+                                    >
+                                        Donate cord blood for research
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item>
+                            {({ active }) => (
+                                    <Link
+                                    className={`${active && 'text-red-600'}`}
+                                    to="/cord-blood-FAQs"
+                                    >
+                                        Cord blood FAQs
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                        </div>
+                    </div>
+                    <div className='flex justify-end'>
+                        <div className='bg-teal-500 text-white text-center pt-4 h-16 w-5/12 text-lg font-bold'>
+                            <Menu.Item className=" flex items-center justify-around ">
+                                {({ active }) => (
+                                        <Link
+                                        className={`${active && ''}`}
+                                        to="/steam-cell-info"
+                                        >
+                                            View All steam cells info <BsArrowRight className='inline-block ' fontWeight={900} fontSize={30} />
+                                        </Link>
+                                    )}
+                            </Menu.Item>
+
+                        </div>
+                    </div>
+
+                </Menu.Items>
+            </Transition>
+        </Menu>
+      </li>
+      <li>
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="border-b-8 hover:text-white font-bold w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 border-teal-600  hover:bg-teal-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Organs &</span>
+                <br /> <span className='pl-4'>Tissues</span>
+                <br /><span className='text-white pl-4'>for Life</span>
+            </Menu.Button>
+            <Transition
+                as={Fragment}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
+
+                <Menu.Items className="absolute z-50 -right-60 w-[930px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className='grid gap-4 pb-4'>
+
+                        <Menu.Item>
+                            <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/abc-of-eligible"
+                                >
+                                ABCs of eligible
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/change-to-donate-criteria"
+                                >
+                                Change to donate criteria
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/trans-tndividusls"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                Sexual behaviour-based screen
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4 pb-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donating blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/blood-type"
+                                >
+                                    What is my blood type?
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donation-process"
+                                >
+                                    Donation process
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/rare-blood-program"
+                                >
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/recognition-program"
+                                >
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                    COVID-19 information
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item className="bg-red-600 text-white text-center text-xl h-14 pt-4">
+                        {({ active }) => (
+                                <Link
+                                className={`${active && ''}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                    View More Blood <BsArrowRight className='inline-block' />
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
+      </li>
+      <li>
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold border-sky-50 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Ways to</span>
+                <br /> <span className='pl-4'>Donate</span>
+            </Menu.Button>
+            <Transition
+                as={Fragment}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
+
+                <Menu.Items className="absolute z-50 right-0 w-[930px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className='grid gap-4 pb-4'>
+
+                        <Menu.Item>
+                            <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/abc-of-eligible"
+                                >
+                                ABCs of eligible
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/change-to-donate-criteria"
+                                >
+                                Change to donate criteria
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/trans-tndividusls"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                Sexual behaviour-based screen
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4 pb-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donating blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/blood-type"
+                                >
+                                    What is my blood type?
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donation-process"
+                                >
+                                    Donation process
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/rare-blood-program"
+                                >
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/recognition-program"
+                                >
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                    COVID-19 information
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item className="bg-red-600 text-white text-center text-xl h-14 pt-4">
+                        {({ active }) => (
+                                <Link
+                                className={`${active && ''}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                    View More Blood <BsArrowRight className='inline-block' />
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
+      </li>
+      <li>
+        <Menu as="div" className="relative inline-block text-left">
+            <Menu.Button className="border-b-8 pb-6 hover:text-white font-bold border-sky-50 w-40 pt-4 cursor-pointer text-left bg-white  text-gray-700 hover:border-gray-600 hover:bg-gray-600 focus:outline-none">
+                <span><RiArrowDropDownLine className='inline-block' />Stories </span>
+                <br /><span className='text-white pl-4 pb-4'></span>
+            </Menu.Button>
+            <Transition
+                as={Fragment}
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+            >
+
+                <Menu.Items className="absolute z-50 right-0 w-[930px] pl-4 pt-4 gap-16 grid-flow-col grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className='grid gap-4 pb-4'>
+
+                        <Menu.Item>
+                            <h1 className='font-semibold'>Am I eligible to donate blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/abc-of-eligible"
+                                >
+                                ABCs of eligible
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/change-to-donate-criteria"
+                                >
+                                Change to donate criteria
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/trans-tndividusls"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                Sexual behaviour-based screen
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4 pb-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donating blood</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                            <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/blood-type"
+                                >
+                                    What is my blood type?
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donation-process"
+                                >
+                                    Donation process
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                Trans Individusls
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/rare-blood-program"
+                                >
+                                    Rare Blood Program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/fdonor-questionnaire"
+                                >
+                                    fDonor Questionnaire
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-health-safety"
+                                >
+                                    Donor health and safety
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                    <div className='grid gap-4'>
+ 
+                        <Menu.Item>
+                            <h1 className='font-semibold'> Donation Platelates</h1>
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/recognition-program"
+                                >
+                                    Recognition program
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/sign-language"
+                                >
+                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/donor-centre-hours-locations"
+                                >
+                                    Donor centre hours & locations
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item>
+                        {({ active }) => (
+                                <Link
+                                className={`${active && 'text-red-600'}`}
+                                to="/account-settings"
+                                >
+                                    COVID-19 information
+                                </Link>
+                            )}
+                        </Menu.Item>
+                        <Menu.Item className="bg-red-600 text-white text-center text-xl h-14 pt-4">
+                        {({ active }) => (
+                                <Link
+                                className={`${active && ''}`}
+                                to="/sexual-behaviour-based-screen"
+                                >
+                                    View More Blood <BsArrowRight className='inline-block' />
+                                </Link>
+                            )}
+                        </Menu.Item>
+                    </div>
+                </Menu.Items>
+            </Transition>
+        </Menu>
+      </li>
+    </ul>
   )
 }
 

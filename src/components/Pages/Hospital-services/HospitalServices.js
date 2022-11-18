@@ -1,8 +1,3 @@
-
-
-// bg-red-600 bg-red-700 bg-teal-500 bg-teal-600
-
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -10,7 +5,7 @@ import { HospitalCard } from './HospitalCard';
 import HospitalRelatedInformation from './HospitalRelatedInformation';
 import backgroundImg from '../../assets/SS_Mercy_2560x1150_0.jpg';
 
-export const HospitalServices = () => {
+ const HospitalServices = () => {
   return (
     <div>
       <div className='container m-8'>
@@ -125,3 +120,4 @@ export const HospitalServices = () => {
     </div>
   )
 }
+export default HospitalServices;
