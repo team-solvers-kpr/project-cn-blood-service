@@ -1,5 +1,5 @@
 import React from "react";
-import ReactPlayer from 'react-player';
+import VideoModal from "../../../Modal/VideoModal";
 
 const VideoSection = () => {
   return (
@@ -10,7 +10,7 @@ const VideoSection = () => {
         Make All The Difference
         </h1>
         <p className="text-white text-lg font-normal mb-6 text-justify">
-        The greatest human connection is made when we give to each other. Whether it’s time, knowledge, expertise, or a lifesaving donation. These connections are what make us Canada’s Lifeline.
+          The greatest human connection is made when we give to each other. Whether it’s time, knowledge, expertise, or a lifesaving donation. These connections are what make us Canada’s Lifeline.
         </p>
         <p className="text-white text-lg font-normal text-justify">
         Join us. You won’t just make a difference, you’ll make all the difference.
@@ -27,12 +27,14 @@ const VideoSection = () => {
         </p>
         </div>
      </div>
-     {/* for youtube  */}
-     <div className='absolute lg:mt-16 lg:mr-40' >
-        <VideoModal  videourl={} />
-        <ReactPlayer url='https://youtu.be/brAqVXrouGg'></ReactPlayer>
 
-     </div>
+      {/* for youtube  */}
+      <div className='absolute lg:mt-16 lg:mr-40' >
+          <VideoModal  videourl={`https://www.youtube.com/embed/5FqsOB-DqXw`} images={`../../../assets/video6.jpg`} />
+          {/* <ReactPlayer url='https://youtu.be/brAqVXrouGg'></ReactPlayer> */}
+
+      </div>
+     
       
     </div>
   );
