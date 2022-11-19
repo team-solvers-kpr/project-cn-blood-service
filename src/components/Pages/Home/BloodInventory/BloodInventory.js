@@ -3,6 +3,7 @@ import SingleBlood from "../SingleBlood/SingleBlood";
 import inventoryBg from "../../../assets/worldMapbg.png";
 import redDrop from "../../../assets/icon-inventory-drop-nomask.svg";
 import grayDrop from "../../../assets/icon-inventory-drop.svg";
+import { Link } from "react-router-dom";
 
 const BloodInventory = () => {
   return (
@@ -67,6 +68,14 @@ const BloodInventory = () => {
             tooltip="When the Inventory for O- is below 8 days, O- is especially needed."
           ></SingleBlood>
         </div>
+      </div>
+      <div className="mt-36 mb-10">
+        <Link
+          className="underline hover:no-underline text-xl text-red-600 hover:text-red-800"
+          to="/find-a-donor"
+        >
+          Find a donor center
+        </Link>
       </div>
     </div>
   );
