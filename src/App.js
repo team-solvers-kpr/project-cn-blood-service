@@ -3,10 +3,10 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home/Home/Home";
 import HospitalServices from "./components/pages/Hospital-services/HospitalServices";
-import Signin from "./components/Pages/Login/Signin/SIgnin";
+import Signin from "./components/pages/Login/Signin/Signin";
 import Notfound from "./components/pages/Notfound/Notfound";
 import Footer from "./components/pages/Shared/Footer/Footer";
-import Navbar from "./components/pages/Shared/Navbar/Navbar";
+import Navbar from './components/pages/Shared/Navbar/Navbar';
 
 function App() {
     const Wrapper = ({ children }) => {
