@@ -13,7 +13,7 @@ const Navbar = () => {
     
     const navigate = useNavigate();
   return (
-    <div className='lg:fixed w-full bg-white z-50'>
+    <div className='lg:fixed w-full bg-white z-50 top-0 left-0 transition-all ease-in-out'>
         <div className='manuBar   grid grid-flow-col '>
             <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
                 <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />

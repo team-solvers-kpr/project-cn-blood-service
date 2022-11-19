@@ -18,13 +18,13 @@ const VideoModal = ({
   
     return (
       <>
-        <div className="fixed inset-0 flex items-center justify-center">
+        <div className="">
           <button
             type="button"
             onClick={openModal}
             className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
           >
-            <img src={images} alt="video images" height={382} width={600} />
+            <img src={images} alt="video images" height={382} width={400} />
           </button>
         </div>
   
@@ -42,7 +42,7 @@ const VideoModal = ({
               <div className="fixed inset-0 bg-black bg-opacity-25" />
             </Transition.Child>
   
-            <div className="fixed inset-0 overflow-y-auto">
+            <div className="fixed right-2 left-2 bottom-4  overflow-y-auto">
               <div className="flex min-h-full items-center justify-center p-4 text-center">
                 <Transition.Child
                   as={Fragment}
@@ -55,7 +55,8 @@ const VideoModal = ({
                 >
                   <Dialog.Panel className="transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                     <div className="mt-2">
-                      <iframe src={videourl} frameborder="0" title='this is modal iframe' height={400} width={820}></iframe>
+                      <iframe src={videourl} frameborder="0" title='this is modal iframe' height={315} width={560}></iframe>
+                      {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/69pPYkGiEAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                     </div>
   
                     <div className="mt-4">

@@ -13,29 +13,26 @@ const VideoSection = () => {
           The greatest human connection is made when we give to each other. Whether it’s time, knowledge, expertise, or a lifesaving donation. These connections are what make us Canada’s Lifeline.
         </p>
         <p className="text-white text-lg font-normal text-justify">
-        Join us. You won’t just make a difference, you’ll make all the difference.
+          Join us. You won’t just make a difference, you’ll make all the difference.
         </p>
        </div>
      </div>
+      {/* for youtube  */}
+      <div className='' >
+          <VideoModal  videourl={`https://www.youtube.com/embed/69pPYkGiEAQ`} images={`https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Main-Cameryn.jpg?itok=21krKG8T`} />
+
+      </div>
+     
      <div className=" lg:w-full lg:relative" style={{backgroundColor:"#419B96"}}>
         <div className="lg:p-40 p-4">
         <p className="text-white text-lg font-normal mb-6 text-justify">
-        The greatest human connection is made when we give to each other. Whether it’s time, knowledge, expertise, or a lifesaving donation. These connections are what make us Canada’s Lifeline.
+          The greatest human connection is made when we give to each other. Whether it’s time, knowledge, expertise, or a lifesaving donation. These connections are what make us Canada’s Lifeline.
         </p>
         <p className="text-white text-lg font-normal text-justify">
         Join us. You won’t just make a difference, you’ll make all the difference.
         </p>
         </div>
      </div>
-
-      {/* for youtube  */}
-      <div className='absolute lg:mt-16 lg:mr-40' >
-          <VideoModal  videourl={`https://www.youtube.com/embed/5FqsOB-DqXw`} images={`../../../assets/video6.jpg`} />
-          {/* <ReactPlayer url='https://youtu.be/brAqVXrouGg'></ReactPlayer> */}
-
-      </div>
-     
-      
     </div>
   );
 };
