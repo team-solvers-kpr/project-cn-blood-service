@@ -13,9 +13,7 @@
     color: #8C8C8C;
 }
 
-.bestSellerCard:hover {
-    background-color: yellow;
-}
+
 
 .bestSellerCardName {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
