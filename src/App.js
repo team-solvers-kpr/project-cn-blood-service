@@ -1,9 +1,9 @@
 import { useLayoutEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
-import Signin from "./components/Pages/Login/Signin/Signin";
-import AllProducts from "./components/Pages/Shop/AllProducts/AllProducts";
-import Shop from "./components/Pages/Shop/Shop/Shop";
+import Signin from "./components/pages/Login/Signin/Signin";
+import AllProducts from "./components/pages/Shop/AllProducts/AllProducts";
+import Shop from "./components/pages/Shop/Shop/Shop";
 import Home from './components/pages/Home/Home/Home'
 import { HospitalServices } from "./components/pages/Hospital-services/HospitalServices";
 import Notfound from "./components/pages/Notfound/Notfound";
@@ -40,7 +40,7 @@ function App() {
           <Route path="*" element={<Notfound />}></Route>
         </Routes>
         <Footer></Footer>
-        <AboutUs></AboutUs>
+       
       </Wrapper>
     </div>
   );
