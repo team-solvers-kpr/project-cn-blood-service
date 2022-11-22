@@ -1,11 +1,8 @@
 import React from "react";
-import 'tw-elements';
-
+import "tw-elements";
 
 const RelatedInfo = () => {
-  return (
-    <h1>this</h1>
-  );
+    return <h1>this</h1>;
 };
 
 export default RelatedInfo;
