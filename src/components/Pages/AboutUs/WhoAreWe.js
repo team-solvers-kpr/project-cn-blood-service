@@ -4,7 +4,7 @@ import React from "react";
 const WhoAreWe = () => {
   return (
     <div className="mb-4" >
-      <div className="px-40 py-16"style={{backgroundColor:'#C4161C'}}>
+      <div className="lg:px-40 py-16"style={{backgroundColor:'#C4161C'}}>
       <h1 className="text-5xl font-bold text-justify mb-10 text-gray-100">Who we are</h1>
       <p className="text-lg  text-justify mb-4 text-gray-100">Canadian Blood Services is a not-for-profit charitable organization that operates independently from government. Created through a memorandum of understanding between the federal, provincial, and territorial governments, we opened our doors in 1998. Our funding comes primarily from the provincial and territorial governments, and we are a registered charity that accepts financial donations.</p>
      <p className="text-lg  text-justify mb-4 text-gray-100">Canadian Blood Services is one part of Canada’s broader network of healthcare systems and is the only national manufacturer of biological products funded by Canada’s provincial and territorial governments. We provide blood, plasma, as well as transfusion and stem cell registry services, on behalf of all provincial and territorial governments (excluding Quebec). Our national transplant registry for interprovincial organ sharing and related programs extends to all the provinces and territories. We have a unique relationship with Hema-Québec, the provincial blood system operator that provides products to patients and manages Quebec’s stem cell donor registry. Our two organizations work closely to share blood products in times of need, and we collaborate regularly to share information, insights, and data.</p>
