@@ -4,8 +4,8 @@ import babyPic from "../../assets/baby.png";
 
 const Annual = () => {
     return (
-        <div className="bg-white mx-28">
-            <div className="flex">
+        <div className="bg-white lg:mx-28">
+            <div className="lg:flex">
                 <div className="px-16 my-auto">
                     <h1 className="text-3xl font-semibold text-justify mb-10 text-gray-700">
                         Our annual reports

@@ -5,11 +5,11 @@ import bgImage from '../../assets/img.jpg';
 
 const UpperPart = () => {
   return (
-    <div className="flex">
+    <div className="lg:flex">
       <div className=" relative">
-            <img src={bgImage} alt="" className="py-32 pl-60 "/>
+            <img src={bgImage} alt="" className="lg:py-32 lg:pl-60 "/>
         </div>
-        <div className=" absolute p-10 mx-32 mt-32">
+        <div className=" absolute p-10 lg:mx-32 lg:mt-32">
         
             <h1 className="text-6xl font-bold text-justify mb-4 text-gray-700">About Canadian Blood <br></br> Services</h1>
             <h4 className="text-lg font-bold text-justify mb-4 text-gray-700">We are Canada's Biological Lifeline.</h4>
