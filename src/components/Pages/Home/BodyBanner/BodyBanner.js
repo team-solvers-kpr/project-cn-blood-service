@@ -5,19 +5,29 @@ import bgImage from '../../../assets/BodyBanner.png';
 
 const BodyBanner = () => {
   return (
-    <div className="flex">
+    <div className="flex justify-center">
       <div className="relative mt-6">
             <img src={bgImage} alt="" className="w-full"/>
         </div>
         
-        <div className="absolute ">
+        <div className="absolute mt-20">
         
-        <h1 className="lg:text-6xl text-5xl font-bold text-justify mb-4 text-gray-700">About Canadian Blood <br></br> Services</h1>
-        <h4 className="text-lg font-bold text-justify mb-4 text-black-700">We are Canada's Biological Lifeline.</h4>
-        <p className="text-base text-justify text-gray-600 text-lg lg:w-1/2">We are the connection between donors and patients, healthcare professionals and medical researchers. We are nationally responsible for a secure system of life essentials for transfusion and transplantation that’s reliable, accessible and sustainable. Every day we work diligently to help save lives, restore health and earn the nation’s trust.</p>
+        
+        <div>
+        <h1 className="lg:text-4xl  font-medium text-gray-700"><strong>GIVING SOMETHING</strong></h1>
+        <h1 className="lg:text-4xl  font-medium  mb-4 text-gray-700"><strong><span className="text-red-600">LIFESAVING</span> THIS HOLIDAY</strong></h1>
+        <p className="lg:text-7xl text-5xl font-bold  text-gray-700">WILL MAKE ALL</p>
+        <p className="lg:text-7xl text-5xl font-bold  text-gray-700">THE DIFFERENCE</p>
+        </div>
+
+        <div className="text-justify  flex justify-center">
+        <button className="hover:bg-red-800 bg-red-600 lg:text-lg text-base font-semibold py-3 px-6 rounded-full mt-4" style={{color:'#fff'}}><a href="https://www.blood.ca/sites/default/files/our_brand_stakeholder/story.html"  target="_blank"
+        rel="noopener noreferrer">Learn more</a> </button>
+        </div>
         
       
-    </div>
+        </div>
+        
        
       
       
