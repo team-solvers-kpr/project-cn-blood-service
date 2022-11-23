@@ -5,14 +5,14 @@ import BookDonationButton from "../BookDonationButton/BookDonationButton";
 import SearchFiled from "../SearchField/SearchFiled";
 import OurLatestUpdate from "../LatestCard/OurLatestUpdate";
 import WaysToDonate from "../WaysToDonate/WaysToDonate";
-// import BodyBanner from "../BodyBanner/BodyBanner";
+import BodyBanner from "../BodyBanner/BodyBanner";
 
 const Home = () => {
     return (
         <div>
             <SearchFiled></SearchFiled>
             <BannerCard></BannerCard>
-            {/* <BodyBanner></BodyBanner> */}
+            <BodyBanner></BodyBanner>
             <OurLatestUpdate></OurLatestUpdate>
             <BloodInventory></BloodInventory>
             <WaysToDonate></WaysToDonate>
