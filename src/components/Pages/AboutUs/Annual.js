@@ -6,18 +6,18 @@ const Annual = () => {
     return (
         <div className="bg-white lg:mx-28">
             <div className="lg:flex">
-                <div className="px-16 my-auto">
-                    <h1 className="text-3xl font-semibold text-justify mb-10 text-gray-700">
+                <div className="lg:px-16 px-2 mt-10 my-auto">
+                    <h1 className="text-3xl  font-semibold text-justify mb-6 text-gray-700">
                         Our annual reports
                     </h1>
-                    <p className="text-lg  text-justify mb-4 text-gray-600">
+                    <p className="lg:text-lg text-base text-justify mb-4 text-gray-600">
                         This year’s annual report, Changing Tomorrow, is about
                         how we’re accelerating, adapting, rethinking and
                         innovating to meet the future needs of Canadian health
                         care.
                     </p>
                     <div className="flex">
-                        <p className="hover:text-red-800 hover:cursor-pointer text-lg  text-justify mb-4 text-red-600">
+                        <p className="hover:text-red-800 hover:cursor-pointer lg:text-lg text-base text-justify mb-4 text-red-600">
                             2020-2021 Annual Report
                         </p>
                         <p
@@ -28,7 +28,7 @@ const Annual = () => {
                         </p>
                     </div>
                     <div className="flex">
-                        <p className="hover:text-gray-300 cursor-pointer text-lg  text-justify mb-4 text-red-600">
+                        <p className="hover:text-gray-300 cursor-pointer lg:text-lg text-base text-justify mb-4 text-red-600">
                             Other publication and reports
                         </p>
                         <p
