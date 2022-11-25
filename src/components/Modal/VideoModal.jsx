@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
 import { CgClose } from 'react-icons/cg'
+import { BsPlayCircleFill } from 'react-icons/bs'
 
 const VideoModal = ({
     images,
@@ -22,9 +23,10 @@ const VideoModal = ({
           <button
             type="button"
             onClick={openModal}
-            className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+            className=" bg-opacity-50 px-4 py-2  hover:bg-opacity-20 focus:outline-none "
           >
-            <img src={images} alt="video images" height={382} width={400} />
+            <img src={images} alt="video images" height={315} width={544} />
+              <BsPlayCircleFill  fontSize={100} className={`text-red-600 -my-14 transition-all ease-in top-[24rem] left-[74%] absolute `}/>
           </button>
         </div>
   
@@ -53,16 +55,15 @@ const VideoModal = ({
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="transform overflow-hidden align-middle shadow-xl transition-all">
                     <div className="mt-2">
-                      <iframe src={videourl} frameborder="0" title='this is modal iframe' height={315} width={560}></iframe>
-                      {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/69pPYkGiEAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                      <iframe src={videourl} frameborder="0" title='this is modal iframe' height={450} width={860}></iframe>
                     </div>
   
                     <div className="mt-4">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                        className="inline-flex absolute top-4 right-4 justify-center focus:outline-none"
                         onClick={closeModal}
                       >
                         <CgClose />
