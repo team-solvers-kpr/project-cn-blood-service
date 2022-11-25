@@ -37,7 +37,7 @@ const Navbar = () => {
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
                         <ul className='flex gap-4 pt-1'>
                             <li className='hover:underline'>
-                                <Link to='/hospital-service' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
+                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
                             </li>
                             <li className='hover:underline'>
                                 <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>

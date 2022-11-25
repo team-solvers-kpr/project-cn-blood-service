@@ -17,12 +17,6 @@ const VideoSection = () => {
         </p>
        </div>
      </div>
-      {/* for youtube  */}
-      <div className='' >
-          <VideoModal  videourl={`https://www.youtube.com/embed/69pPYkGiEAQ`} images={`https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Main-Cameryn.jpg?itok=21krKG8T`} />
-
-      </div>
-     
      <div className=" lg:w-full lg:relative" style={{backgroundColor:"#419B96"}}>
         <div className="lg:p-40 p-4">
         <p className="text-white text-lg font-normal mb-6 text-justify">
@@ -33,6 +27,12 @@ const VideoSection = () => {
         </p>
         </div>
      </div>
+
+      {/* for youtube  */}
+      <div className='' >
+          <VideoModal  videourl={`https://www.youtube.com/embed/69pPYkGiEAQ`} images={`https://www.blood.ca/sites/default/files/styles/story_teaser/public/Stories-Main-Cameryn.jpg?itok=21krKG8T`} />
+
+      </div>
     </div>
   );
 };
