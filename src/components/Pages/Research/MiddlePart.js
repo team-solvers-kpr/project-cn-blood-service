@@ -1,4 +1,5 @@
 import React from "react";
+import MiddlePartOne from "./MiddlePart/MiddlePartOne";
 
 
 
@@ -6,8 +7,8 @@ import React from "react";
 
 const MiddlePart = () => {
   return (
- <div>
-    <h1>MiddlePart</h1>
+ <div className="mt-12">
+    <MiddlePartOne></MiddlePartOne>
  </div>
   );
 };
