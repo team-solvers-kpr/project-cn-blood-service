@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundPic from '../../assets/blood-drops.jpg';
+import backgroundPic from '../../assets/BodyBanner2.png';
 import {FaArrowRight} from 'react-icons/fa';
 
 
@@ -8,7 +8,7 @@ const UpperPart = () => {
   return (
     <div className="flex ">
         <div className="relative">
-                <img src={backgroundPic} alt="" className="ml-16"/>
+                <img src={backgroundPic} alt="" className=""/>
         </div>
         <div className="ml-32 absolute w-1/2 mt-10">
      <h1 className="lg:text-6xl text-5xl font-bold text-justify mb-4 text-gray-600 mb-10">Research</h1>
