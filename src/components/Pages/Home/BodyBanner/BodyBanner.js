@@ -6,11 +6,11 @@ import bgImage from '../../../assets/BodyBanner.png';
 const BodyBanner = () => {
   return (
     <div className="flex justify-center">
-      <div className="relative mt-6">
+      <div className="relative lg:mt-6 hidden lg:block">
             <img src={bgImage} alt="" className="w-full"/>
         </div>
         
-        <div className="absolute mt-20">
+        <div className="absolute lg:mt-24">
         
         
         <div>
