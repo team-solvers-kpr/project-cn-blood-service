@@ -51,43 +51,43 @@ const UpperPart = () => {
      <div className="mb-32">
           <div className="flex mt-4">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400 text-sm "></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Our Research Activities </a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/our-research-activities" target='_blank'  rel="noopener noreferrer">Our Research Activities </a> </p></div>
             
        
             </div>
             <div className="flex">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400  text-sm"></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Our Research Stories </a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/our-research-stories" target='_blank'  rel="noopener noreferrer">Our Research Stories </a> </p></div>
             
        
             </div>
             <div className="flex">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400  text-sm"></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Our Research Funding Opportunities </a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/our-research-funding-opportunities" target='_blank'  rel="noopener noreferrer">Our Research Funding Opportunities </a> </p></div>
             
        
             </div>
             <div className="flex">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400  text-sm"></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Products and Services for Researchers</a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/products-and-services-researchers" target='_blank'  rel="noopener noreferrer">Products and Services for Researchers</a> </p></div>
             
        
             </div>
             <div className="flex">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400  text-sm"></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Contract Research and Technology Transfer </a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/contract-research-and-technology-transfer" target='_blank'  rel="noopener noreferrer">Contract Research and Technology Transfer </a> </p></div>
             
        
             </div>
             <div className="flex">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400  text-sm"></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Leading Practices and Educational Resources </a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/leading-practices-and-educational-resources" target='_blank'  rel="noopener noreferrer">Leading Practices and Educational Resources </a> </p></div>
             
        
             </div>
             <div className="flex">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400  text-sm "></FaArrowRight></div>
-           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/about-us/publications-and-reports" target='_blank'  rel="noopener noreferrer">Research dissemination resources </a> </p></div>
+           <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/research-dissemination-resources" target='_blank'  rel="noopener noreferrer">Research dissemination resources </a> </p></div>
             
        
             </div>
