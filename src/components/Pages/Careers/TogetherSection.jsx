@@ -1,4 +1,5 @@
 import React from 'react'
+import { BsPlayCircleFill } from 'react-icons/bs';
 import VideoModal from '../../Modal/VideoModal';
 
 const TogetherSection = () => {
@@ -14,6 +15,7 @@ const TogetherSection = () => {
             </div>
             <div className="video grid-cols-6 my-8">
                 <VideoModal images={`https://www.blood.ca/sites/default/files/video_thumbnails/QAP3SMTCsVo.jpg`} videourl={`https://www.youtube.com/watch?v=QAP3SMTCsVo`} />
+                <BsPlayCircleFill  fontSize={100} className={`text-red-600 -my-14 transition-all ease-in top-[24rem] right-[16rem] absolute `}/>
             </div>
         </div>
     </div>
