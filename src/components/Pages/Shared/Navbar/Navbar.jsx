@@ -34,7 +34,7 @@ const Navbar = () => {
             </div>
             <div className='right md:block hidden pt-2 col-span-9'>
                 <div className="menu-top">
-                    <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
+                    <nav className='lg:flex justify-center gap-4 lg:flex-row hidden'>
                         <ul className='flex gap-4 pt-1'>
                             <li className='hover:underline'>
                                 <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-bold'>Hospital Services</Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-bold'>About us</Link>
                             </li>
                         </ul>
-                        <div className='inline-flex  gap-2'>
+                        <div className='inline-flex  gap-4'>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -65,8 +65,8 @@ const Navbar = () => {
                                         bgprimary="bg-[#C4161C]"
                                         height="h-10"
                                         width="w-28"
-                                        textprimary="text-[#C4161C]"
-                                        borderprimary="border-red-700"
+                                        textprimary="text-red-600"
+                                        borderprimary="border-red-600"
                                         bgsecondary="bg-white"
                                         textColor='text-white'
                                         fontwidth="font-bold"
@@ -76,6 +76,7 @@ const Navbar = () => {
 
                                     <Button
                                         btnText={"Sign in"}
+                                        buttonIcon={<FaUserAlt className='inline-block -mt-1 mr-2' />}
                                         bgprimary="bg-white"
                                         height="h-11"
                                         width="w-28"
@@ -84,10 +85,10 @@ const Navbar = () => {
                                         fontsize="text-base"
                                         textprimary="text-white"
                                         borderprimary="border-red-700"
-                                        bgsecondary="bg-[#C4161C]"
+                                        bgsecondary="bg-red-600"
                                         textColor='text-[#C4161C]'
                                         onClick={(e) => navigate("/signin")}
-                                    />
+                                    ></Button>
                                 </div>
                             </div>
                             <div className='topsearchbar '>
