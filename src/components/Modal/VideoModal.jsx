@@ -57,6 +57,8 @@ const VideoModal = ({
                   <Dialog.Panel className="transform overflow-hidden align-middle shadow-xl transition-all">
                     <div className="mt-2">
                       <iframe src={videourl} frameborder="0" title='this is modal iframe' height={450} width={860}></iframe>
+
+                      {console.log(videourl)}
                     </div>
   
                     <div className="mt-4">

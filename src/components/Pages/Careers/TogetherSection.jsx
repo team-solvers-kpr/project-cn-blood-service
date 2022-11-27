@@ -13,9 +13,9 @@ const TogetherSection = () => {
             <p className='mb-4 font-xl'>If you are looking for a rewarding experience and the opportunity to make a meaningful difference, we encourage you to consider joining our dedicated team.</p>
             <h2 className='font-xl font-medium'>This is our people promise.</h2>
             </div>
-            <div className="video grid-cols-6 my-8">
+            <div className="video grid-cols-6 my-8 cursor-pointer">
                 <BsPlayCircleFill  fontSize={100} className={`text-red-600 lg:-my-14 transition-all ease-in lg:top-[24rem] lg:right-[16rem] ml-[10rem] mt-[6rem] absolute `}/>
-                <VideoModal images={`https://www.blood.ca/sites/default/files/video_thumbnails/QAP3SMTCsVo.jpg`} videourl={`https://www.youtube.com/watch?v=QAP3SMTCsVo`} />
+                <VideoModal images={`https://www.blood.ca/sites/default/files/video_thumbnails/QAP3SMTCsVo.jpg`} videourl={`https://www.youtube.com/embed/QAP3SMTCsVo`} />
             </div>
         </div>
     </div>
