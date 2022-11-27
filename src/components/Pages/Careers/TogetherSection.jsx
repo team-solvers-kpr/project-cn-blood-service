@@ -5,7 +5,7 @@ import VideoModal from '../../Modal/VideoModal';
 const TogetherSection = () => {
   return (
     <div className='bg-red-700'>
-        <div className='grid grid-flow-col m-12 gap-12'>
+        <div className='grid lg:grid-flow-col  m-12 gap-12'>
 
             <div className="content w-full grid-cols-4 text-white text-left">
                 <h1 className='text-3xl mt-12 mb-8 font-bold'>Together, we make a difference</h1>
@@ -14,8 +14,8 @@ const TogetherSection = () => {
             <h2 className='font-xl font-medium'>This is our people promise.</h2>
             </div>
             <div className="video grid-cols-6 my-8">
+                <BsPlayCircleFill  fontSize={100} className={`text-red-600 lg:-my-14 transition-all ease-in lg:top-[24rem] lg:right-[16rem] ml-[10rem] mt-[6rem] absolute `}/>
                 <VideoModal images={`https://www.blood.ca/sites/default/files/video_thumbnails/QAP3SMTCsVo.jpg`} videourl={`https://www.youtube.com/watch?v=QAP3SMTCsVo`} />
-                <BsPlayCircleFill  fontSize={100} className={`text-red-600 -my-14 transition-all ease-in top-[24rem] right-[16rem] absolute `}/>
             </div>
         </div>
     </div>

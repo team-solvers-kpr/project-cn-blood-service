@@ -20,11 +20,11 @@ const VideoCard = () => {
       {careerCardData && careerCardData.map( data =>
         <div key={data.id} className='bg-[#F0F0F0] flex  flex-col '>
           <div className='video w-full'>
-            <BsPlayCircleFill  fontSize={100} className={`text-red-600 -my-14 transition-all ease-in ml-[16rem] mt-[8rem] absolute `}/>
+            <BsPlayCircleFill  fontSize={100} className={`text-red-600 -my-14 transition-all ease-in ml-[14rem] mt-[6rem] lg:ml-[16rem] lg:mt-[8rem] absolute `}/>
              <VideoModal images={data.image} videourl={data.video} /> 
              
           </div>
-          <div className='content text-left p-12 mb-12'>
+          <div className='content text-left p-12 lg:mb-12'>
            <h1 className='employes-name mb-4 font-bold text-xl'>{data.name}</h1>
            <hr className='h-0 w-24  rounded  bg-red-900 border-solid border-2 border-red-600' />
            <p className='pra-top mt-4'>{data.pragraphtop}</p>
