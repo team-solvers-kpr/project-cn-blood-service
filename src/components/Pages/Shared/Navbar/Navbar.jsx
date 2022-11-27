@@ -37,19 +37,19 @@ const Navbar = () => {
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
                         <ul className='flex gap-4 pt-1'>
                             <li className='hover:underline'>
-                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
+                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-bold'>Hospital Services</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
+                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-bold'>Research</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
+                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-bold'>Careers</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
+                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-bold'>Shop</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
+                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-bold'>About us</Link>
                             </li>
                         </ul>
                         <div className='inline-flex  gap-2'>
