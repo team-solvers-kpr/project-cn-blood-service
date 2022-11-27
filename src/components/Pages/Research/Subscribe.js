@@ -1,5 +1,6 @@
 import { Input } from "postcss";
 import React from "react";
+import Email from "./ValidateEmail/Email";
 
 
 
@@ -24,16 +25,14 @@ const Subscribe = () => {
     </div>
  </div>
         {/* right side  */}
- <div className="w-1/2  px-28 py-12">
-        <h1 className=" text-sm text-gray-500 text-justify">Email Address <span className="text-red-600">*</span></h1>
-       
-    <div className="flex mt-6">
-          
-          <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-700 text-justify text-base font-semibold mt-1"><a href="https://www.blood.ca/en/research/our-research-stories" target='_blank'  rel="noopener noreferrer">Learn more about Our Research Stories </a> </p></div>
-         
-           
-      
-   </div>
+ <div className=" w-1/2  px-8 mt-8 py-9">
+       <p className="text-xs text-gray-600 flex justify-end mr-32"><span className="text-red-400">* </span>indicates required</p>
+        <div className="flex">
+        <h1 className=" text-gray-700 text-justify text-sm">Email Address </h1>
+        <p className="text-red-400 text-lg ml-1">*</p>
+        </div>
+       <Email></Email>
+   
    
  </div>
     </div>
