@@ -227,7 +227,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-            <Menu.Items className="absolute z-50 -left-60 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute z-50 -left-40 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                    <div className='grid grid-cols-3 gap-4'>
                         <div className='grid gap-4'>
 
@@ -451,7 +451,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-                <Menu.Items className="absolute z-50 -left-60 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute z-50 -left-80 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                    <div className='grid grid-cols-3 gap-4'>
                         <div className='grid gap-4'>
 
@@ -623,7 +623,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-            <Menu.Items className="absolute z-50 -left-60 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute z-50 -right-72 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                    <div className='grid grid-cols-3 gap-4'>
                         <div className='grid gap-4'>
 
@@ -817,7 +817,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-            <Menu.Items className="absolute z-50 -left-60 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute z-50 -right-32 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                    <div className='grid grid-cols-3 gap-4'>
                         <div className='grid gap-4'>
 
@@ -938,7 +938,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-            <Menu.Items className="absolute z-50 -left-60 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute z-50 -right-32 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                    <div className='grid grid-cols-3 gap-4'>
                         <div className='grid gap-4'>
 
@@ -975,31 +975,32 @@ function Nav() {
                                     </Link>
                                 )}
                             </Menu.Item>
-                            <Menu.Item>
+                            
+                        </div>
+                        <div className='grid gap-4 pb-4'>
+                        <Menu.Item>
                             {({ active }) => (
                                     <Link
-                                    className={`${active && 'text-red-600'}`}
+                                    className={`${active && 'text-red-600'} font-semibold`}
                                     to="/how-stem-cell-donation-works"
                                     >
                                         Sharing
                                     </Link>
                                 )}
                             </Menu.Item>
-                        </div>
-                        <div className='grid gap-4 pb-4'>
+                            <Menu.Item>
+                                <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
+                            </Menu.Item>
 
                             <Menu.Item>
                             {({ active }) => (
                                     <Link
-                                    className={`${active && 'text-red-600'} font-semibold`}
+                                    className={`${active && 'text-red-600'}`}
                                     to="/cord-blood-bank"
                                     >
                                         Tell us what Canada’s Lifeline means to you and read stories from others
                                     </Link>
                                 )}
-                            </Menu.Item>
-                            <Menu.Item>
-                                <hr className='h-0 w-24 rounded  bg-red-500 border-solid border-2 border-red-500' />
                             </Menu.Item>
                             <Menu.Item>
                             {({ active }) => (
