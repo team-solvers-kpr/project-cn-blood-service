@@ -3,10 +3,12 @@ import { useForm } from "react-hook-form";
 
 const Email = () => {
     //handle event
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } ,reset} = useForm();
 
     //handle submit 
-    const onSubmit = (data) =>console.log(data) ;
+    const onSubmit = (data) =>{console.log(data.email) ;
+    reset();
+    }
   return (
    <div>
     <form onSubmit={handleSubmit(onSubmit)}>
