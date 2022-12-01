@@ -1,0 +1,34 @@
+.bestSellerContainer {
+    margin-bottom: 150px;
+    padding: 0 50px 0 50px;
+}
+
+.bestSellerTitle {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    font-size: 38px;
+    color: #8C8C8C;
+}
+
+
+
+.bestSellerCardName {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #959595;
+}
+
+.bestSellerCardCode {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #ed1c24;
+}
+
+.bestSellerCardPrice {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #959595;
+}

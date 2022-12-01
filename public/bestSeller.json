@@ -1,0 +1,38 @@
+[
+    {
+        "name":"Coffee Sleeve",
+        "code":"CBS180023",
+        "price":"$2.50",
+        "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/400/87d4a127f995a3ddfd0422f73a639459.jpg"
+    },
+    {
+        "name":"Infinity Stress Ball",
+        "code":"CBS190031",
+        "price":"$1.98",
+        "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/400/b0954ff22b8e0302f892841621340aa9.jpg"
+    },
+    {
+        "name":" LifeSavers - Assorted Fruit",
+        "code":"CBS210016",
+        "price":"$2.45",
+        "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/400/b4bbe154c35a39bbce93467d47359199.JPG"
+    },
+    {
+        "name":"Mega Tumbler",
+        "code":"CBS180035",
+        "price":"$12.95",
+        "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/400/5bf5e1df01a5709be8ef2a8f7649b601.jpg"
+    },
+    {
+        "name":"Phone Ring",
+        "code":"CBS180019",
+        "price":"$5.00",
+        "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/400/99aee331b94ec53254a17f5cf0f514dc.jpg"
+    },
+    {
+        "name":"Sugar Free Mints",
+        "code":" CBS190023",
+        "price":"$3.49",
+        "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/400/f378b9426bbd7e9661d57cc8fb360a83.jpg"
+    }
+]

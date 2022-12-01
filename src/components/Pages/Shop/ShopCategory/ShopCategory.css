@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+.categoryCard {
+    height: 316px;
+    width: 234px;
+    border-radius: 0;
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.shopCategory {
+    background-color: #f0f0f0;
+    padding-bottom: 40px;
+}
+
+.categoryCardTitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+    color: #8C8C8C;
+}
+
+.categoryBorderSpan:after {
+    content: "";
+    display: inline-block;
+    height: 1em;
+    vertical-align: bottom;
+    width: 30%;
+    border-top: 5px solid #ed1c24;
+}
+
+.categoryCardBtn {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #ed1c24;
+}
+
+.shopArrow {
+    display: inline;
+    color: #53c2ba;
+    font-weight: bold;
+}
+
+.categoryCard:hover .shopArrow {
+    color: #ed1c24;
+    margin-left: 15px;
+    transition: 1s;
+}
