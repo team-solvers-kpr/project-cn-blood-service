@@ -13,8 +13,8 @@ const Navbar = () => {
     
     const navigate = useNavigate();
   return (
-    <div>
-        <div className='manuBar  grid grid-flow-col '>
+    <div className='lg:fixed w-full bg-white z-50 top-0 left-0 transition-all ease-in-out'>
+        <div className='manuBar   grid grid-flow-col '>
             <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
                 <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />
                 {!isOpen && (
@@ -34,25 +34,25 @@ const Navbar = () => {
             </div>
             <div className='right md:block hidden pt-2 col-span-9'>
                 <div className="menu-top">
-                    <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
+                    <nav className='lg:flex justify-center gap-4 lg:flex-row hidden'>
                         <ul className='flex gap-4 pt-1'>
                             <li className='hover:underline'>
-                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
+                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-bold'>Hospital Services</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
+                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-bold'>Research</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
+                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-bold'>Careers</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
+                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-bold'>Shop</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
+                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-bold'>About us</Link>
                             </li>
                         </ul>
-                        <div className='inline-flex  gap-2'>
+                        <div className='inline-flex  gap-4'>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -65,8 +65,8 @@ const Navbar = () => {
                                         bgprimary="bg-[#C4161C]"
                                         height="h-10"
                                         width="w-28"
-                                        textprimary="text-[#C4161C]"
-                                        borderprimary="border-red-700"
+                                        textprimary="text-red-600"
+                                        borderprimary="border-red-600"
                                         bgsecondary="bg-white"
                                         textColor='text-white'
                                         fontwidth="font-bold"
@@ -76,6 +76,7 @@ const Navbar = () => {
 
                                     <Button
                                         btnText={"Sign in"}
+                                        buttonIcon={<FaUserAlt className='inline-block -mt-1 mr-2' />}
                                         bgprimary="bg-white"
                                         height="h-11"
                                         width="w-28"
@@ -84,10 +85,10 @@ const Navbar = () => {
                                         fontsize="text-base"
                                         textprimary="text-white"
                                         borderprimary="border-red-700"
-                                        bgsecondary="bg-[#C4161C]"
+                                        bgsecondary="bg-red-600"
                                         textColor='text-[#C4161C]'
                                         onClick={(e) => navigate("/signin")}
-                                    />
+                                    ></Button>
                                 </div>
                             </div>
                             <div className='topsearchbar '>
@@ -105,9 +106,9 @@ const Navbar = () => {
 
                             {/* mobile menu navigation  */}
 
-        <div className={`md:hidden bg-white relative  h-full w-full bottom-0 py-24 pt-4 ${
+        <div className={`md:hidden bg-white absolute h-full w-full py-24  pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
-            } ease-in-out duration-700 z-50`}>
+            } ease-in-out duration-700 z-40`}>
 
                         <div className='searchBar'>
                             <SearchBar width="w-full"  />

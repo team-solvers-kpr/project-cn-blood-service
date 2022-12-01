@@ -74,20 +74,10 @@ const Signin = () => {
                                             value: true,
                                             message: "Email is required",
                                         },
-                                        pattern: {
-                                            value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                                            message:
-                                                "Please, provide a valid email address",
-                                        },
                                     })}
                                 />
                                 <label className="label">
                                     {errors.email?.type === "required" && (
-                                        <span className="label-text-alt text-red-500 font-semibold text-base">
-                                            {errors.email.message}
-                                        </span>
-                                    )}
-                                    {errors.email?.type === "pattern" && (
                                         <span className="label-text-alt text-red-500 font-semibold text-base">
                                             {errors.email.message}
                                         </span>
@@ -111,11 +101,6 @@ const Signin = () => {
                                                 value: true,
                                                 message: "Password is required",
                                             },
-                                            minLength: {
-                                                value: 8,
-                                                message:
-                                                    "Password must be at least 8 character long",
-                                            },
                                         })}
                                     />
                                     <div
@@ -130,11 +115,6 @@ const Signin = () => {
                                 </div>
                                 <label className="label">
                                     {errors.password?.type === "required" && (
-                                        <span className="label-text-alt text-red-500 font-semibold text-base">
-                                            {errors.password.message}
-                                        </span>
-                                    )}
-                                    {errors.password?.type === "minLength" && (
                                         <span className="label-text-alt text-red-500 font-semibold text-base">
                                             {errors.password.message}
                                         </span>
