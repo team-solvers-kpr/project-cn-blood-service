@@ -10,7 +10,9 @@ import HospitalServices from "./components/pages/Hospital-services/HospitalServi
 import AboutUs from "./components/pages/AboutUs/AboutUs";
 import Notfound from "./components/pages/Notfound/Notfound";
 import Footer from "./components/pages/Shared/Footer/Footer";
+import Research from "./components/pages/Research/Research";
 import Careers from "./components/pages/Careers/Careers";
+
 
 function App() {
     const Wrapper = ({ children }) => {
@@ -48,6 +50,7 @@ function App() {
                         element={<Careers />}
                     ></Route>
                     <Route path="/about-Us" element={<AboutUs />}></Route>
+                    <Route path="/research" element={<Research />}></Route>
                     <Route path="*" element={<Notfound />}></Route>
                 </Routes>
                 <Footer></Footer>

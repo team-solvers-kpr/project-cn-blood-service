@@ -4,7 +4,7 @@ import React from "react";
 const WhoWeServe = () => {
   return (
     <div className="mb-4">
-      <div className="px-40 py-10 bg-gray-100" >
+      <div className="lg:px-40 px-6 py-10 bg-gray-100" >
       <h1 className="text-4xl font-semibold text-justify mb-4 text-gray-600">Who  we serve</h1>
    <div className="border-b-4 my-2 border-red-600 rounded-md w-24"></div>
    <div className="mt-6">
