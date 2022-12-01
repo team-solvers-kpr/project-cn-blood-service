@@ -1,8 +1,11 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { CgClose, CgMenuLeft } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../../firebase.init';
 import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import Nav from './Nav';
@@ -10,13 +13,18 @@ import { SearchBar } from './SearchBar';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
+    const [user, loading, error] = useAuthState(auth);
+
+    const logOut=()=>{
+        signOut(auth)
+    }
     
     const navigate = useNavigate();
   return (
     <div>
         <div className='manuBar  grid grid-flow-col '>
             <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
-                <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />
+                <img src={Logo} alt="logo" className='h-[52px] lg:pl-32 ' />
                 {!isOpen && (
                             <div className='menu-icon cursor-pointer font-bold  absolute inline-block right-4 lg:hidden outline-none'
                             onClick={() => setOpen(!isOpen)}
@@ -25,7 +33,7 @@ const Navbar = () => {
                             <span className='uppercase text-[#BEBEC2]'>Menu</span>
                         </div>
                         )}
-                    {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none '
+                    {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none'
                     onClick={() => setOpen(!isOpen)}
                     >
                             <CgClose fontSize={40} className="text-red-600" />
@@ -74,7 +82,8 @@ const Navbar = () => {
                                         onClick={(e) => navigate("/bookNow")}
                                     />
 
-                                    <Button
+                                    {!user ?
+                                        <Button
                                         btnText={"Sign in"}
                                         bgprimary="bg-white"
                                         height="h-11"
@@ -86,8 +95,23 @@ const Navbar = () => {
                                         borderprimary="border-red-700"
                                         bgsecondary="bg-[#C4161C]"
                                         textColor='text-[#C4161C]'
-                                        onClick={(e) => navigate("/signin")}
+                                        onClick={() => navigate("/signin")}
                                     />
+                                    :
+                                    <Button
+                                        btnText={"Log out"}
+                                        bgprimary="bg-white"
+                                        height="h-11"
+                                        width="w-28"
+                                        fontwidth="font-bold"
+                                        textTransform='uppercase'
+                                        fontsize="text-base"
+                                        textprimary="text-white"
+                                        borderprimary="border-red-700"
+                                        bgsecondary="bg-[#C4161C]"
+                                        textColor='text-[#C4161C]'
+                                        onClick={logOut}
+                                    />}
                                 </div>
                             </div>
                             <div className='topsearchbar '>

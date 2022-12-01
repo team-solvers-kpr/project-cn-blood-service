@@ -2,9 +2,6 @@ import React from "react";
 import 'tw-elements';
 import valueImage from '../../assets/value.jpg';
 
-
-
-
 const Vision = () => {
   return (
     <div className="lg:px-40 px-4 py-10 mb-6">
