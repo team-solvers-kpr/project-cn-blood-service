@@ -1,9 +1,10 @@
 import React from 'react'
+import { FaUserAlt } from 'react-icons/fa';
 
   const  Button = ({ 
       bgprimary, textprimary, borderprimary, 
       bgsecondary, btnText, onClick ,textColor,
-      height, width, fontwidth, fontsize, textTransform
+      height, width, fontwidth, fontsize, textTransform, buttonIcon
   }) => {
   return (
     <button
@@ -19,7 +20,7 @@ import React from 'react'
       duration-300`
     }
     >
-      {btnText}
+     {buttonIcon}{btnText}
     </button>
   );
 }
