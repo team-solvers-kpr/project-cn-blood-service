@@ -19,9 +19,9 @@
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "swiper": "^8.4.5",
     "tw-elements": "^1.0.0-alpha12",
     "uuid": "^9.0.0",
-    "swiper": "^8.4.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
