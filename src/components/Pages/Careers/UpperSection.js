@@ -16,3 +16,5 @@ export const UpperSection = () => {
     </div>
   )
 }
+
+export default UpperSection;
