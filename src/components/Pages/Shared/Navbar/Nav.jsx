@@ -938,7 +938,7 @@ function Nav() {
                 leaveTo="transform scale-95 opacity-0"
             >
 
-            <Menu.Items className="absolute z-50 -right-32 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <Menu.Items className="absolute z-40 right-8 w-[930px] pl-4 pt-4 grid-flow-row gap-8 grid  bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                    <div className='grid grid-cols-3 gap-4'>
                         <div className='grid gap-4'>
 
