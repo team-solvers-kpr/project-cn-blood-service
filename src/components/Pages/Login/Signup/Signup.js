@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
 import Loading from "../../Shared/Loading";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
     const [showPass, setShowPass] = useState(false);
@@ -31,6 +32,8 @@ const Signup = () => {
     if (user) {
         console.log(user);
     }
+
+    const navigate = useNavigate();
 
     if (loading || updating) {
         return <Loading></Loading>;
@@ -55,17 +58,18 @@ const Signup = () => {
     const onSubmit = async (data) => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({
-            displayName: data.firstName + data.lastName,
+            displayName: data.firstName + " " + data.lastName,
             dateOfBirth: data.dob,
             phoneNumber: data.phoneNumber,
             postalCode: data.postalCode,
         });
+        navigate("/home");
     };
 
     return (
         <div>
-            <h2 className="text-2xl font-semibold">Create an account</h2>
-            <div className="text-start bg-white my-8 mr-8 rounded-md">
+            <h2 className="text-2xl font-">Create an account</h2>
+            <div className="text-start bg-white my-8 lg:mr-8 ml-5 lg:ml-0 mr-5 rounded-md">
                 <div className="px-5 py-10">
                     <h2 className="text-xl">You are just a step away!</h2>
                     <h2 className="my-4 text-lg">
@@ -372,20 +376,23 @@ const Signup = () => {
                             <p
                                 className={`my-2 text-lg
                                 ${
-                                    errors.password?.type === "pattern"
+                                    errors.password?.type === "pattern" ||
+                                    errors.password?.type === "required"
                                         ? "text-red-800"
                                         : "text-green-800"
                                 }`}
                             >
                                 <div
                                     className={`flex border-2 rounded-md p-2 ${
-                                        errors.password?.type === "pattern"
+                                        errors.password?.type === "pattern" ||
+                                        errors.password?.type === "required"
                                             ? "border-red-500 bg-red-50"
                                             : "border-green-500 bg-green-50"
                                     }`}
                                 >
                                     <div>
-                                        {errors.password?.type === "pattern" ? (
+                                        {errors.password?.type === "pattern" ||
+                                        errors.password?.type === "required" ? (
                                             <ImIcons.ImCross className="inline-block text-4xl mt-2 mr-1" />
                                         ) : (
                                             <TiIcons.TiTick className="inline-block text-5xl mt-1" />
@@ -401,13 +408,17 @@ const Signup = () => {
                                 <p
                                     className={`my-2 text-lg 
                                 ${
+                                    errors.confirmPassword?.type ===
+                                        "required" ||
                                     errors.confirmPassword?.type === "validate"
                                         ? "text-red-600"
                                         : "text-green-600"
                                 }`}
                                 >
                                     {errors.confirmPassword?.type ===
-                                    "validate" ? (
+                                        "required" ||
+                                    errors.confirmPassword?.type ===
+                                        "validate" ? (
                                         <ImIcons.ImCross className="inline-block text-xl mr-1 mb-1" />
                                     ) : (
                                         <TiIcons.TiTick className="inline-block text-2xl mr-1 mb-1" />

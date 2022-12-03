@@ -1,5 +1,4 @@
 import React from 'react'
-import { BsPlayCircleFill } from 'react-icons/bs';
 import VideoModal from '../../Modal/VideoModal';
 
 const TogetherSection = () => {

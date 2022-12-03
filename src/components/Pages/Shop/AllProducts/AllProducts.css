@@ -1,0 +1,29 @@
+.allProductsTitle {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    font-size: 38px;
+    color: #8C8C8C;
+}
+
+.newSellerCardName {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #959595;
+}
+
+.newSellerCardCode {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #ed1c24;
+    margin-top: 20px;
+}
+
+.newSellerCardPrice {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #959595;
+}

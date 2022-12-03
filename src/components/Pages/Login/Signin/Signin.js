@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Signup from "../Signup/Signup";
 import {
     useSignInWithEmailAndPassword,
@@ -22,6 +22,8 @@ const Signin = () => {
         useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword, user, loading, error] =
         useSignInWithEmailAndPassword(auth);
+
+    const navigate = useNavigate();
 
     let signInError;
 
@@ -47,6 +49,7 @@ const Signin = () => {
 
     const onSubmit = (data) => {
         signInWithEmailAndPassword(data.email, data.password);
+        navigate("/home");
     };
 
     return (
@@ -55,10 +58,10 @@ const Signin = () => {
                 Sign in or create an account
             </h2>
             <hr className="py-6" />
-            <div className="grid grid-cols-2 gap-8">
+            <div className="lg:grid grid-cols-2 gap-8">
                 <div>
                     <h2 className="text-2xl font-semibold">Sign in</h2>
-                    <div className="text-start bg-white my-8 ml-8 rounded-md">
+                    <div className="text-start bg-white my-8 lg:ml-8 ml-5 lg:mr-0 mr-5 rounded-md">
                         <div className="px-5 py-10">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <h3 className="text-lg">

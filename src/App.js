@@ -10,50 +10,46 @@ import HospitalServices from "./components/pages/Hospital-services/HospitalServi
 import AboutUs from "./components/pages/AboutUs/AboutUs";
 import Notfound from "./components/pages/Notfound/Notfound";
 import Footer from "./components/pages/Shared/Footer/Footer";
+import Research from "./components/pages/Research/Research";
 import Careers from "./components/pages/Careers/Careers";
 
 function App() {
-    const Wrapper = ({ children }) => {
-        const location = useLocation();
+  const Wrapper = ({ children }) => {
+    const location = useLocation();
 
-        useLayoutEffect(() => {
-            document.documentElement.scrollTo(0, 0);
-        }, [location.pathname]);
-        return children;
-    };
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children;
+  };
 
-    return (
-        <div className="App">
-            <Wrapper>
-                <Navbar></Navbar>
-                <Routes>
-                    <Route path="/" element={<Home />}></Route>
-                    <Route path="/home" element={<Home />}></Route>
-                    <Route
-                        path="/hospital-services"
-                        element={<HospitalServices />}
-                    ></Route>
-                    <Route path="/signin" element={<Signin />}></Route>
-                    <Route path="/shop" element={<Shop />}></Route>
-                    <Route
-                        path="/allProducts"
-                        element={<AllProducts />}
-                    ></Route>
-                    <Route
-                        path="/hospital-services"
-                        element={<HospitalServices />}
-                    ></Route>
-                    <Route
-                        path="/careers"
-                        element={<Careers />}
-                    ></Route>
-                    <Route path="/about-Us" element={<AboutUs />}></Route>
-                    <Route path="*" element={<Notfound />}></Route>
-                </Routes>
-                <Footer></Footer>
-            </Wrapper>
-        </div>
-    );
+  return (
+    <div className="App">
+      <Wrapper>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route
+            path="/hospital-services"
+            element={<HospitalServices />}
+          ></Route>
+          <Route path="/signin" element={<Signin />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/allProducts" element={<AllProducts />}></Route>
+          <Route
+            path="/hospital-services"
+            element={<HospitalServices />}
+          ></Route>
+          <Route path="/careers" element={<Careers />}></Route>
+          <Route path="/about-Us" element={<AboutUs />}></Route>
+          <Route path="/research" element={<Research />}></Route>
+          <Route path="*" element={<Notfound />}></Route>
+        </Routes>
+        <Footer></Footer>
+      </Wrapper>
+    </div>
+  );
 }
 
 export default App;

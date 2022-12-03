@@ -6,7 +6,7 @@ import WhoWeServe from "./WhoWeServe";
 import Vision from "./Vision";
 import LastRedPart from "./LastRedPart";
 import Annual from "./Annual";
-import RelatedInfo from "./RelatedInfo";
+
 
 
 const AboutUs = () => {
@@ -19,7 +19,7 @@ const AboutUs = () => {
       <Vision></Vision>
       <LastRedPart></LastRedPart>
       <Annual></Annual>
-      <RelatedInfo></RelatedInfo>
+      
       
     </div>
   );
