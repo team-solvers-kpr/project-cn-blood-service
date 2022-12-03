@@ -129,7 +129,7 @@ const Navbar = () => {
 
                             {/* mobile menu navigation  */}
 
-        <div className={`md:hidden bg-white relative  h-full w-full bottom-0 py-24 pt-4 ${
+        <div className={`md:hidden bg-white h-full w-full py-24 pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             } ease-in-out duration-700 z-50`}>
 
