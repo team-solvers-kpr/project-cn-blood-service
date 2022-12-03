@@ -1,12 +1,15 @@
 import React from 'react'
 import EmployeesVideoSection from './EmployeesVideoSection';
 import TogetherSection from './TogetherSection';
+import { UpperSection } from './UpperSection';
 
 const Careers = () => {
   return (
-    <div className='pt-[152px]'>
+    <div className=''>
+      <UpperSection></UpperSection>
         <TogetherSection></TogetherSection>
         <EmployeesVideoSection></EmployeesVideoSection>
+        
     </div>
   )
 }
