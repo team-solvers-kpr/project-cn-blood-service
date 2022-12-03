@@ -1,4 +1,5 @@
 import React from 'react'
+import { Award } from './Award';
 import EmployeesVideoSection from './EmployeesVideoSection';
 import LastBluePart from './LastBluePart';
 import LastGrayPart from './LastGrayPart';
@@ -19,6 +20,7 @@ const Careers = () => {
         <LastBluePart></LastBluePart>
         <LastGrayPart></LastGrayPart>
         <Note></Note>
+        <Award></Award>
         
     </div>
   )
