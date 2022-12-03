@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
+import { BsPlayCircleFill } from 'react-icons/bs';
 import { CgClose } from 'react-icons/cg';
 
 const VideoModal = ({
@@ -22,8 +23,9 @@ const VideoModal = ({
           <button
             type="button"
             onClick={openModal}
-            className=" bg-opacity-50  hover:bg-opacity-20 focus:outline-none "
+            className=" bg-opacity-50 relative hover:bg-opacity-20 focus:outline-none "
           >
+            <BsPlayCircleFill  fontSize={100} className={`text-red-600 top-[40%] left-[40%] transition-all  duration-100 ease-in absolute`}/>
             <img src={images} alt="video images" height={315} width={645} />
               
           </button>
