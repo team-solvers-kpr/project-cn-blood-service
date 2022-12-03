@@ -1,5 +1,6 @@
 import React from 'react'
 import EmployeesVideoSection from './EmployeesVideoSection';
+import { ServiceInterruption } from './ServiceInterruption';
 import TogetherSection from './TogetherSection';
 import { UpperSection } from './UpperSection';
 import WhatWeDoMatters from './WhatWeDoMatters';
@@ -9,6 +10,7 @@ const Careers = () => {
     <div className=''>
       <UpperSection></UpperSection>
       <WhatWeDoMatters></WhatWeDoMatters>
+      <ServiceInterruption></ServiceInterruption>
         <TogetherSection></TogetherSection>
         <EmployeesVideoSection></EmployeesVideoSection>
         
