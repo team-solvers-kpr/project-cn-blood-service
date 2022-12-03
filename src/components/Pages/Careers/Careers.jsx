@@ -1,6 +1,7 @@
 import React from 'react'
 import EmployeesVideoSection from './EmployeesVideoSection';
 import LastBluePart from './LastBluePart';
+import LastGrayPart from './LastGrayPart';
 import { ServiceInterruption } from './ServiceInterruption';
 import TogetherSection from './TogetherSection';
 import { UpperSection } from './UpperSection';
@@ -15,6 +16,7 @@ const Careers = () => {
         <TogetherSection></TogetherSection>
         <EmployeesVideoSection></EmployeesVideoSection>
         <LastBluePart></LastBluePart>
+        <LastGrayPart></LastGrayPart>
         
     </div>
   )
