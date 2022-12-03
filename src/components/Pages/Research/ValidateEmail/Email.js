@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from "react-hook-form";
 
 const Email = () => {
@@ -6,7 +6,10 @@ const Email = () => {
     const { register, handleSubmit, formState: { errors } ,reset} = useForm();
 
     //handle submit 
-    const onSubmit = (data) =>{console.log(data.email) ;
+    
+    const onSubmit = (data) =>{console.log(data);
+        
+        
     reset();
     }
   return (
@@ -30,11 +33,11 @@ const Email = () => {
        
     </div>
     <div>
-        
-        <p></p>
+    
+        <p>{massage}</p>
     </div>
     <div className='text-justify mt-4'>
-        <input className=' border rounded cursor-pointer bg-gray-400 text-white py-2 px-5 text-sm hover:bg-gray-500' type='submit' value='Subscribe' name='Subscribe'/>
+        <input className='onClick() border rounded cursor-pointer bg-gray-400 text-white py-2 px-5 text-sm hover:bg-gray-500' type='submit' value='Subscribe' name='Subscribe'/>
     
     </div>
     </form>
@@ -43,4 +46,4 @@ const Email = () => {
   )
 }
 
-export default Email
+export default Email;
