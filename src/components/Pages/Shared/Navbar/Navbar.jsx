@@ -9,10 +9,11 @@ import auth from '../../../../firebase.init';
 import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import Nav from './Nav';
-import { SearchBar } from './SearchBar';
+import { ExpandableSearchbar } from './ExpandableSearchbar';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
+    const [isExpand, setExpand] = useState(false);
     const [user, loading, error] = useAuthState(auth);
 
     const logOut=()=>{
@@ -45,7 +46,7 @@ const Navbar = () => {
             <div className='right md:block hidden pt-2 col-span-9'>
                 <div className="menu-top">
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
-                        <ul className='flex gap-4 pt-1'>
+                        <ul className={`${isExpand ? 'hidden': 'block'}  flex gap-4 pt-1`}>
                             <li className='hover:underline'>
                                 <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
                             </li>
@@ -62,7 +63,7 @@ const Navbar = () => {
                                 <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
                             </li>
                         </ul>
-                        <div className='inline-flex  gap-2'>
+                        <div className={`inline-flex  gap-2 ${isExpand ? 'hidden': 'block'}`}>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -116,11 +117,15 @@ const Navbar = () => {
                                     />}
                                 </div>
                             </div>
-                            <div className='topsearchbar '>
-                                <button className="btn btn-ghost btn-circle bg-red-600 text-white">
+                            
+                        </div>
+                        <div className='topsearchbar pb-4'>
+                                {isExpand && (<ExpandableSearchbar />)}
+
+
+                                <button onClick={() => setExpand(!isExpand)} className={`${isExpand ? 'hidden': 'block'}  btn btn-ghost btn-circle bg-red-600 text-white`}>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                                 </button>
-                            </div>
                         </div>
                     </nav>
                 </div>
@@ -138,7 +143,7 @@ const Navbar = () => {
             } ease-in-out duration-700 z-50`}>
 
                         <div className='searchBar'>
-                            <SearchBar width="w-full"  />
+                            <ExpandableSearchbar   />
                         </div>
                         
                         <div className='py-5 flex justify-around'>
