@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
+import { BsPlayCircleFill } from 'react-icons/bs';
 import { CgClose } from 'react-icons/cg';
 
 const VideoModal = ({
@@ -22,8 +23,9 @@ const VideoModal = ({
           <button
             type="button"
             onClick={openModal}
-            className=" bg-opacity-50  hover:bg-opacity-20 focus:outline-none "
+            className=" bg-opacity-50 relative hover:bg-opacity-20 focus:outline-none "
           >
+            <BsPlayCircleFill  fontSize={100} className={`text-red-600 top-[40%] left-[40%] -scalex-y-[50%]  -scalex-x-[50%]   transition-all  duration-100 ease-in absolute`}/>
             <img src={images} alt="video images" height={315} width={645} />
               
           </button>
@@ -54,7 +56,7 @@ const VideoModal = ({
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="transform overflow-hidden align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="transform overflow-hidden align-middle   shadow-xl transition-all">
                     <div className="mt-2">
                       <iframe src={videourl} frameborder="0" title='this is modal iframe' height={450} width={860} allowfullscreen></iframe>
                     </div>
@@ -62,7 +64,7 @@ const VideoModal = ({
                     <div className="mt-4">
                       <button
                         type="button"
-                        className="inline-flex absolute top-4 right-4 justify-center focus:outline-none"
+                        className="inline-flex absolute top-4 right-1 justify-center focus:outline-none"
                         onClick={closeModal}
                       >
                         <CgClose />

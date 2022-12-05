@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaUserAlt } from 'react-icons/fa';
 
   const  Button = ({ 
       bgprimary, textprimary, borderprimary, 
