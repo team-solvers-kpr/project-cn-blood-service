@@ -8,17 +8,17 @@ import WaysToDonate from "../WaysToDonate/WaysToDonate";
 import BodyBanner from "../BodyBanner/BodyBanner";
 
 const Home = () => {
-    return (
-        <div>
-            <SearchFiled></SearchFiled>
-            <BannerCard></BannerCard>
-            <BodyBanner></BodyBanner>
-            <OurLatestUpdate></OurLatestUpdate>
-            <BloodInventory></BloodInventory>
-            <WaysToDonate></WaysToDonate>
-            <BookDonationButton></BookDonationButton>
-        </div>
-    );
+  return (
+    <div>
+      <SearchFiled></SearchFiled>
+      <BannerCard></BannerCard>
+      <BodyBanner></BodyBanner>
+      <OurLatestUpdate></OurLatestUpdate>
+      <BloodInventory></BloodInventory>
+      <WaysToDonate></WaysToDonate>
+      <BookDonationButton></BookDonationButton>
+    </div>
+  );
 };
 
 export default Home;

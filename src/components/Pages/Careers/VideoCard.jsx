@@ -19,10 +19,7 @@ const VideoCard = () => {
       {careerCardData && careerCardData.map( data =>
         <div key={data.id} className='bg-[#F0F0F0] flex  flex-col overflow-hidden'>
           <div className='video w-full relative'>
-             
-            
-            <VideoModal images={data.image} videourl={data.video} /> 
-             
+            <VideoModal images={data.image} videourl={data.video} />   
           </div>
           <div className='content text-left p-12 lg:mb-12'>
            <h1 className='employes-name mb-4 font-bold text-xl'>{data.name}</h1>
