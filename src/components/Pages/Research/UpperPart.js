@@ -6,11 +6,11 @@ import {FaArrowRight} from 'react-icons/fa';
 
 const UpperPart = () => {
   return (
-    <div className="flex ">
-        <div className="relative">
+    <div className="flex overflow-hidden">
+        <div className="lg:relative hidden lg:block">
                 <img src={backgroundPic} alt="" className=""/>
         </div>
-        <div className="ml-32 absolute w-1/2 mt-10">
+        <div className="lg:ml-32 ml-2 lg:absolute lg:w-1/2 mt-10">
      <h1 className="lg:text-6xl text-5xl font-bold text-justify mb-4 text-gray-600 mb-10">Research</h1>
      <p className="text-justify text-base text-gray-600 mb-6 w-4/5">Canadian Blood Services drives world-class innovation in blood transfusion, cellular therapy, and transplantation — bringing clarity and insight to an increasingly complex health care future. In collaboration with an extended network of partners, our team fosters discovery and clinical research, conducts product and process development research, translates knowledge through leading practices, and builds capacity through training and education.</p>
      <div>
@@ -48,7 +48,7 @@ const UpperPart = () => {
 
      <div className="border-b-4 my-2 border-red-600 rounded-md w-28 mt-8 "></div>
 
-     <div className="mb-32">
+     <div className="lg:mb-32">
           <div className="flex mt-4">
            <div className="mt-2 mr-4"> <FaArrowRight className="text-cyan-400 text-sm "></FaArrowRight></div>
            <div className=" "> <p className="hover:text-red-800 cursor-pointer text-red-600 text-justify text-base  mt-1"><a href="https://www.blood.ca/en/research/our-research-activities" target='_blank'  rel="noopener noreferrer">Our Research Activities </a> </p></div>

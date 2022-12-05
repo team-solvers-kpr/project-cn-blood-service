@@ -7,11 +7,11 @@ import backgroundPic from '../../assets/blood-drops.jpg';
 const ContactPart = () => {
   return (
     <div className="flex ">
-         <div className="ml-32 absolute mt-10">
+         <div className="lg:ml-32 lg:absolute mt-10">
             <p>For general enquiries about research at Canadian Blood Services, please contact us at:</p>
 
 </div>
-        <div className="relative ml-32">
+        <div className="lg:relative lg:ml-32 hidden lg:block">
                 <img src={backgroundPic} alt="" className="w-2/3 ml-96 px-14 "/>
         </div>
         <div className="ml-32 absolute mt-10">
