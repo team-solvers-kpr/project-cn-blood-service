@@ -1,5 +1,6 @@
 import React from 'react'
 import { Award } from './Award';
+import BenefitsSecton from './BenefitsSecton';
 import EmployeesVideoSection from './EmployeesVideoSection';
 import LastBluePart from './LastBluePart';
 import LastGrayPart from './LastGrayPart';
@@ -16,6 +17,7 @@ const Careers = () => {
       <WhatWeDoMatters></WhatWeDoMatters>
       <ServiceInterruption></ServiceInterruption>
         <TogetherSection></TogetherSection>
+        <BenefitsSecton></BenefitsSecton>
         <EmployeesVideoSection></EmployeesVideoSection>
         <LastBluePart></LastBluePart>
         <LastGrayPart></LastGrayPart>

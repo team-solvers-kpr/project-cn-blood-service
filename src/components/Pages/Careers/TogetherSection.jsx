@@ -6,7 +6,6 @@ const TogetherSection = () => {
   return (
     <div className='bg-red-700'>
         <div className='grid lg:grid-flow-col  mx-12 gap-12'>
-
             <div className="content w-full grid-cols-4 text-white text-left">
                 <h1 className='text-3xl mt-12 mb-8 font-bold'>Together, we make a difference</h1>
                 <p className='mb-4 font-xl' >Thousands of Canadians depend on us every day for reliable access to safe blood, plasma, stem cells and organs and tissues.</p>
