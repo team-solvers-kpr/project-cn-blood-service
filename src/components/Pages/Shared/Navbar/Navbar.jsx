@@ -48,20 +48,20 @@ const Navbar = () => {
                 <div className={``}>
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
                         <ul className={`${isExpand ? 'hidden': 'block'} ${close ? 'block' : 'hiddden'} flex gap-4 pt-1`}>
-                            <li className='hover:underline'>
-                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
+                            <li className='hover:underline '>
+                                <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80'>Hospital Services</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
+                            <li className='hover:underline '>
+                                <Link to='/research' className='font-semibold opacity-50 hover:opacity-80 '>Research</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
+                            <li className='hover:underline '>
+                                <Link to='/careers' className='font-semibold opacity-50 hover:opacity-80'>Careers</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
+                            <li className='hover:underline '>
+                                <Link to='/shop' className='font-semibold opacity-50 hover:opacity-80'>Shop</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
+                            <li className='hover:underline '>
+                                <Link to='/about-us' className='font-semibold opacity-50 hover:opacity-80'>About us</Link>
                             </li>
                         </ul>
                         <div className={`inline-flex  gap-2 ${close ? 'block' : 'hiddden'} ${isExpand ? 'hidden': 'block'}`}>
