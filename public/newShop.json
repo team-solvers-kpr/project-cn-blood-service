@@ -37,33 +37,33 @@
         "price":"$38.00"
     },
     {
-        "name":"Unisex Pullover Hoodie",
+        "name":"Unisex T-shirt",
         "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/300/f1d21443a281d4539bb2b5fb825cd558.JPG",
-        "code":"CBS220006",
-        "price":"$38.00"
+        "code":"CBS220008",
+        "price":"$18.00"
     },
     {
-        "name":"Unisex Pullover Hoodie",
+        "name":"15 Inches Computer Briefcase",
         "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/300/03eacc64da37813331ce92a4afbcc2c2.JPG",
-        "code":"CBS220006",
-        "price":"$38.00"
+        "code":"CBS220009",
+        "price":"$30.00"
     },
     {
-        "name":"Unisex Pullover Hoodie",
+        "name":"Microfiber Cloth",
         "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/300/36635506382a6e629b29f254a02f0c07.JPG",
-        "code":"CBS220006",
-        "price":"$38.00"
+        "code":"CBS220010",
+        "price":"$2.05"
     },
     {
-        "name":"Unisex Pullover Hoodie",
+        "name":"QR Keychain",
         "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/300/99b76121ea414bcd7236c7b1493b016f.JPG",
-        "code":"CBS220006",
-        "price":"$38.00"
+        "code":"CBS220004",
+        "price":"$3.98"
     },
     {
-        "name":"Unisex Pullover Hoodie",
+        "name":"Gum Pack",
         "img":"https://www.blood-shop.ca/assets/Stores/8e5d001e21a4d4e570fc3c315852b877/Products/300/8ad1d72f97e0f6f5dd1aef9e53b36eac.JPG",
-        "code":"CBS220006",
-        "price":"$38.00"
+        "code":"CBS220005",
+        "price":"$1.55"
     }
 ]

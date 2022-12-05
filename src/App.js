@@ -9,6 +9,7 @@ import Footer from "./components/Pages/Shared/Footer/Footer";
 import Navbar from "./components/Pages/Shared/Navbar/Navbar";
 import AllProducts from "./components/Pages/Shop/AllProducts/AllProducts";
 import Shop from "./components/Pages/Shop/Shop/Shop";
+import Gifts from "./components/Pages/Shop/ShopAd/Gifts/Gifts/Gifts";
 
 function App() {
   const Wrapper = ({ children }) => {
@@ -33,6 +34,7 @@ function App() {
           ></Route>
           <Route path="/signin" element={<Signin />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/gifts" element={<Gifts />}></Route>
           <Route path="/allProducts" element={<AllProducts />}></Route>
           <Route path="*" element={<Notfound />}></Route>
         </Routes>
