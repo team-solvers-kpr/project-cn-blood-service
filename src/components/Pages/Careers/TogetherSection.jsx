@@ -5,7 +5,7 @@ import VideoModal from '../../Modal/VideoModal';
 const TogetherSection = () => {
   return (
     <div className='bg-red-700'>
-        <div className='grid lg:grid-flow-col  m-12 gap-12'>
+        <div className='grid lg:grid-flow-col mt-12 mx-12 gap-12'>
 
             <div className="content w-full grid-cols-4 text-white text-left">
                 <h1 className='text-3xl mt-12 mb-8 font-bold'>Together, we make a difference</h1>
