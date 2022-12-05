@@ -10,7 +10,7 @@ import backgroundImg from '../../assets/SS_Mercy_2560x1150_0.jpg';
     <div>
       <div className='container m-8'>
         <div className="h-full">
-          <div className='hidden'>
+          <div className=''>
             <img src={backgroundImg} alt="" />
           </div>
           <div className=''>
