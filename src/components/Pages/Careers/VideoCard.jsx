@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import VideoModal from '../../Modal/VideoModal';
-import {BsPlayCircleFill} from 'react-icons/bs';
 
 
 const VideoCard = () => {
@@ -16,13 +15,11 @@ const VideoCard = () => {
 
   }, []);
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-2 lg:gap-2 md:gap-2 max-w-full items-center'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-2 lg:gap-x-2 lg:gap-y-12 md:gap-2 max-w-full items-center'>
       {careerCardData && careerCardData.map( data =>
-        <div key={data.id} className='bg-[#F0F0F0] flex  flex-col '>
-          <div className='video w-full'>
-            <BsPlayCircleFill  fontSize={100} className={`text-red-600 -my-14 transition-all duration-100 ease-in ml-[14rem] mt-[6rem] lg:ml-[16rem] lg:mt-[8rem] absolute `}/>
-             <VideoModal images={data.image} videourl={data.video} /> 
-             
+        <div key={data.id} className='bg-[#F0F0F0] flex  flex-col overflow-hidden'>
+          <div className='video w-full relative'>
+            <VideoModal images={data.image} videourl={data.video} />   
           </div>
           <div className='content text-left p-12 lg:mb-12'>
            <h1 className='employes-name mb-4 font-bold text-xl'>{data.name}</h1>

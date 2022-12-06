@@ -1,22 +1,33 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { CgClose, CgMenuLeft } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../../firebase.init';
 import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import Nav from './Nav';
-import { SearchBar } from './SearchBar';
+import { ExpandableSearchbar } from './ExpandableSearchbar';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
+    const [isExpand, setExpand] = useState(false);
+    const [user, loading, error] = useAuthState(auth);
+
+    const logOut=()=>{
+        signOut(auth)
+    }
     
     const navigate = useNavigate();
   return (
-    <div className='lg:fixed w-full bg-white z-50 top-0 left-0 transition-all ease-in-out'>
+    <div className='lg:fixed w-full bg-white z-40 top-0 left-0 transition-all ease-in-out'>
         <div className='manuBar   grid grid-flow-col '>
             <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
-                <img src={Logo} alt="logo" className='h-12 lg:pl-7 ' />
+                <Link to='/'>
+                    <img  src={Logo} alt="logo" className='h-[52px] lg:pl-32 ' />
+                </Link>
                 {!isOpen && (
                             <div className='menu-icon cursor-pointer font-bold  absolute inline-block right-4 lg:hidden outline-none'
                             onClick={() => setOpen(!isOpen)}
@@ -25,7 +36,7 @@ const Navbar = () => {
                             <span className='uppercase text-[#BEBEC2]'>Menu</span>
                         </div>
                         )}
-                    {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none '
+                    {isOpen &&  (<div className='closeIcon cursor-pointer absolute right-4 inline-block lg:hidden outline-none'
                     onClick={() => setOpen(!isOpen)}
                     >
                             <CgClose fontSize={40} className="text-red-600" />
@@ -34,25 +45,25 @@ const Navbar = () => {
             </div>
             <div className='right md:block hidden pt-2 col-span-9'>
                 <div className="menu-top">
-                    <nav className='lg:flex justify-center gap-4 lg:flex-row hidden'>
-                        <ul className='flex gap-4 pt-1'>
+                    <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
+                        <ul className={`${isExpand ? 'hidden': 'block'}  flex gap-4 pt-1`}>
                             <li className='hover:underline'>
-                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-bold'>Hospital Services</Link>
+                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-bold'>Research</Link>
+                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-bold'>Careers</Link>
+                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-bold'>Shop</Link>
+                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
                             </li>
                             <li className='hover:underline'>
-                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-bold'>About us</Link>
+                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
                             </li>
                         </ul>
-                        <div className='inline-flex  gap-4'>
+                        <div className={`inline-flex  gap-2 ${isExpand ? 'hidden': 'block'}`}>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -74,26 +85,47 @@ const Navbar = () => {
                                         onClick={(e) => navigate("/bookNow")}
                                     />
 
-                                    <Button
-                                        btnText={"Sign in"}
-                                        buttonIcon={<FaUserAlt className='inline-block -mt-1 mr-2' />}
+                                    {!user ?
+                                        <Button
+                                        btnText={"Sign In"}
+                                        buttonIcon= { <FaUserAlt className='inline-block -mt-1 mr-2' /> }
                                         bgprimary="bg-white"
-                                        height="h-11"
+                                        height="h-10"
+                                        width="w-28"
+                                        fontwidth="font-bold"
+                                        fontsize="text-base"
+                                        textprimary="text-white"
+                                        borderprimary="border-red-600"
+                                        bgsecondary="bg-red-600"
+                                        textColor='text-red-600'
+                                        onClick={() => navigate("/signin")}
+                                    />
+                                    :
+                                    <Button
+                                        btnText={"Log out"}
+                                        bgprimary="bg-white"
+                                        height="h-10"
                                         width="w-28"
                                         fontwidth="font-bold"
                                         textTransform='uppercase'
                                         fontsize="text-base"
                                         textprimary="text-white"
                                         borderprimary="border-red-700"
-                                        bgsecondary="bg-red-600"
+                                        bgsecondary="bg-[#C4161C]"
                                         textColor='text-[#C4161C]'
-                                        onClick={(e) => navigate("/signin")}
-                                    ></Button>
+                                        onClick={logOut}
+                                    />}
                                 </div>
                             </div>
-                            <div className='topsearchbar '>
-                                <SearchBar width='w-12' pr= 'focus:pr-4' />
-                            </div>
+                            
+                        </div>
+                        <div className='topsearchbar pb-4'>
+                                {isExpand && (<ExpandableSearchbar />)}
+
+
+                                <button onClick={() => setExpand(!isExpand)} className={`${isExpand ? 'hidden': 'block'}  btn btn-ghost btn-circle bg-red-600 text-white`}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                </button>
                         </div>
                     </nav>
                 </div>
@@ -106,12 +138,12 @@ const Navbar = () => {
 
                             {/* mobile menu navigation  */}
 
-        <div className={`md:hidden bg-white absolute h-full w-full py-24  pt-4 ${
+        <div className={`md:hidden bg-white h-full w-full py-24 pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
-            } ease-in-out duration-700 z-40`}>
+            } ease-in-out duration-700 z-50`}>
 
                         <div className='searchBar'>
-                            <SearchBar width="w-full"  />
+                            <ExpandableSearchbar   />
                         </div>
                         
                         <div className='py-5 flex justify-around'>

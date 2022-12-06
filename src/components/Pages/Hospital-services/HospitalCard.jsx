@@ -17,10 +17,10 @@ export const HospitalCard = () => {
   return (
     hospitalData && hospitalData.map(data =>
       <div className='bg-white flex flex-col shadow-lg items-center' key={data.id}>
-      <div className='cardImg h-48 w-48'>
+      <div className='cardImg h-48 w-48 mt-16'>
           <img src={data.image} alt="" />
       </div>
-      <div className='cardContent p-12 text-left'>
+      <div className='cardContent p-10 text-left'>
           <div>
               <h1 className='py-6'>
                   <span className='text-red-600 text-3xl font-bold'>{data.heading}</span>
@@ -28,9 +28,9 @@ export const HospitalCard = () => {
               <hr className='h-0 w-24  rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
               <p className='py-6'>{data.pragraph}</p>
           </div>
-          <div className='text-xl text-red-600 '>
+          <div className='text-xl text-red-700 '>
               <Link to='/'>
-                  {data.morelink} <AiOutlineArrowRight className='inline-block' />
+                  {data.morelink} <AiOutlineArrowRight className='inline-block text-teal-600' />
               </Link>
           </div>
       </div>
