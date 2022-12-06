@@ -3,17 +3,14 @@ import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { HospitalCard } from "./HospitalCard";
 import HospitalRelatedInformation from "./HospitalRelatedInformation";
-import backgroundImg from "../../assets/SS_Mercy_2560x1150_0.jpg";
+import backgroundImg from "../../assets/SS_Mercy.jpg";
 
 const HospitalServices = () => {
   return (
-    <div className="mt-[168px]">
-      <div className="lg:flex pt-8">
-        <div className="lg:relative hidden lg:block">
-          <img src={backgroundImg} alt="" className="lg:pl-60" />
-        </div>
-        <div className="lg:absolute ml-36">
-          <h1 className="text-6xl font-bold text-slate-700 text-left">
+    <div className="lg:mt-[168px]">
+      <div className="lg:grid grid-cols-12 pt-8 mb-6">
+        <div className="lg:ml-36 lg:col-span-7 ml-8">
+          <h1 className="lg:text-6xl text-5xl font-bold text-slate-700 text-left">
             Hospital services
           </h1>
           <div className="max-w-xl mt-8 mb-8 text-left text-slate-700">
@@ -44,7 +41,7 @@ const HospitalServices = () => {
                     <span>
                       <AiOutlineArrowRight fontSize={24} color="#54c3bb" />
                     </span>
-                    <p className="text-lg text-red-500 font-semibold">
+                    <p className="lg:text-lg text-red-500 font-semibold">
                       COVID-19 Information for Health Care Professionals
                     </p>
                   </Link>
@@ -196,10 +193,13 @@ const HospitalServices = () => {
             </div>
           </div>
         </div>
+        <div className="lg:col-span-5 lg:block hidden">
+          <img src={backgroundImg} alt="" className="" />
+        </div>
       </div>
 
-      <div className="bg-[#F0F0F0] max-w-full mt-36">
-        <div className="mx-36 pt-12 lg:grid grid-cols-3 gap-4">
+      <div className="bg-[#F0F0F0] max-w-full">
+        <div className="mx-36 py-12 lg:grid grid-cols-3 gap-4">
           <HospitalCard />
         </div>
       </div>
