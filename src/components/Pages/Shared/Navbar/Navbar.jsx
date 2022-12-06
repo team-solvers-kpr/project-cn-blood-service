@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className=' md:block hidden pt-2 col-span-9'>
                 <div className={``}>
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
-                        <ul className={`${isExpand ? 'hidden': 'block'} ${close ? 'block' : 'hiddden'} flex gap-4 pt-1`}>
+                        <ul className={`${isExpand ? 'hidden': 'block'} ${close ? 'true' : 'hiddden'} flex gap-4 pt-1`}>
                             <li className='hover:underline '>
                                 <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80'>Hospital Services</Link>
                             </li>
@@ -64,7 +64,7 @@ const Navbar = () => {
                                 <Link to='/about-us' className='font-semibold opacity-50 hover:opacity-80'>About us</Link>
                             </li>
                         </ul>
-                        <div className={`inline-flex  gap-2 ${close ? 'block' : 'hiddden'} ${isExpand ? 'hidden': 'block'}`}>
+                        <div className={`inline-flex  gap-2 ${close ? 'true' : 'hiddden'} ${isExpand ? 'hidden': 'block'}`}>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -131,7 +131,7 @@ const Navbar = () => {
                                             </div>
                                             <input type="text" placeholder="what are we search for?" className="input input-bordered  input-success w-full max-w-xs h-[50px] pr-16 pl-16 py-2 font-semibold placeholder:italic placeholder-gray-500 text-gray-500 rounded-full border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2" />
                                             <div 
-                                            onClick={() => setClose(!close)}
+                                            onClick={() => setClose(false)}
                                             className="btn   btn-sm btn-circle absolute top-2 right-2"
                                             >✕
                                             </div>
