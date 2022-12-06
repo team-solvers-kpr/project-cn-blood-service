@@ -20,7 +20,7 @@ const SingleBlood = ({ bloodGroup, days, bloodDrop, tooltip }) => {
             {days} <br /> days
           </h4>
         </div>
-        <span className="invisible group-hover:visible opacity-0 font-semibold group-hover:opacity-100 transition bg-red-600 text-white p-4 rounded-xl absolute mt-4 bottom-60 right-0 shadow-md z-20">
+        <span className="invisible group-hover:visible opacity-0 font-semibold group-hover:opacity-100 transition bg-red-600 text-white p-4 rounded-xl absolute mt-4 bottom-60 right-0 shadow-md z-50">
           {tooltip}
         </span>
       </div>
