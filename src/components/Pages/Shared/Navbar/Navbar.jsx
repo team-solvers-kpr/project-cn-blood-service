@@ -14,6 +14,7 @@ import { ExpandableSearchbar } from './ExpandableSearchbar';
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
     const [isExpand, setExpand] = useState(false);
+    const [close, setClose] = useState(false);
     const [user, loading, error] = useAuthState(auth);
 
     const logOut=()=>{
@@ -43,27 +44,27 @@ const Navbar = () => {
                         </div>
                         )}
             </div>
-            <div className='right md:block hidden pt-2 col-span-9'>
-                <div className="menu-top">
+            <div className=' md:block hidden pt-2 col-span-9'>
+                <div className={``}>
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
-                        <ul className={`${isExpand ? 'hidden': 'block'}  flex gap-4 pt-1`}>
-                            <li className='hover:underline'>
-                                <Link to='/hospital-services' className=' opacity-80 hover:opacity-100 font-medium'>Hospital Services</Link>
+                        <ul className={`${isExpand ? 'hidden': 'block'} ${close ? 'true' : 'hiddden'} flex gap-4 pt-1`}>
+                            <li className='hover:underline '>
+                                <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80'>Hospital Services</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/research' className=' opacity-80 hover:opacity-100 font-medium'>Research</Link>
+                            <li className='hover:underline '>
+                                <Link to='/research' className='font-semibold opacity-50 hover:opacity-80 '>Research</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/careers' className=' opacity-80 hover:opacity-100 font-medium'>Careers</Link>
+                            <li className='hover:underline '>
+                                <Link to='/careers' className='font-semibold opacity-50 hover:opacity-80'>Careers</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/shop' className=' opacity-80 hover:opacity-100 font-medium'>Shop</Link>
+                            <li className='hover:underline '>
+                                <Link to='/shop' className='font-semibold opacity-50 hover:opacity-80'>Shop</Link>
                             </li>
-                            <li className='hover:underline'>
-                                <Link to='/about-us' className=' opacity-80 hover:opacity-100 font-medium'>About us</Link>
+                            <li className='hover:underline '>
+                                <Link to='/about-us' className='font-semibold opacity-50 hover:opacity-80'>About us</Link>
                             </li>
                         </ul>
-                        <div className={`inline-flex  gap-2 ${isExpand ? 'hidden': 'block'}`}>
+                        <div className={`inline-flex  gap-2 ${close ? 'true' : 'hiddden'} ${isExpand ? 'hidden': 'block'}`}>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -119,12 +120,26 @@ const Navbar = () => {
                             </div>
                             
                         </div>
-                        <div className='topsearchbar pb-4'>
-                                {isExpand && (<ExpandableSearchbar />)}
-
-
-                                <button onClick={() => setExpand(!isExpand)} className={`${isExpand ? 'hidden': 'block'}  btn btn-ghost btn-circle bg-red-600 text-white`}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 " fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        <div className=' pb-4'>
+                                <div>
+                                    <form action="" className={` ${isExpand ? 'float-left' : 'hidden'} max-w-full transition-all duration-100 ease-in-out `}>
+                                        <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
+                                            <div className='btn pointer-events-none btn-circle  absolute'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5  " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path strokeLinecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                                </svg>
+                                            </div>
+                                            <input type="text" placeholder="what are we search for?" className="input input-bordered  input-success w-full max-w-xs h-[50px] pr-16 pl-16 py-2 font-semibold placeholder:italic placeholder-gray-500 text-gray-500 rounded-full border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2" />
+                                            <div 
+                                            onClick={() => setClose(false)}
+                                            className="btn   btn-sm btn-circle absolute top-2 right-2"
+                                            >✕
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <button  onClick={() => setExpand(!isExpand)} className={` ${isExpand ? 'hidden': 'block'} btn btn-circle`}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                                 </button>
                         </div>
                     </nav>
