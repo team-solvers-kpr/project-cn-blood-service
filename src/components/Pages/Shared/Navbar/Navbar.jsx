@@ -197,8 +197,8 @@ const Navbar = () => {
                                                     />
                                                     <span className='py-8'>Blood</span>
                                                 </Disclosure.Button>
-                                                <Disclosure.Panel className="bg-red-600 px-4 pt-4 pb-2 text-xl  text-left font-bold text-white">
-                                                    <Link to='' className='flex justify-around '>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
                                                         <span>
                                                             View all Blood info 
                                                         </span>
@@ -296,7 +296,564 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </li>
-                                <li className='border-l-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none h-20'>
+                                <li className='group '>
+                                    <div className="w-full ">
+                                        <div className="mx-auto w-full">
+                                            <Disclosure>
+                                            {({ open }) => (
+                                                <>
+                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full group-hover:bg-red-600 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                    <RiArrowDropDownLine
+                                                        className={`${
+                                                            open ? 'rotate-180 transform' : ''
+                                                        } h-8 w-8 text-black duration-300 my-8 `}
+                                                    />
+                                                    <span className='py-8'>Plasma</span>
+                                                </Disclosure.Button>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Plasma info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </Disclosure.Panel>
+                                                <Disclosure.Panel className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Am I eligible to donate plasma?</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                    Become a plasma donor
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                    Eligibility quiz
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                    ABC of eligibility
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                        Men who have sex with men plasma eligibility
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Donating plasma</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                How your plasma donation helps
+
+
+
+
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor Questionnaire
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor health and safety
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor centres hours & locations
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    COVID-19 information
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <ul className='font-semibold space-y-8 opacity-80'>
+                                                            <li>
+                                                                <Link>
+                                                                Securing Canada’s plasma supply
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Plasma and the blood system supply chain
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Plasma protein and related products
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    COVID-19 and convalescent plasma
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Disclosure.Panel>
+                                                </>
+                                            )}
+                                            </Disclosure>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className='group '>
+                                    <div className="w-full ">
+                                        <div className="mx-auto w-full">
+                                            <Disclosure>
+                                            {({ open }) => (
+                                                <>
+                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full group-hover:bg-red-600 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                    <RiArrowDropDownLine
+                                                        className={`${
+                                                            open ? 'rotate-180 transform' : ''
+                                                        } h-8 w-8 text-black duration-300 my-8 `}
+                                                    />
+                                                    <span className='py-8'>Stem Cells</span>
+                                                </Disclosure.Button>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Stem Cells info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </Disclosure.Panel>
+                                                <Disclosure.Panel className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Adult stem cell registry</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                Donating stem cells
+
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                Stem cell donation eligibility and registration
+
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                    How stem cell donation works
+                                                                    </Link>
+                                                                </li>
+
+                                                                    
+                                                                <li>
+                                                                    <Link>
+                                                                    Collection and transplant hospital resources
+                                                                    </Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link>
+                                                                    
+                                                                        Stem cell FAQs
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Cord blood bank</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Donating cord blood
+
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Cord blood eligibility
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                How cord blood donation works
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Safety Standards
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donate cord blood for research
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Cord blood FAQs
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Disclosure.Panel>
+                                                </>
+                                            )}
+                                            </Disclosure>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className='group '>
+                                    <div className="w-full ">
+                                        <div className="mx-auto w-full">
+                                            <Disclosure>
+                                            {({ open }) => (
+                                                <>
+                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full group-hover:bg-red-600 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                    <RiArrowDropDownLine
+                                                        className={`${
+                                                            open ? 'rotate-180 transform' : ''
+                                                        } h-8 w-8 text-black duration-300 my-8 `}
+                                                    />
+                                                    <span className='py-8'>Blood</span>
+                                                </Disclosure.Button>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Blood info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </Disclosure.Panel>
+                                                <Disclosure.Panel className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Am I eligible to donate blood?</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                    ABCs of eligibility
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                     Changes to donation criteria
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                        Trans individuals
+                                                                    </Link>
+                                                                </li>
+
+                                                                    
+                                                                <li>
+                                                                    <Link>
+                                                                        Sexual behaviour-based screening
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Donating blood</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                    What is my blood type?
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donation process
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Rare Blood Program
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor Questionnaire
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor health and safety
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <ul className='font-semibold space-y-8 opacity-80'>
+                                                            <li>
+                                                                <Link>
+                                                                    Donating platelets
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Recognition program
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors Donor centre  hours & locations
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    COVID-19 information
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Disclosure.Panel>
+                                                </>
+                                            )}
+                                            </Disclosure>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className='group '>
+                                    <div className="w-full ">
+                                        <div className="mx-auto w-full">
+                                            <Disclosure>
+                                            {({ open }) => (
+                                                <>
+                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full group-hover:bg-red-600 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                    <RiArrowDropDownLine
+                                                        className={`${
+                                                            open ? 'rotate-180 transform' : ''
+                                                        } h-8 w-8 text-black duration-300 my-8 `}
+                                                    />
+                                                    <span className='py-8'>Blood</span>
+                                                </Disclosure.Button>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Blood info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </Disclosure.Panel>
+                                                <Disclosure.Panel className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Am I eligible to donate blood?</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                    ABCs of eligibility
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                     Changes to donation criteria
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                        Trans individuals
+                                                                    </Link>
+                                                                </li>
+
+                                                                    
+                                                                <li>
+                                                                    <Link>
+                                                                        Sexual behaviour-based screening
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Donating blood</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                    What is my blood type?
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donation process
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Rare Blood Program
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor Questionnaire
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor health and safety
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <ul className='font-semibold space-y-8 opacity-80'>
+                                                            <li>
+                                                                <Link>
+                                                                    Donating platelets
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Recognition program
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors Donor centre  hours & locations
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    COVID-19 information
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Disclosure.Panel>
+                                                </>
+                                            )}
+                                            </Disclosure>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className='group '>
+                                    <div className="w-full ">
+                                        <div className="mx-auto w-full">
+                                            <Disclosure>
+                                            {({ open }) => (
+                                                <>
+                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full group-hover:bg-red-600 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                    <RiArrowDropDownLine
+                                                        className={`${
+                                                            open ? 'rotate-180 transform' : ''
+                                                        } h-8 w-8 text-black duration-300 my-8 `}
+                                                    />
+                                                    <span className='py-8'>Blood</span>
+                                                </Disclosure.Button>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Blood info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </Disclosure.Panel>
+                                                <Disclosure.Panel className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Am I eligible to donate blood?</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                    ABCs of eligibility
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                     Changes to donation criteria
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                        Trans individuals
+                                                                    </Link>
+                                                                </li>
+
+                                                                    
+                                                                <li>
+                                                                    <Link>
+                                                                        Sexual behaviour-based screening
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Donating blood</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                    What is my blood type?
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donation process
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Rare Blood Program
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor Questionnaire
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donor health and safety
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <ul className='font-semibold space-y-8 opacity-80'>
+                                                            <li>
+                                                                <Link>
+                                                                    Donating platelets
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Recognition program
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors Donor centre  hours & locations
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    COVID-19 information
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Disclosure.Panel>
+                                                </>
+                                            )}
+                                            </Disclosure>
+                                        </div>
+                                    </div>
+                                </li>
+                                {/* <li className='border-l-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none h-20'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Plasma
@@ -327,7 +884,7 @@ const Navbar = () => {
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Stories
                                     </Link>
-                                </li>
+                                </li> */}
                         </ul>
                         <div className='links bg-[#4D4D4D]'>
                             <ul>
