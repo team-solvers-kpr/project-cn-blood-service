@@ -639,96 +639,72 @@ const Navbar = () => {
                                                             open ? 'rotate-180 transform' : ''
                                                         } h-8 w-8 text-black duration-300 my-8 `}
                                                     />
-                                                    <span className='py-8'>Blood</span>
+                                                    <span className='py-8'>Ways To Donate</span>
                                                 </Disclosure.Button>
                                                 <Disclosure.Panel className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
                                                     <Link to='' className='flex justify-between'>
                                                         <span>
-                                                            View all Blood info 
+                                                            View all Ways To Donate info 
                                                         </span>
                                                         <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
                                                     </Link>
                                                 </Disclosure.Panel>
                                                 <Disclosure.Panel className=" px-4 pt-10 pb-2">
                                                     <div className='text-left '>
-                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Am I eligible to donate blood?</Link></h1>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Financial donations</Link></h1>
                                                         <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
                                                             <li className=''>
                                                                 <Link to=''>
-                                                                    ABCs of eligibility
+                                                                Your gifts at work
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link to=''>
-                                                                     Changes to donation criteria
+                                                                How to give
                                                                 </Link>
                                                             </li>
                                                                 <li>
                                                                     <Link to={``}>
-                                                                        Trans individuals
-                                                                    </Link>
-                                                                </li>
-
-                                                                    
-                                                                <li>
-                                                                    <Link>
-                                                                        Sexual behaviour-based screening
+                                                                    Donate now
                                                                     </Link>
                                                                 </li>
                                                         </ul>
                                                     </div>
-                                                    <div className='text-left mt-8'>
+                                                    <div className='text-left mt-8 '>
                                                         <h1 className='font-semibold opacity-80'>
-                                                            <Link to='/donating-blood'>Donating blood</Link>
+                                                            <Link to='/donating-blood'>Partners for Life</Link>
                                                         </h1>
                                                         <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
                                                             <li>
                                                                 <Link>
-                                                                    What is my blood type?
+                                                                Group donations and pledge-based partnerships
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link>
-                                                                    Donation process
+                                                                National partners
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link>
-                                                                    Rare Blood Program
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link>
-                                                                    Donor Questionnaire
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link>
-                                                                    Donor health and safety
+                                                                Partner eNews
                                                                 </Link>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div className='text-left mt-8 mb-12'>
-                                                        <ul className='font-semibold space-y-8 opacity-80'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Volunteering</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
                                                             <li>
                                                                 <Link>
-                                                                    Donating platelets
+                                                                Become a volunteer
                                                                 </Link>
                                                             </li>
                                                             <li>
                                                                 <Link>
-                                                                    Recognition program
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link>
-                                                                    Sign language interpreting services for Deaf, deafened and hard of hearing donors Donor centre  hours & locations
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link>
-                                                                    COVID-19 information
+                                                                Youth volunteers
                                                                 </Link>
                                                             </li>
                                                         </ul>
