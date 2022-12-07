@@ -10,6 +10,7 @@ import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import Nav from './Nav';
 import { ExpandableSearchbar } from './ExpandableSearchbar';
+import { Disclosure } from '@headlessui/react';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -174,11 +175,37 @@ const Navbar = () => {
                             </button>
                         </div>
                         <ul className='border-[#f0f0f0]'>
-                                <li className='border-l-8 hover:text-white border-red-600 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-600 focus:outline-none h-20 ease-in-out'>
+                                {/* <li className='border-l-8 hover:text-white border-red-600 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-600 focus:outline-none h-20 ease-in-out'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
                                         <span className='inline-block'><RiArrowDropDownLine /></span>
                                         Blood
                                     </Link>
+                                </li> */}
+                                <li className='group '>
+                                    <div className="w-full ">
+                                        <div className="mx-auto w-full">
+                                            <Disclosure>
+                                            {({ open }) => (
+                                                <>
+                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full group-hover:bg-red-600 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                    <RiArrowDropDownLine fontSize={40}
+                                                        className={`${
+                                                            open ? 'rotate-180 transform' : ''
+                                                        } h-5 w-5 text-white duration-300 my-8 `}
+                                                    />
+                                                    <span className='py-8'>Blood</span>
+                                                </Disclosure.Button>
+                                                <Disclosure.Panel className="bg-red-600 px-4 pt-4 pb-2 text-sm text-white">
+                                                    View all Blood info
+                                                </Disclosure.Panel>
+                                                <Disclosure.Panel className=" px-4 pt-4 pb-2 text-sm text-black">
+                                                    Blood
+                                                </Disclosure.Panel>
+                                                </>
+                                            )}
+                                            </Disclosure>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li className='border-l-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none h-20'>
                                     <Link className=' pt-4 pb-0 pr-2 pl-2'>
@@ -212,7 +239,7 @@ const Navbar = () => {
                                         Stories
                                     </Link>
                                 </li>
-                            </ul>
+                        </ul>
                         <div className='links bg-[#4D4D4D]'>
                             <ul>
                                 <li className='font-normal text-left text-white uppercase px-3 pt-10'>
