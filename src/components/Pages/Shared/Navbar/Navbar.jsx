@@ -14,7 +14,6 @@ import { ExpandableSearchbar } from './ExpandableSearchbar';
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
     const [isExpand, setExpand] = useState(false);
-    const [close, setClose] = useState(false);
     const [user, loading, error] = useAuthState(auth);
 
     const logOut=()=>{
@@ -24,7 +23,7 @@ const Navbar = () => {
     const navigate = useNavigate();
   return (
     <div className='lg:fixed w-full bg-white z-40 top-0 left-0 transition-all ease-in-out'>
-        <div className='manuBar   grid grid-flow-col '>
+        <div className='manuBar grid grid-flow-col '>
             <div className='logo flex lg:m-0 m-5 flex-row items-center col-span-3 lg:border-b-8 border-sky-50'>
                 <Link to='/'>
                     <img  src={Logo} alt="logo" className='h-[52px] lg:pl-32 ' />
@@ -45,26 +44,26 @@ const Navbar = () => {
                         )}
             </div>
             <div className=' md:block hidden pt-2 col-span-9'>
-                <div className={``}>
+                <div>
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
-                        <ul className={`${isExpand ? 'hidden': 'block'} ${close ? 'true' : 'hiddden'} flex gap-4 pt-1`}>
-                            <li className='hover:underline '>
-                                <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80'>Hospital Services</Link>
+                        <ul className={`${isExpand ? 'hidden': 'block'} flex gap-4 pt-1`}>
+                            <li>
+                                <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>Hospital Services</Link>
                             </li>
-                            <li className='hover:underline '>
-                                <Link to='/research' className='font-semibold opacity-50 hover:opacity-80 '>Research</Link>
+                            <li>
+                                <Link to='/research' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>Research</Link>
                             </li>
-                            <li className='hover:underline '>
-                                <Link to='/careers' className='font-semibold opacity-50 hover:opacity-80'>Careers</Link>
+                            <li>
+                                <Link to='/careers' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>Careers</Link>
                             </li>
-                            <li className='hover:underline '>
-                                <Link to='/shop' className='font-semibold opacity-50 hover:opacity-80'>Shop</Link>
+                            <li>
+                                <Link to='/shop' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>Shop</Link>
                             </li>
-                            <li className='hover:underline '>
-                                <Link to='/about-us' className='font-semibold opacity-50 hover:opacity-80'>About us</Link>
+                            <li>
+                                <Link to='/about-us' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>About us</Link>
                             </li>
                         </ul>
-                        <div className={`inline-flex  gap-2 ${close ? 'true' : 'hiddden'} ${isExpand ? 'hidden': 'block'}`}>
+                        <div className={`inline-flex  gap-2 ${isExpand ? 'hidden': 'block'}`}>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -117,29 +116,31 @@ const Navbar = () => {
                                         onClick={logOut}
                                     />}
                                 </div>
-                            </div>
-                            
+                            </div>  
                         </div>
-                        <div className=' pb-4'>
+                        
+                        <div className='pb-4'>
                                 <div>
-                                    <form action="" className={` ${isExpand ? 'float-left' : 'hidden'} max-w-full transition-all duration-100 ease-in-out `}>
+                                    <form action="" className={` ${isExpand ? 'float-left' : 'hidden'} max-w-full transition-all duration-500 ease-in-out`}>
                                         <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
-                                            <div className='btn pointer-events-none btn-circle  absolute'>
-                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5  " fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <div className='border rounded-full p-2 bg-gray-700 pointer-events-none  absolute'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                     <path strokeLinecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                                 </svg>
                                             </div>
-                                            <input type="text" placeholder="what are we search for?" className="input input-bordered  input-success w-full max-w-xs h-[50px] pr-16 pl-16 py-2 font-semibold placeholder:italic placeholder-gray-500 text-gray-500 rounded-full border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2" />
+                                            <input type="text" placeholder="What are we search for?" className="input input-bordered input-success w-full max-w-full h-[45px] pr-16 pl-16 font-semibold placeholder:italic placeholder-gray-500 text-gray-500 rounded-full border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2" />
                                             <div 
-                                            onClick={() => setClose(false)}
-                                            className="btn   btn-sm btn-circle absolute top-2 right-2"
+                                                onClick={() => setExpand(false)}
+                                                className="btn btn-sm btn-circle absolute top-2 right-1"
                                             >✕
-                                            </div>
+                                             </div>
                                         </div>
                                     </form>
                                 </div>
-                                <button  onClick={() => setExpand(!isExpand)} className={` ${isExpand ? 'hidden': 'block'} btn btn-circle`}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                                <button  
+                                    onClick={() => setExpand(true)} 
+                                    className={` ${isExpand ? 'hidden': 'block'} border rounded-full p-2 bg-gray-700`}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                                 </button>
                         </div>
                     </nav>
