@@ -35,6 +35,5 @@ export const HospitalCard = () => {
           </div>
       </div>
   </div>)
-
   )
 }
