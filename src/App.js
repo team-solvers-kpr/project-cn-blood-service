@@ -10,6 +10,11 @@ import Navbar from "./components/Pages/Shared/Navbar/Navbar";
 import AllProducts from "./components/Pages/Shop/AllProducts/AllProducts";
 import Shop from "./components/Pages/Shop/Shop/Shop";
 import Gifts from "./components/Pages/Shop/ShopAd/Gifts/Gifts/Gifts";
+import ShopCategoryItemsAccessories from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsAccessories/ShopCategoryItemsAccessories";
+import ShopCategoryItemsApparel from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsApparel/ShopCategoryItemsApparel";
+import ShopCategoryItemsDrinkware from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsDrinkware/ShopCategoryItemsDrinkware";
+import ShopCategoryItemsEvents from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsEvents/ShopCategoryItemsEvents";
+import ShopCategoryItemsOffice from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsOffice/ShopCategoryItemsOffice";
 
 function App() {
   const Wrapper = ({ children }) => {
@@ -36,6 +41,11 @@ function App() {
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/gifts" element={<Gifts />}></Route>
           <Route path="/allProducts" element={<AllProducts />}></Route>
+          <Route path="/shopCategoryItemsApparel" element={<ShopCategoryItemsApparel />}></Route>
+          <Route path="/shopCategoryItemsEvents" element={<ShopCategoryItemsEvents />}></Route>
+          <Route path="/shopCategoryItemsOffice" element={<ShopCategoryItemsOffice />}></Route>
+          <Route path="/shopCategoryItemsDrinkware" element={<ShopCategoryItemsDrinkware />}></Route>
+          <Route path="/shopCategoryItemsAccessories" element={<ShopCategoryItemsAccessories />}></Route>
           <Route path="*" element={<Notfound />}></Route>
         </Routes>
         <Footer></Footer>
