@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className=' md:block hidden pt-2 col-span-9'>
                 <div>
                     <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
-                        <ul className={`${isExpand ? 'hidden': 'block'} flex gap-4 pt-1`}>
+                        <ul className={`${isExpand ? 'hidden': 'block'} flex gap-4 pt-1 transition-all ease-in-out duration-500`}>
                             <li>
                                 <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>Hospital Services</Link>
                             </li>
@@ -65,7 +65,7 @@ const Navbar = () => {
                                 <Link to='/about-us' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>About us</Link>
                             </li>
                         </ul>
-                        <div className={`inline-flex  gap-2 ${isExpand ? 'hidden': 'block'}`}>
+                        <div className={`inline-flex transition-all ease-in-out duration-500 gap-2 ${isExpand ? 'hidden': 'block'}`}>
                             <div className='topbuttons inline-flex gap-2'>
                                 <div className='link pt-1'>
                                     <Link className='text-red-500 font-bold'>
@@ -123,7 +123,7 @@ const Navbar = () => {
                         
                         <div className='pb-4'>
                                 <div>
-                                    <form action="" className={` ${isExpand ? 'float-left' : 'hidden'} max-w-full transition-all duration-500 ease-in-out`}>
+                                    <form action="" className={` ${isExpand ? 'float-left' : 'hidden'} ml-[30rem] max-w-full transition-all duration-500 ease-in-out`}>
                                         <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
                                             <div className='border rounded-full p-2 bg-gray-700 pointer-events-none  absolute'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
