@@ -8,11 +8,11 @@ import {FaArrowRight} from 'react-icons/fa';
 const MiddlePartOne = () => {
   return (
  <div className="">
-    <div className="lg:flex lg:justify-between">
+    <div className="md:flex md:justify-between">
         {/* left side  */}
     
        
-    <div className="lg:w-1/2  px-28 py-12">
+    <div className="md:w-1/2  px-28 py-12">
         <h1 className="hover:text-red-800 text-3xl font-bold cursor-pointer hover:no-underline text-red-700 text-justify"><a href="https://www.blood.ca/en/research/our-research-activities"> Our Research Funding Opportunities</a></h1>
         <p className="text-justify mt-10 text-base text-gray-600">
         The Centre for Innovation has multiple competitive funding programs open to Canadian researchers interested in pursuing projects focused on Canadian Blood Services priorities.
@@ -27,7 +27,7 @@ const MiddlePartOne = () => {
    
  </div>
  {/* right side  */}
-    <div className="bg-gray-100 lg:w-1/2 py-12 px-28">
+    <div className="bg-gray-100 md:w-1/2 py-12 px-28">
     <h1 className="  hover:text-red-800 text-3xl font-bold cursor-pointer hover:no-underline text-red-700 text-justify"><a href="https://www.blood.ca/en/research/our-research-activities"> Products and Services for Researchers</a></h1>
     <p className=" text-justify mt-10 text-base text-gray-600">
     Discover more about products and services offered by Canadian Blood Services:
