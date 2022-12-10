@@ -4,7 +4,7 @@ import React from "react";
 const WhatWeDo = () => {
   return (
     <div className="mb-4">
-   <div className="px-40 py-16">
+   <div className="lg:px-40 px-6 py-16">
    <h1 className="text-4xl font-semibold text-justify mb-4 text-gray-600">What we do</h1>
    <div className="border-b-4 my-2 border-red-600 rounded-md w-24"></div>
    <p className="text-lg text-justify mb-4 text-gray-600 mt-10">A fundamental conviction anchors the diverse responsibilities of Canadian Blood Services: what we do matters. We ensure Canadian patients have reliable access to safe, high-quality blood, plasma, stem cells, and organs and tissues. To do this, we undertake a broad range of activities in four areas:</p>

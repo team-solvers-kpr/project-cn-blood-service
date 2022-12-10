@@ -3,7 +3,7 @@ import React from 'react'
   const  Button = ({ 
       bgprimary, textprimary, borderprimary, 
       bgsecondary, btnText, onClick ,textColor,
-      height, width, fontwidth, fontsize, textTransform
+      height, width, fontwidth, fontsize, textTransform, buttonIcon
   }) => {
   return (
     <button
@@ -19,7 +19,7 @@ import React from 'react'
       duration-300`
     }
     >
-      {btnText}
+     {buttonIcon}{btnText}
     </button>
   );
 }

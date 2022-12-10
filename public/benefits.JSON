@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "title":"Generous compensation",
+        "description":"We offer competitive salary packages, generous annual leave and flexible work arrangements to support your work-life balance.",
+        "image":"https://www.blood.ca/sites/default/files/styles/max_1300x1300/public/career-icon-competitive_salary.jpg?itok=Oanpw66p"
+    },
+    {
+        "id":2,
+        "title":"Wellness programs",
+        "description":"Feel supported with free workplace mental health resources, on-site virtual wellness activities, Employee Assistance Program (EAP), and more.",
+        "image":"https://www.blood.ca/sites/default/files/styles/max_1300x1300/public/career-icon-wellness.jpg?itok=Xmf_97AH"
+    },
+    {
+        "id":3,
+        "title":"Pension and group savings",
+        "description":"Prepare for your future with defined benefit or defined contribution pension plans, group RRSP, group TFSA and financial advisor services.",
+        "image":"https://www.blood.ca/sites/default/files/styles/max_1300x1300/public/career-icon-pension.jpg?itok=ZdTml7la"
+    },
+    {
+        "id":4,
+        "title":"Learning and development",
+        "description":"Take advantage of resources to help expand your skills, knowledge and abilities to enable long-term personal and professional growth.",
+        "image":"https://www.blood.ca/sites/default/files/styles/max_1300x1300/public/career-icon-learning_dev.jpg?itok=X32snv5g"
+    },
+    {
+        "id":5,
+        "title":"Health and dental",
+        "description":"We've got you covered with extended health and dental, disability and life insurance benefits.",
+        "image":"https://www.blood.ca/sites/default/files/styles/max_1300x1300/public/career-icon-health_benefits.jpg?itok=OGxyr1uF"
+    },
+    {
+        "id":6,
+        "title":"Employee discounts",
+        "description":"Save money on things you enjoy with our wide range of national and regional discounts.",
+        "image":"https://www.blood.ca/sites/default/files/styles/max_1300x1300/public/career-icon-employee_discounts.jpg?itok=XUxDRsXI"
+    }
+]

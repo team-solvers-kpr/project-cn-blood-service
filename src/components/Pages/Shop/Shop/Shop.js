@@ -5,14 +5,14 @@ import ShopBanner from '../ShopBanner/ShopBanner';
 import ShopCategory from '../ShopCategory/ShopCategory/ShopCategory';
 
 const Shop = () => {
-    return (
-        <div>
-            <ShopBanner />
-            <ShopAd />
-            <ShopCategory />
-            <BestSeller />
-        </div>
-    );
+  return (
+    <div className="mt-[168px]">
+      <ShopBanner />
+      <ShopAd />
+      <ShopCategory />
+      <BestSeller />
+    </div>
+  );
 };
 
 export default Shop;

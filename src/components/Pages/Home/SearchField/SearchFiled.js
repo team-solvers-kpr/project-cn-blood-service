@@ -10,15 +10,16 @@ const SearchFiled = () => {
 
   const handleSearch = (e) => {
     setSearchData(e.target.value);
+    e.preventDefault();
   };
 
-  const clearForm = (e) => {
+  const clearForm = () => {
     setSearchData([]);
     document.getElementById("clear-from").reset();
   };
 
   return (
-    <div className="bg-red-600 lg:flex justify-evenly py-4 lg:px-12">
+    <div className="bg-red-600 lg:flex justify-evenly py-4 lg:px-12 md:mt-[168px]">
       <div className="text-start text-white lg:mb-0 mb-4">
         <h3 className="lg:ml-0 ml-12 text-2xl font-semibold">
           Book now to donate blood
@@ -49,7 +50,7 @@ const SearchFiled = () => {
             aria-label="Location"
             onChange={handleSearch}
             className="lg:mb-0 mb-4 lg:w-full w-5/6 bg-white lg:rounded-l-full lg:rounded-none rounded-full border-r border-red-600
-             py-4 pl-16 pr-16 shadow-md focus:outline-none text-lg text-black placeholder-slate-500"
+             py-4 pl-16 pr-12 shadow-md focus:outline-none text-lg text-black placeholder-slate-500"
             required
           />
           <input
