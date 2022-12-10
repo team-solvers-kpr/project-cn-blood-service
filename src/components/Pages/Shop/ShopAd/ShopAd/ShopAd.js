@@ -1,6 +1,7 @@
 import React from 'react';
 import './ShopAd.css';
-import mug from '../../../assets/shop/mug.png'
+import mug from '../../../../assets/shop/mug.png'
+import { Link } from 'react-router-dom';
 const ShopAd = () => {
     return (
         <div className='shopAddContainer'>
@@ -9,7 +10,7 @@ const ShopAd = () => {
                     <h3 >Gifts that give back</h3>
                     <span className='borderSpan'></span><br />
                     <h3>Every dollar of your purchase supports critical programs and initiatives that connect patients with the life essentials they need to survive.</h3>
-                    <button className='shopNowBtn'>Shop now</button>
+                    <Link to="/gifts"> <button className='shopNowBtn'>Shop now</button></Link>
                 </div>
                 <div className='mugContainer'>
                     <img src={mug} alt="" />
