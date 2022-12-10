@@ -203,24 +203,30 @@ const HospitalServices = () => {
           <HospitalCard />
         </div>
       </div>
-      <div className="mt-20 lg:mx-36 ml-12">
+      <div className="flex justify-end ml-12 border-b mb-10">
+      <div className=" relative  mb-16  ">
+     
+     <img src={backgroundImg2} alt='' className=""/>
+     
+        </div>
+        <div className="absolute  lg:mx-36 mt-20">
+    
         
-        <div className="absolute">
-        <div>
-        <h1 className="text-left text-2xl font-bold text-slate-700">
-          Related information
-        </h1>
-        </div>
-        <div className=" grid lg:grid-cols-3 grid-cols-1">
-          <HospitalRelatedInformation />
-        </div>
-        </div>
-        <div className="flex justify-end relative bg-black mb-16  ">
-     
-     <img src={backgroundImg2} alt='' className="h-96"/>
-     
-        </div>
+      
+    <div>
+    <h1 className="text-left text-2xl font-bold text-slate-700">
+      Related information
+    </h1>
+    </div>
+    <div className=" grid lg:grid-cols-3 grid-cols-1">
+      <HospitalRelatedInformation />
+    </div>
+   
+    
+  </div>
+
       </div>
+     
     </div>
   );
 };

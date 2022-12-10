@@ -19,10 +19,11 @@ const HospitalRelatedInformation = () => {
     
     
     hospitalRelatedData && hospitalRelatedData.map(data =>
-      <div className=' bg-white flex flex-col lg:border-r-2 border-b-2 items-center mb-10 ' key={data.id}>
-        <div className='cardContent p-12 text-left'>
+      <div className='  flex flex-col   items-center mb-10 ' key={data.id}>
+        <div className='cardContent  p-6 text-left '>
+          <div className="lg:border-l-2 pl-10 ">
           <div>
-              <h1 className='py-6'>
+              <h1 className='py-6 '>
                   <span className='text-2xl font-bold text-slate-700'>{data.heading}</span>
               </h1>
               <hr className='h-0 w-24 rounded  bg-red-900 border-solid border-2 border-[#E7131A]' />
@@ -33,6 +34,7 @@ const HospitalRelatedInformation = () => {
                   {data.morelink} <AiOutlineArrowRight className='inline-block' />
               </Link>
           </div>
+        </div>
         </div>
         
        
