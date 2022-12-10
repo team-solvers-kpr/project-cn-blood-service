@@ -154,7 +154,7 @@ const Navbar = () => {
 
                             {/* mobile menu navigation  */}
 
-        <div className={`md:hidden bg-white h-full w-full  pt-4 ${
+        <div className={`md:hidden bg-white h-max w-full absolute pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             } ease-in-out duration-700 z-50`}>
 
@@ -186,7 +186,7 @@ const Navbar = () => {
                                 </li>
                                 <li className='font-normal text-left text-white uppercase px-3 pt-10'>
                                     <Link to='/research'>
-                                        Research
+                                    Research
                                     </Link>
                                 </li>
                                  <li className='font-normal text-left text-white uppercase px-3 pt-10'>

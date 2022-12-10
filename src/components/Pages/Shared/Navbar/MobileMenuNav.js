@@ -39,7 +39,7 @@ export default function MobileMenuNav() {
         </AccordionHeader>
         <AccordionBody className='py-0'>
           <div className="bg-red-600 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
-                                                    <Link to='' className='flex justify-between'>
+                                                    <Link to='/blood' className='flex justify-between'>
                                                         <span>
                                                             View all Blood info 
                                                         </span>
@@ -51,24 +51,24 @@ export default function MobileMenuNav() {
                                                         <h1 className='font-semibold opacity-80'><Link to='/'>Am I eligible to donate blood?</Link></h1>
                                                         <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
                                                             <li className=''>
-                                                                <Link to=''>
+                                                                <Link to='/abcs-of-eligibility'>
                                                                     ABCs of eligibility
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link to=''>
+                                                                <Link to='/changes-to-donation-criteria'>
                                                                      Changes to donation criteria
                                                                 </Link>
                                                             </li>
                                                                 <li>
-                                                                    <Link to={``}>
+                                                                    <Link to={`/trans-individuals`}>
                                                                         Trans individuals
                                                                     </Link>
                                                                 </li>
 
                                                                     
                                                                 <li>
-                                                                    <Link>
+                                                                    <Link to='/sexual-behaviour-based-screening'>
                                                                         Sexual behaviour-based screening
                                                                     </Link>
                                                                 </li>
@@ -80,27 +80,27 @@ export default function MobileMenuNav() {
                                                         </h1>
                                                         <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/what-is-my-blood-type`}>
                                                                     What is my blood type?
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/donation-process`}>
                                                                     Donation process
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/rare-blood-program`}>
                                                                     Rare Blood Program
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to='/donor-questionnaire'>
                                                                     Donor Questionnaire
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/donor-health-and-safety`}> 
                                                                     Donor health and safety
                                                                 </Link>
                                                             </li>
@@ -109,22 +109,22 @@ export default function MobileMenuNav() {
                                                     <div className='text-left mt-8 mb-12'>
                                                         <ul className='font-semibold space-y-8 opacity-80'>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/donating-platelets`}>
                                                                     Donating platelets
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/recognition-program`}>
                                                                     Recognition program
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/interpreting-services`}>
                                                                     Sign language interpreting services for Deaf, deafened and hard of hearing donors Donor centre  hours & locations
                                                                 </Link>
                                                             </li>
                                                             <li>
-                                                                <Link>
+                                                                <Link to={`/covid-19-information`}>
                                                                     COVID-19 information
                                                                 </Link>
                                                             </li>
