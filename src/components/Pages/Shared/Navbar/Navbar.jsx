@@ -3,15 +3,13 @@ import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { CgClose, CgMenuLeft } from 'react-icons/cg';
 import { FaUserAlt } from 'react-icons/fa';
-import { RiArrowDropDownLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
 import Logo from '../../../assets/footerimage.png';
 import Button from './Button';
 import Nav from './Nav';
 import { ExpandableSearchbar } from './ExpandableSearchbar';
-import { Disclosure } from '@headlessui/react';
-import { BsArrowRight } from 'react-icons/bs';
+import MobileMenuNav from './MobileMenuNav';
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
@@ -47,7 +45,7 @@ const Navbar = () => {
             </div>
             <div className=' md:block hidden pt-2 col-span-9'>
                 <div>
-                    <nav className='lg:flex justify-center gap-2 lg:flex-row hidden'>
+                    <nav className='lg:flex justify-center gap-2 lg:flex-row hidden py-3'>
                         <ul className={`${isExpand ? 'hidden': 'block'} flex gap-4 pt-1 transition-all ease-in-out duration-500`}>
                             <li>
                                 <Link to='/hospital-services' className='font-semibold opacity-50 hover:opacity-80 hover:underline'>Hospital Services</Link>
@@ -121,7 +119,7 @@ const Navbar = () => {
                             </div>  
                         </div>
                         
-                        <div className='pb-4'>
+                        <div>
                                 <div>
                                     <form action="" className={` ${isExpand ? 'float-left' : 'hidden'} ml-[30rem] max-w-full transition-all duration-500 ease-in-out`}>
                                         <div className='relative flex items-center text-gray-400 focus-within:text-gray-600'>
@@ -177,13 +175,8 @@ const Navbar = () => {
                             </button>
                         </div>
                         <ul className='border-[#f0f0f0]'>
-                                {/* <li className='border-l-8 hover:text-white border-red-600 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-600 focus:outline-none h-20 ease-in-out'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Blood
-                                    </Link>
-                                </li> */}
-                                <li className='group '>
+                            <MobileMenuNav />
+                                {/* <li className='group '>
                                     <div className="w-full ">
                                         <div className="mx-auto w-full">
                                             <Disclosure>
@@ -302,7 +295,7 @@ const Navbar = () => {
                                             <Disclosure>
                                             {({ open }) => (
                                                 <>
-                                                <Disclosure.Button className="flex gap-2 border-l-8 border-red-700 hover:text-white focus:text-white focus:bg-red-700  w-full group-hover:bg-red-700 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+                                                <Disclosure.Button className="flex gap-2">
                                                     <RiArrowDropDownLine
                                                         className={`${
                                                             open ? 'rotate-180 transform' : ''
@@ -777,38 +770,6 @@ const Navbar = () => {
                                             </Disclosure>
                                         </div>
                                     </div>
-                                </li>
-                                {/* <li className='border-l-8 border-red-700 w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:bg-red-700 hover:text-white focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Plasma
-                                    </Link>
-                                </li>
-                                <li className='border-l-8 border-[#54C3BB] hover:bg-[#54C3BB] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Stem Cells
-                                    </Link>
-                                </li>
-                                <li className='border-l-8 border-[#419B96] hover:bg-[#419B96] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 hover:text-white shadow-sm  focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Organ & 
-                                            Tissues
-                                    </Link>
-                                </li>
-                                <li className=' border-l-8 border-[#F0F0F0] w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm  hover:bg-[#4D4D4D] hover:border-[#4D4D4D] hover:text-white focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Ways to donet
-                                    </Link>
-                                </li>
-                                
-                                <li className=' border-l-8 border-[#F0F0F0]  w-full pt-2 cursor-pointer text-left bg-white text-lg font-bold text-gray-700 shadow-sm hover:text-white hover:border-[#4D4D4D] hover:bg-[#4D4D4D] focus:outline-none h-20'>
-                                    <Link className=' pt-4 pb-0 pr-2 pl-2'>
-                                        <span className='inline-block'><RiArrowDropDownLine /></span>
-                                        Stories
-                                    </Link>
                                 </li> */}
                         </ul>
                         <div className='links bg-[#4D4D4D]'>
