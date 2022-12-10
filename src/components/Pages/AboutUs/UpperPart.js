@@ -6,7 +6,7 @@ const UpperPart = () => {
   return (
     <div className="lg:flex mb-10">
       <div className="lg:relative hidden lg:block">
-        <img src={bgImage} alt="" className="xl:pl-60" />
+        <img src={bgImage} alt="" className="2xl:pl-60" />
       </div>
       <div className="lg:absolute xl:p-10 p-4 xl:mx-32">
         <h1 className="xl:text-6xl text-5xl font-bold text-justify mb-4 text-gray-700">
@@ -15,7 +15,7 @@ const UpperPart = () => {
         <h4 className="text-lg font-bold text-justify mb-4 text-gray-700">
           We are Canada's Biological Lifeline.
         </h4>
-        <p className="text-justify text-gray-600  lg:text-base xl:text-lg xl:w-1/2 lg:w-2/3">
+        <p className="text-justify text-gray-600  lg:text-base 2xl:text-lg xl:w-1/2 lg:w-2/3">
           We are the connection between donors and patients, healthcare
           professionals and medical researchers. We are nationally responsible
           for a secure system of life essentials for transfusion and
