@@ -19,6 +19,7 @@ import ShopCategoryItemsOffice from "./components/Pages/Shop/ShopCategory/ShopCa
 import ShopCategoryItemsDrinkware from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsDrinkware/ShopCategoryItemsDrinkware";
 import ShopCategoryItemsAccessories from "./components/Pages/Shop/ShopCategory/ShopCategoryItems/ShopCategoryItemsAccessories/ShopCategoryItemsAccessories";
 
+
 function App() {
   const Wrapper = ({ children }) => {
     const location = useLocation();

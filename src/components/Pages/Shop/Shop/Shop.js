@@ -4,6 +4,7 @@ import ShopAd from '../ShopAd/ShopAd/ShopAd';
 import ShopBanner from '../ShopBanner/ShopBanner';
 import ShopCategory from '../ShopCategory/ShopCategory/ShopCategory';
 
+
 const Shop = () => {
   return (
     <div className="mt-[168px]">
