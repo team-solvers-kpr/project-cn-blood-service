@@ -13,7 +13,7 @@ import WhatWeDoMatters from './WhatWeDoMatters';
 
 const Careers = () => {
   return (
-    <div className='mt-[168px]'>
+    <div className='mt-[168px] overflow-hidden'>
       <UpperSection></UpperSection>
       <WhatWeDoMatters></WhatWeDoMatters>
       <ServiceInterruption></ServiceInterruption>
