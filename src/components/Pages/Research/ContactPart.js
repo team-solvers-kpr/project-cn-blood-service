@@ -6,16 +6,13 @@ import backgroundPic from '../../assets/blood-drops.jpg';
 
 const ContactPart = () => {
   return (
-    <div className="flex ">
-         <div className="lg:ml-32 lg:absolute mt-10">
-            <p>For general enquiries about research at Canadian Blood Services, please contact us at:</p>
-
-</div>
-        <div className="lg:relative lg:ml-32 hidden lg:block">
-                <img src={backgroundPic} alt="" className="w-2/3 ml-96 px-14 "/>
+    <div className="md:flex p-3">
+       
+        <div className="md:relative 2xl:ml-32 hidden md:block">
+                <img src={backgroundPic} alt="" className=" 2xl:w-2/3 2xl:ml-96 2xl:px-14 "/>
         </div>
-        <div className="ml-32 absolute mt-10">
-            <p className="text-gray-700">For general enquiries about research at Canadian Blood Services, please contact us at:</p>
+        <div className="2xl:ml-32 md:absolute mt-10">
+            <p className="text-gray-700 text-justify">For general enquiries about research at Canadian Blood Services, please contact us at:</p>
             <p className="text-gray-600 text-base text-justify mt-6">
                   <a
                     href="https://www.blood.ca/sites/default/files/CBS_I%26PM_Overview_2022_EN.pdf"
