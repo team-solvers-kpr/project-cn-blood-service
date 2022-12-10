@@ -34,7 +34,7 @@ export default function MobileMenuNav() {
   return (
     <Fragment>
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(1)} className='border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full hover:bg-red-600 cursor-pointer text-left bg-white px-4 text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20'>
+        <AccordionHeader onClick={() => handleOpen(1)} className='border-l-8 border-red-600 hover:text-white focus:text-white focus:bg-red-600  w-full hover:bg-red-600 cursor-pointer transition-all duration-300 text-left bg-white px-4 text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20'>
           Blood
         </AccordionHeader>
         <AccordionBody className='py-0'>
@@ -134,10 +134,10 @@ export default function MobileMenuNav() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(2)} className='border-l-8 border-red-700 hover:text-white focus:text-white focus:bg-red-700  w-full hover:bg-red-700 cursor-pointer text-left bg-white px-4 text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20'>
+        <AccordionHeader onClick={() => handleOpen(2)} className='border-l-8 border-red-700 hover:text-white focus:text-white focus:bg-red-700  w-full hover:bg-red-700 cursor-pointer transition-all duration-300 text-left bg-white px-4 text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20'>
           Plasma
         </AccordionHeader>
-        <AccordionBody>
+        <AccordionBody className='py-0'>
         <div className="bg-red-700 px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
                                                     <Link to='' className='flex justify-between'>
                                                         <span>
@@ -236,7 +236,7 @@ export default function MobileMenuNav() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(3)} className="flex gap-2   border-l-8 border-[#54C3BB] hover:bg-[#54C3BB] hover:text-white focus:text-white focus:bg-[#54C3BB]  w-full px-4 hover:bg-[#54C3BB]cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+        <AccordionHeader onClick={() => handleOpen(3)} className="flex gap-2   border-l-8 border-[#54C3BB] hover:bg-[#54C3BB] hover:text-white focus:text-white focus:bg-[#54C3BB] transition-all duration-300 w-full px-4 cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
           Stem Cells
         </AccordionHeader>
         <AccordionBody className='py-0'>
@@ -326,7 +326,7 @@ export default function MobileMenuNav() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(4)} className="flex gap-2 border-l-8 border-[#419B96] hover:text-white focus:text-white focus:bg-[#419B96] w-full group-hover:bg-[#419B96] cursor-pointer px-4 text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+        <AccordionHeader onClick={() => handleOpen(4)} className="flex gap-2 border-l-8 border-[#419B96] hover:text-white focus:text-white focus:bg-[#419B96] w-full hover:bg-[#419B96] cursor-pointer px-4 transition-all duration-300 text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
           Organs & Tissues
         </AccordionHeader>
         <AccordionBody className='py-0'>
@@ -574,13 +574,52 @@ export default function MobileMenuNav() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 6} icon={<Icon id={6} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(6)}>
-          What can I do with Material Tailwind?
+        <AccordionHeader onClick={() => handleOpen(6)} className="flex gap-2 border-l-8 border-white hover:text-white focus:text-white focus:bg-[#4D4D4D] transition-all duration-300  w-full hover:bg-[#4D4D4D] hover:border-[#4D4D4D] focus:border-[#4D4D4D]  cursor-pointer px-4 text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+          Stories
         </AccordionHeader>
-        <AccordionBody>
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+        <AccordionBody className='py-0'>
+        <div className="bg-[#4D4D4D]  px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Stories info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </div>
+                                                <div className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Features</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                Inspiring content by our team about donors, recipients and more
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                Read articles
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Sharing</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Tell us what Canada’s Lifeline means to you and read stories from others
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Share your story
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
         </AccordionBody>
       </Accordion>
     </Fragment>

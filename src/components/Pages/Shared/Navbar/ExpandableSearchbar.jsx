@@ -11,7 +11,7 @@ export const ExpandableSearchbar = () => {
           <path strokeLinecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
           </div>
-         <input type="text" placeholder="what are we search for?" className="input input-bordered  input-success w-full max-w-xs h-[50px] pr-16 pl-16 py-2 font-semibold placeholder:italic placeholder-gray-500 text-gray-500 rounded-full border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2" />
+         <input type="text" placeholder="what are we search for?" className="input input-bordered  input-success w-full  h-[50px] pr-16 pl-16 py-2 font-semibold placeholder:italic placeholder-gray-500 text-gray-500 rounded-full border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2" />
         </div>
       </form>
     </div>

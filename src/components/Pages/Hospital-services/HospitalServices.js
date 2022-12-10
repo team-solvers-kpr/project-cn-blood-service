@@ -199,7 +199,7 @@ const HospitalServices = () => {
       </div>
 
       <div className="bg-[#F0F0F0] max-w-full">
-        <div className="mx-36 py-12 lg:grid grid-cols-3 gap-4">
+        <div className=" grid w-full py-12 lg:grid-cols-3 gap-4 space-y-8">
           <HospitalCard />
         </div>
       </div>
@@ -207,7 +207,7 @@ const HospitalServices = () => {
         <h1 className="text-left text-2xl font-bold text-slate-700">
           Related information
         </h1>
-        <div className="grid lg:grid-cols-3 grid-cols-1">
+        <div className="grid lg:grid-cols-3 grid-cols-1 ">
           <HospitalRelatedInformation />
         </div>
       </div>
