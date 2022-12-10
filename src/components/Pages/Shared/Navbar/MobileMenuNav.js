@@ -236,37 +236,345 @@ export default function MobileMenuNav() {
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(3)} className="flex gap-2   border-l-8 border-[#54C3BB] hover:bg-[#54C3BB] hover:text-white focus:text-white focus:bg-[#54C3BB]  w-full group-hover:bg-[#54C3BB]cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+        <AccordionHeader onClick={() => handleOpen(3)} className="flex gap-2   border-l-8 border-[#54C3BB] hover:bg-[#54C3BB] hover:text-white focus:text-white focus:bg-[#54C3BB]  w-full px-4 hover:bg-[#54C3BB]cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
           Stem Cells
         </AccordionHeader>
         <AccordionBody className='py-0'>
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+        <div className="bg-[#54C3BB] px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Stem Cells info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </div>
+                                                <div className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Adult stem cell registry</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                Donating stem cells
+
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                Stem cell donation eligibility and registration
+
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                    How stem cell donation works
+                                                                    </Link>
+                                                                </li>
+
+                                                                    
+                                                                <li>
+                                                                    <Link>
+                                                                    Collection and transplant hospital resources
+                                                                    </Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link>
+                                                                    
+                                                                        Stem cell FAQs
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Cord blood bank</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Donating cord blood
+
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Cord blood eligibility
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                How cord blood donation works
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Safety Standards
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Donate cord blood for research
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                    Cord blood FAQs
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
         </AccordionBody>
       </Accordion>
-      <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(3)}>
-          What can I do with Material Tailwind?
+      <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
+        <AccordionHeader onClick={() => handleOpen(4)} className="flex gap-2 border-l-8 border-[#419B96] hover:text-white focus:text-white focus:bg-[#419B96] w-full group-hover:bg-[#419B96] cursor-pointer px-4 text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+          Organs & Tissues
         </AccordionHeader>
-        <AccordionBody>
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+        <AccordionBody className='py-0'>
+        <div className="bg-[#419B96] px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Organs & Tissues info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </div>
+                                                <div className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Living Organ Donation</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                Am I eligible to be a living kidney donor?
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                What is living kidney donation?
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                    Living Kidney Donation Programs
+                                                                    </Link>
+                                                                </li>
+
+                                                                    
+                                                                <li>
+                                                                    <Link>
+                                                                    About the Living Donation Storytelling Project
+                                                                    </Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link>
+                                                                    Kidney paired donation
+                                                                    </Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link>
+                                                                    My Transplant Coach Canada
+                                                                    </Link>
+                                                                </li>
+                                                                <li>
+                                                                    <Link>
+                                                                    My Paired Donation Coach Canada
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Deceased donation</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Am I eligible to donate organs or tissue?
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Organ donation after death
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Tissue donation after death
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <ul className='font-semibold space-y-8 opacity-80'>
+                                                            <li>
+                                                                <Link>
+                                                                COVID-19 information
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Professional Education Resources 
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Education Portal for Teachers and Students
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
         </AccordionBody>
       </Accordion>
-      <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(3)}>
-          What can I do with Material Tailwind?
+      <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
+        <AccordionHeader onClick={() => handleOpen(5)} className="flex gap-2 border-l-8 border-white hover:text-white focus:text-white focus:bg-[#4D4D4D] hover:border-[#4D4D4D] focus:border-[#4D4D4D] px-4 w-full hover:bg-[#4D4D4D] cursor-pointer text-left bg-white text-xl font-bold text-gray-700 shadow-sm focus:underline focus:outline-none ease-in-out h-20">
+          Ways To Donate
         </AccordionHeader>
-        <AccordionBody>
-          We're not always in the position that we want to be at. We're
-          constantly growing. We're constantly making mistakes. We're constantly
-          trying to express ourselves and actualize our dreams.
+        <AccordionBody className='py-0'>
+
+
+        <div className="bg-[#4D4D4D] px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Ways To Donate info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </div>
+                                                <div className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Financial donations</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                Your gifts at work
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                How to give
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                    Donate now
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 '>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Partners for Life</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Group donations and pledge-based partnerships
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                National partners
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Partner eNews
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Volunteering</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Become a volunteer
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Youth volunteers
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+        {/* <div className="bg-[#4D4D4D] px-4 pt-8 pb-4 text-xl  text-left font-bold text-white">
+                                                    <Link to='' className='flex justify-between'>
+                                                        <span>
+                                                            View all Ways To Donate info 
+                                                        </span>
+                                                        <BsArrowRight className='inline-block' fontWeight={900} fontSize={30} />
+                                                    </Link>
+                                                </div>
+                                                <div className=" px-4 pt-10 pb-2">
+                                                    <div className='text-left '>
+                                                        <h1 className='font-semibold opacity-80'><Link to='/'>Financial donations</Link></h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li className=''>
+                                                                <Link to=''>
+                                                                Your gifts at work
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link to=''>
+                                                                How to give
+                                                                </Link>
+                                                            </li>
+                                                                <li>
+                                                                    <Link to={``}>
+                                                                    Donate now
+                                                                    </Link>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 '>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Partners for Life</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Group donations and pledge-based partnerships
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                National partners
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Partner eNews
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='text-left mt-8 mb-12'>
+                                                        <h1 className='font-semibold opacity-80'>
+                                                            <Link to='/donating-blood'>Volunteering</Link>
+                                                        </h1>
+                                                        <ul className='ml-16 border-l-2 space-y-4 mt-12 pl-2'>
+                                                            <li>
+                                                                <Link>
+                                                                Become a volunteer
+                                                                </Link>
+                                                            </li>
+                                                            <li>
+                                                                <Link>
+                                                                Youth volunteers
+                                                                </Link>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div> */}
         </AccordionBody>
       </Accordion>
-      <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-        <AccordionHeader onClick={() => handleOpen(3)}>
+      <Accordion open={open === 6} icon={<Icon id={6} open={open} />}>
+        <AccordionHeader onClick={() => handleOpen(6)}>
           What can I do with Material Tailwind?
         </AccordionHeader>
         <AccordionBody>
