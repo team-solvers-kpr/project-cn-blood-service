@@ -6,7 +6,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 export const Award = () => {
   return (
     <div className="">
-      <div className="mx-32 mt-6">
+      <div className="2xl:mx-32 mt-6 mx-6">
         <h1 className="text-3xl font-bold text-stone-600 text-justify">
           Awards and Recognition
         </h1>
