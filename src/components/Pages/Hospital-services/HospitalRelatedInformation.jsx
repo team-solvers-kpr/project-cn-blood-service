@@ -15,6 +15,7 @@ const HospitalRelatedInformation = () => {
     fetchData();
 
   }, []);
+
   return (
     
     

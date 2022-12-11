@@ -14,3 +14,4 @@ const SingleBenefit = (props) => {
 };
 
 export default SingleBenefit;
+
