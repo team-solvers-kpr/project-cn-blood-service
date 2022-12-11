@@ -16,7 +16,7 @@ export const HospitalCard = () => {
   }, []);
   return (
     hospitalData && hospitalData.map(data =>
-      <div className='bg-white flex flex-col w-full shadow-lg items-center' key={data.id}>
+      <div className='bg-white flex flex-col max-h-full max-w-full container w-full shadow-lg items-center' key={data.id}>
       <div className='cardImg h-48 w-48 mt-16'>
           <img src={data.image} alt="" />
       </div>

@@ -207,7 +207,6 @@ const HospitalServices = () => {
       <div className=" md:relative  mb-16  hidden md:block">
      
      <img src={backgroundImg2} alt='' className=""/>
-     
         </div>
         <div className="md:absolute  2xl:mx-36 xl:mx-10 mt-20">
     

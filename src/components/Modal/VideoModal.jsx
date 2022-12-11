@@ -79,4 +79,4 @@ const VideoModal = ({
   )
 }
 
-export default VideoModal
+export default VideoModal;
