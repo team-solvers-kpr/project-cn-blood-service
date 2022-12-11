@@ -4,7 +4,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { HospitalCard } from "./HospitalCard";
 import HospitalRelatedInformation from "./HospitalRelatedInformation";
 import backgroundImg from "../../assets/SS_Mercy.jpg";
-
+import backgroundImg2 from '../../assets/service.png'
 const HospitalServices = () => {
   return (
     <div className="lg:mt-[168px]">
@@ -199,18 +199,33 @@ const HospitalServices = () => {
       </div>
 
       <div className="bg-[#F0F0F0] max-w-full">
-        <div className=" grid w-full py-12 lg:grid-cols-3 gap-4 space-y-8">
+        <div className="xl:mx-36 py-12 md:grid md:grid-cols-3 gap-4">
           <HospitalCard />
         </div>
       </div>
-      <div className="mt-20 lg:mx-36 ml-12">
-        <h1 className="text-left text-2xl font-bold text-slate-700">
-          Related information
-        </h1>
-        <div className="grid lg:grid-cols-3 grid-cols-1 ">
-          <HospitalRelatedInformation />
+      <div className="md:flex md:justify-end md:ml-12 border-b mb-10">
+      <div className=" md:relative  mb-16  hidden md:block">
+     
+     <img src={backgroundImg2} alt='' className=""/>
         </div>
+        <div className="md:absolute  2xl:mx-36 xl:mx-10 mt-20">
+    
+        
+      
+    <div>
+    <h1 className="text-left text-2xl font-bold text-slate-700">
+      Related information
+    </h1>
+    </div>
+    <div className=" grid md:grid-cols-3 grid-cols-1">
+      <HospitalRelatedInformation />
+    </div>
+   
+    
+  </div>
+
       </div>
+     
     </div>
   );
 };

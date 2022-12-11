@@ -8,12 +8,13 @@ const AllProducts = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
     return (
         <div className='md:container md:mx-auto '>
             <h3 className='allProductsTitle'>New</h3>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 justify-items-center'>
                 {
-                    products.map(product => <div key={product.code} className="mb-20">
+                    products.map(product => <div key={product.code} className="mb-20 s">
                         <img src={product.img} alt="" />
                         <p className="newSellerCardName">{
                             product.name.length > 35 ? <>

@@ -4,9 +4,9 @@ import Email from "./ValidateEmail/Email";
 const Subscribe = () => {
   return (
     <div className="bg-gray-100">
-      <div className="flex justify-between">
+      <div className="lg:flex lg:justify-between">
         {/* left side  */}
-        <div className=" w-1/2 px-28 py-12">
+        <div className="ml-4 lg:w-1/2 lg:px-28 py-12">
           <h1 className="text-gray-600 text-4xl font-bold text-justify">
             Subscribe
           </h1>
@@ -31,7 +31,7 @@ const Subscribe = () => {
           </div>
         </div>
         {/* right side  */}
-        <div className=" w-1/2  px-8 mt-8 py-9">
+        <div className=" lg:w-1/2  px-8 mt-8 py-9">
           <p className="text-xs text-gray-600 flex justify-end mr-32">
             <span className="text-red-400">* </span>indicates required
           </p>

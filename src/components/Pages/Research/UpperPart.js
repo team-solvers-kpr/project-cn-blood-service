@@ -4,15 +4,15 @@ import { FaArrowRight } from "react-icons/fa";
 
 const UpperPart = () => {
   return (
-    <div className="flex ">
-      <div className="relative">
+    <div className="lg:flex overflow-hidden ">
+      <div className="lg:relative hidden lg:block lg:mb-60 2xl:mb-10">
         <img src={backgroundPic} alt="" className="" />
       </div>
-      <div className="ml-32 absolute w-1/2 mt-10">
+      <div className="xl:ml-32 lg:absolute lg:w-4/5 xl:w-1/2 mt-10 p-3">
         <h1 className="lg:text-6xl text-5xl font-bold text-justify text-gray-800 mb-10">
           Research
         </h1>
-        <p className="text-justify text-base text-gray-600 mb-6 w-4/5">
+        <p className="text-justify text-base text-gray-600 mb-6 lg:w-4/5">
           Canadian Blood Services drives world-class innovation in blood
           transfusion, cellular therapy, and transplantation — bringing clarity
           and insight to an increasingly complex health care future. In
@@ -54,7 +54,7 @@ const UpperPart = () => {
 
         <div className="border-b-4 my-2 border-red-600 rounded-md w-28 mt-8 "></div>
 
-        <div className="mb-32">
+        <div className="2xl:mb-32">
           <div className="flex mt-4">
             <div className="mt-2 mr-4">
               {" "}
