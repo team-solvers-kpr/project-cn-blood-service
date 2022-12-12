@@ -115,8 +115,8 @@ const Navbar = () => {
                                         fontsize="text-base"
                                         textprimary="text-white"
                                         borderprimary="border-red-700"
-                                        bgsecondary="bg-[#C4161C]"
-                                        textColor='text-[#C4161C]'
+                                        bgsecondary="bg-red-600"
+                                        textColor='text-red-600'
                                         onClick={logOut}
                                     />}
                                 </div>
