@@ -19,7 +19,11 @@ const Navbar = () => {
     const logOut=()=>{
         signOut(auth)
     }
-    
+
+    if(error || loading){
+        console.log(loading, error);
+    }
+
     const navigate = useNavigate();
   return (
     <div className='lg:fixed w-full bg-white z-40 top-0 left-0 transition-all ease-in-out'>

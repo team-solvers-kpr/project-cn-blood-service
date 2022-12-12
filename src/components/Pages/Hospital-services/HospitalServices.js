@@ -4,7 +4,6 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { HospitalCard } from "./HospitalCard";
 import HospitalRelatedInformation from "./HospitalRelatedInformation";
 import backgroundImg from "../../assets/SS_Mercy.jpg";
-
 const HospitalServices = () => {
   return (
     <div className="lg:mt-[168px]">

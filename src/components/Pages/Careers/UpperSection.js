@@ -4,7 +4,7 @@ import {BsFillArrowRightCircleFill} from 'react-icons/bs'
 export const UpperSection = () => {
   return (
     <div className='' style={{background:'#4D4D4D'}}>
-<div className='mx-32'>
+<div className='lg:mx-32 p-3'>
     
         <p className='text-white font-medium text-justify pt-8 '>Do you currently work for Canadian Blood Services? Click on the button below to view and apply to positions on our internal career site.</p>
 
