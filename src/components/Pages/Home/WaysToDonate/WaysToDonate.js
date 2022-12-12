@@ -27,35 +27,35 @@ const WaysToDonate = () => {
         <div>
           <Link
             to="/"
-            className="block pt-8 text-lg font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
+            className="block pt-8 text-base font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
           >
             <AiIcons.AiOutlineArrowRight className="inline-block mr-3 text-2xl text-teal-500 cursor-pointer" />
             Financial donations
           </Link>
           <Link
             to="/"
-            className="block pt-8 text-lg font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
+            className="block pt-8 text-base font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
           >
             <AiIcons.AiOutlineArrowRight className="inline-block mr-3 text-2xl text-teal-500 cursor-pointer" />
             Donate as a partner
           </Link>
           <Link
             to="/"
-            className="block pt-8 text-lg font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
+            className="block pt-8 text-base font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
           >
             <AiIcons.AiOutlineArrowRight className="inline-block mr-3 text-2xl text-teal-500 cursor-pointer" />
             Information on Recognition Program
           </Link>
           <Link
             to="/"
-            className="block pt-8 text-lg font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
+            className="block pt-8 text-base font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
           >
             <AiIcons.AiOutlineArrowRight className="inline-block mr-3 text-2xl text-teal-500 cursor-pointer" />
             Volunteering
           </Link>
           <Link
             to="/"
-            className="block pt-8 text-lg font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
+            className="block pt-8 text-base font-semibold  hover:text-gray-300 hover:delay-100 hover:duration-300 duration-300 hover:transition-all hover:ease-in-out"
           >
             <AiIcons.AiOutlineArrowRight className="inline-block mr-3 text-2xl text-teal-500 cursor-pointer" />
             Information on Reasons to Join Canada's Lifeline

@@ -19,7 +19,11 @@ const Navbar = () => {
     const logOut=()=>{
         signOut(auth)
     }
-    
+
+    if(error || loading){
+        console.log(loading, error);
+    }
+
     const navigate = useNavigate();
   return (
     <div className='lg:fixed w-full bg-white z-40 top-0 left-0 transition-all ease-in-out'>
@@ -154,7 +158,7 @@ const Navbar = () => {
 
                             {/* mobile menu navigation  */}
 
-        <div className={`md:hidden bg-white h-full w-full  pt-4 ${
+        <div className={`md:hidden bg-white h-full w-full pt-4 ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             } ease-in-out duration-700 z-50`}>
 
