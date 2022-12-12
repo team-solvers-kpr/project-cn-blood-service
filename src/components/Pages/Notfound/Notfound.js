@@ -17,7 +17,7 @@ const Notfound = () => {
   };
 
   return (
-    <div>
+    <div className="lg:mt-[158px]">
       <section className="flex items-center h-full p-10 bg-red-600">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <div className="max-w-md text-center">

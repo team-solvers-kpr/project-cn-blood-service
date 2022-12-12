@@ -162,7 +162,7 @@ const Navbar = () => {
               isOpen ? "translate-x-0" : "-translate-x-full"
             } ease-in-out duration-700 z-50`}>
 
-                        <div className='searchBar px-4 py-4'>
+                        <div className='searchBar px-4 py-4 '>
                             <ExpandableSearchbar   />
                         </div>
                         
