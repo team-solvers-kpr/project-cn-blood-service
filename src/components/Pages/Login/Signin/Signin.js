@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Signup from "../Signup/Signup";
 import {
   useSignInWithEmailAndPassword,
@@ -23,12 +23,13 @@ const Signin = () => {
     useSignInWithEmailAndPassword(auth);
 
   const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
 
   let signInError;
 
-  if (gUser) {
-    console.log(gUser);
-    console.log(user);
+  if (gUser || user) {
+    navigate(from, { replace: true });
   }
 
   const toggle = () => {
@@ -52,8 +53,12 @@ const Signin = () => {
     navigate("/home");
   };
 
+  const handleSignInWithGoogle = () => {
+    signInWithGoogle();
+  };
+
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 mt-[157px]">
       <h2 className="text-start text-xl font-semibold text-gray-500 ml-10 pt-5 pb-3">
         Sign in or create an account
       </h2>
@@ -133,7 +138,7 @@ const Signin = () => {
               </div>
               <div className="py-8 divider">OR</div>
               <button
-                onClick={() => signInWithGoogle()}
+                onClick={handleSignInWithGoogle}
                 className="btn btn-outline btn-warning w-full"
               >
                 Continue with Google
