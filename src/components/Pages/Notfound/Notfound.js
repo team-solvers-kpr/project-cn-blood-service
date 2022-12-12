@@ -17,7 +17,7 @@ const Notfound = () => {
   };
 
   return (
-    <div>
+    <div className="lg:mt-[158px]">
       <section className="flex items-center h-full p-10 bg-red-600">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <div className="max-w-md text-center">
@@ -27,7 +27,7 @@ const Notfound = () => {
               <span className="text-gray-700">4</span>
               <span className="text-red-200 ml-3">error</span>
             </h2>{" "}
-            <p className="text-4xl font-bold text-white">Page not found</p>
+            <p className="text-4xl font-bold text-white">Page is under development</p>
             <p className="mt-4 mb-8 text-white">
               The link you clicked on may be broken or the page may have been
               removed.
